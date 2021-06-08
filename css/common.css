@@ -1,0 +1,336 @@
+:root {
+  --coolwhite: #FDFDFB;
+  --warmwhite: #F0EEE8;
+  --darkpowder: #FFAE95;
+  --powder: #D1AF8D;
+  --lightpowder: #EFD8C6;
+  --blue: #C3ECF3;
+  --gold: #C6A566;
+  --black: #030201;
+  --darkestgray: #1B150A;
+  --deepgray: #312B22;
+  --gray: #5C5851;
+  --lightgray: #726F69;
+  --lightengray: #CBC9C6;
+  --brown: #DFCCA9;
+  --lightbrown: #EFE5D4;
+  --red: #CA3000;
+  --green: #00CA63;
+  --color-1-5: #F5F2EB;
+  --color-6-12: #FDE9E6;
+  --color-13-20: #FBC7B9;
+}
+body {
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--deepgray);
+    position: relative;
+    background-color: var(--coolwhite);
+    background: url(../img/bg/bg-0.svg) no-repeat;
+    background-size: 100% auto;
+    background-position: center 100vh;
+}
+@media (max-width: 1199px){
+    body {font-size: 15px;}
+}
+@media (max-width: 991px){
+    body {font-size: 14px;}
+}
+@media (max-width: 575px){
+    body {font-size: 13px;}
+}
+
+
+a, a:hover, a:focus, a:active {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, ul, ol, dl {
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+
+/* FORMS CUSTOMIZATION */
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active, 
+textarea, textarea:hover, textarea:focus, textarea:active,
+select, select:hover, select:focus, select:active {outline: none;}
+
+/* placeholder stylization */
+input:-moz-placeholder, textarea:-moz-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-moz-placeholder, textarea::-moz-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input::placeholder, textarea::placeholder {color: #CBCBCB; font-weight: 400;}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input, textarea, select {
+    border: 1px solid var(--gold);
+    background-color: var(--coolwhite);
+    border-radius: 0;
+    padding: 1em 1.5em;
+    width: 100%;
+    line-height: 1.1em;
+    box-shadow: unset;
+}
+
+/* SELECT simple */
+select {
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    background-image: url(../images/icons/caret_down.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: auto 30%;
+    position: relative;
+}
+select::-ms-expand { /* for IE 11 */display: none;}
+select:hover {cursor: pointer;}
+
+/* checkbox customization */
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.checkbox input[type="checkbox"] {
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    box-shadow: none;
+    border: 2px solid var(--color-2);
+    border-radius: 0;
+    height: 1em;
+    min-height: unset;
+    width: 1em;
+    position: relative;
+    box-sizing: content-box;
+    margin-right: .25em;
+}
+.checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: .4em;
+    height: .9em;
+    border: 0 solid var(--color-1);
+    border-width: 0 2px 2px 0;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    margin: .15em .3em;
+}
+.checkbox label {flex: 1;}
+
+/* radiobutton customization */
+.radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.radio input[type="radio"] {
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    box-shadow: none;
+    border: 2px solid var(--color-2);
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    position: relative;
+    box-sizing: content-box;
+    margin-right: .25em;
+}
+.radio input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: var(--color-1);
+    border-radius: 50%;
+}
+.radio label {flex: 1;}
+
+
+
+/* кнопки */
+button {
+    background: none;
+    border: none;
+    padding: unset;
+    display: block;
+}
+button:hover, button:focus, button:active {cursor: pointer;}
+.btn_main {
+    border-radius: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    line-height: 1.1em;
+    padding: 1.2em 1.5em;
+    text-align: center;
+    transition: .5s;
+    font-weight: 500;
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
+.btn_1 {
+    color: var(--coolwhite);
+    background-color: var(--powder);
+}
+.btn_1:hover, .btn_1:focus, .btn_1:active {
+    color: var(--coolwhite);
+    background-color: var(--gold);
+    box-shadow: 0px 2px 8px 0px var(--powder);
+}
+.btn_2 {
+    background-color: transparent;
+    border-bottom: 1px solid var(--powder);
+}
+.btn_2:hover, .btn_2:focus, .btn_2:active {
+    box-shadow: 0px 2px 8px 0px var(--powder);
+}
+
+
+/* TEXT STYLIZATION */
+h1, h2, h3, h4 {font-family: 'Source Serif Pro', serif;}
+h1 {
+    font-size: 3.5em;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1em;
+}
+h2 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: .6em;
+}
+h3 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: .6em;
+}
+h4 {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.felix {font-family: 'Felix Titling';}
+.source {font-family: 'Source Serif Pro', serif;}
+.pt {font-family: 'PT Sans', sans-serif;}
+
+.f_08 {font-size: .8em;}
+.f_09 {font-size: .9em;}
+.f_11 {font-size: 1.1em;}
+.f_12 {font-size: 1.2em;}
+.f_13 {font-size: 1.3em;}
+.f_14 {font-size: 1.4em;}
+.f_15 {font-size: 1.5em;}
+.f_16 {font-size: 1.6em;}
+.f_17 {font-size: 1.7em;}
+.f_18 {font-size: 1.8em;}
+.f_19 {font-size: 1.9em;}
+.f_20 {font-size: 2em;}
+.white {color: var(--coolwhite);}
+.black {color: var(--black);}
+.gray {color: var(--gray);}
+.lightgray {color: var(--lightgray);}
+.lightengray {color: var(--lightengray);}
+
+.fw_1 {font-weight: 100;} /* thin */
+.fw_2 {font-weight: 200;} /* extra-light */
+.fw_3 {font-weight: 300;} /* light */
+.fw_4 {font-weight: 400;} /* regular */
+.fw_5 {font-weight: 500;} /* medium */
+.fw_6 {font-weight: 600;} /* semi-bold */
+.fw_7 {font-weight: 700;} /* bold */
+.fw_8 {font-weight: 800;} /* extra-bold */
+.fw_9 {font-weight: 900;} /* black */
+.itlc {font-style: italic;}
+.norm {font-style: normal;}
+
+.td_und {text-decoration: underline;}
+.td_lth {text-decoration: line-through;}
+.lh_n {line-height: normal;}
+.bb_1 {border-bottom: 1px solid;}
+.t_ind {text-indent: 2rem;}
+
+
+main {
+    width: calc(100% - 80px);
+    margin: 0px auto;
+    background-color: var(--coolwhite);
+    position: relative;
+    /* padding-bottom: 1em; */
+    border: 1px solid var(--gold);
+}
+/* main::before {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    bottom: 1.5em;
+    left: 1.5em;
+    border: 1px solid var(--gold);
+    z-index: 1;
+} */
+main>section {
+    /* margin-left: calc(1.5em + 1px);
+    margin-right: calc(1.5em + 1px); */
+    position: relative;
+    z-index: 2;
+}
+
+
+.mb-6 {margin-bottom: 6em;}
+
+.round-icon {
+    background-color: var(--powder);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.round-icon img {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+img.icon {
+    width: 1.5em;
+    height: 1.5em;
+}
