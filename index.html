@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Site</title>
-	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="" type="image/png">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -45,16 +45,16 @@
 					</a>
 				</div>
 				<div class="col-4 d-flex justify-content-end">
-					<a href="#" class="text-uppercase lightengray f_09 position-relative">
+					<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
+						<div class="count me-1">12</div>
 						<img src="img/icons/shopping-cart.svg" alt="">
 						корзина
-						<div class="count">12</div>
 					</a>
-					<a href="#" class="ms-4 position-relative">
+					<a href="#" class="ms-4 d-flex align-items-center">
+						<div class="count me-1">29</div>
 						<img src="img/icons/favorite.svg" alt="">
-						<div class="count">29</div>
 					</a>
-					<a href="#" class="ms-4">
+					<a href="#" class="ms-3">
 						<img src="img/icons/user.svg" alt="">
 					</a>
 				</div>
@@ -86,9 +86,9 @@
 			<div class="container">
 				<h2>О компании</h2>
 				<div class="row justify-content-center">
-					<div class="col-7">
-						<p>История бренда началась на юго-востоке Франции. А именно в парфюмерной столице мира — в знаменитом городе Grasse. Компании принадлежит одна из лучших фабрик региона, оборудованная по европейским стандартам. Именно здесь с 1971 года изготавливают качественные эфирные масла и сырьё для парфюмерии.</p>
-						<p>Создатели бренда используют своё сырьё и выпускают парфюмы на собственной фабрике, сокращая издержки производства. Вот почему ароматы Parfé по ценам на порядок ниже и духов, и эссенций, созданных известными парфюмерными Домами.</p>
+					<div class="col-6 text-center">
+						<p class="f_12">История бренда началась на юго-востоке Франции. А именно в парфюмерной столице мира — в знаменитом городе Grasse. Компании принадлежит одна из лучших фабрик региона, оборудованная по европейским стандартам. Именно здесь с 1971 года изготавливают качественные эфирные масла и сырьё для парфюмерии. Создатели бренда используют своё сырьё и выпускают парфюмы на собственной фабрике, сокращая издержки производства. Вот почему ароматы Parfé по ценам на порядок ниже и духов, и эссенций, созданных известными парфюмерными Домами.</p>
+						<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
 					</div>
 				</div>
 			</div>
@@ -96,7 +96,10 @@
 
 		<section id="sec-3">
 			<div class="container">
-
+				<div class="row">
+					<div class="col-8"></div>
+					<div class="col-4"></div>
+				</div>
 			</div>
 		</section>
 
@@ -110,7 +113,7 @@
 								<img src="img/parfume/1.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button class="btn_main btn_1 w-100 mt-4">В избранное</button>
+									<button onclick="fav(this)" class="btn_main btn_1 w-100 mt-4 btn-fav" data-fav="false"></button>
 								</div>
 								<div class="sticker color-1-5">
 									<div class="felix">N° 1</div>
@@ -121,7 +124,10 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button class="btn_main btn_1 mt-4 w-100">В корзину</button>
+							<button class="btn_main btn_1 mt-4 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-2">
+								В корзину
+							</button>
 						</div>
 					</div>
 					<div>
@@ -130,7 +136,7 @@
 								<img src="img/parfume/7.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button class="btn_main btn_1 w-100 mt-4">В избранное</button>
+									<button onclick="fav(this)" class="btn_main btn_1 w-100 mt-4 btn-fav" data-fav="false"></button>
 								</div>
 								<div class="sticker color-6-12">
 									<div class="felix">N° 7</div>
@@ -141,7 +147,10 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button class="btn_main btn_1 mt-4 w-100">В корзину</button>
+							<button class="btn_main btn_1 mt-4 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-2">
+								В корзину
+							</button>
 						</div>
 					</div>
 					<div>
@@ -150,7 +159,7 @@
 								<img src="img/parfume/6.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button class="btn_main btn_1 w-100 mt-4">В избранное</button>
+									<button onclick="fav(this)" class="btn_main btn_1 w-100 mt-4 btn-fav" data-fav="false"></button>
 								</div>
 								<div class="sticker color-6-12">
 									<div class="felix">N° 6</div>
@@ -161,7 +170,10 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button class="btn_main btn_1 mt-4 w-100">В корзину</button>
+							<button class="btn_main btn_1 mt-4 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-2">
+								В корзину
+							</button>
 						</div>
 					</div>
 					<div>
@@ -170,7 +182,7 @@
 								<img src="img/parfume/20.jpg" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button class="btn_main btn_1 w-100 mt-4">В избранное</button>
+									<button onclick="fav(this)" class="btn_main btn_1 w-100 mt-4 btn-fav" data-fav="false"></button>
 								</div>
 								<div class="sticker color-13-20">
 									<div class="felix">N° 20</div>
@@ -181,7 +193,10 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button class="btn_main btn_1 mt-4 w-100">В корзину</button>
+							<button class="btn_main btn_1 mt-4 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-2">
+								В корзину
+							</button>
 						</div>
 					</div>
 				</div>
@@ -195,7 +210,7 @@
 						<h2>Как наносить ароматы</h2>
 						<p class="f_12 gray itlc">Чтобы благоухать, достаточно нанести всего каплю парфюма на каждую точку пульса — за мочку уха, на запястье, сгиб локтя, шею в районе межключичной впадины и под колено. В этих местах кожа имеет самую высокую температуру, а значит, запах будет быстро распространяться по воздуху. Желательно наносить на чистую, слегка влажную кожу. Аромат парфюма максимально впитывается именно во влажную кожу.</p>
 						<div class="mt-4">
-							<a href="#" class="btn_main btn_2">Каталог ароматов</a>
+							<a href="" class="btn_main btn_2">Каталог ароматов</a>
 						</div>
 					</div>
 					<div>
@@ -210,6 +225,7 @@
 				<div class="row justify-content-between">
 					<div class="col-4">
 						<h2 class="text-start">При покупке в нашем магазине</h2>
+						<hr>
 					</div>
 					<div class="col-7">
 						<ol class="f_15">
@@ -225,19 +241,58 @@
 		<section id="sec-7" class="mb-6">
 			<div class="container">
 				<h2>Отзывы</h2>
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">Slide 1</div>
-						<div class="swiper-slide">Slide 2</div>
-						<div class="swiper-slide">Slide 3</div>
-					</div>
-					<div class="swiper-button-prev">
-						<img src="img/icons/arrow-left.svg" alt="предыдущий слайд">
-					</div>
-					<div class="swiper-button-next">
-						<img src="img/icons/arrow-right.svg" alt="следующий слайд">
+				<div class="position-relative">
+					<div class="swiper-reviews">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="review">
+									<img src="img/users/u1.jpg" alt="">
+									<div>
+										<p class="text">
+											Потрясающий зимний аромат от Parfe: ром, мёд, табак, ваниль и корица слились воедино, чтобы укутать холодным снежным вечером. Ранее я уже делилась своим отзывом на шикарный аромат Parfe #11, а сегодня хочу рассказать о новинке, вокруг которой я ходила очень долго и всё же решилась на покупку. Я делю парфюм по временам года, и уж очень мне захотелось чего-то необычного и уютного на зиму
+										</p>
+										<div class="itlc powder"><a href="">читать в источнике</a></div>
+										<div class="mt-4 text-uppercase ls-1">invisible_mua</div>
+										<div class="ls-1">irecommend.ru</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="review">
+									<img src="img/users/u2.jpg" alt="">
+									<div>
+										<p class="text">
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus sed aspernatur nemo quas odit exercitationem repellat deserunt eligendi sint, dolor quibusdam architecto, quisquam unde quidem rerum blanditiis. Doloribus, harum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae natus sed aspernatur nemo quas odit exercitationem repellat deserunt eligendi sint, dolor quibusdam architecto, quisquam unde quidem rerum blanditiis. Doloribus, harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas neque sapiente in commodi deleniti earum alias delectus illo fuga porro dolore, dolorem voluptatibus rerum. Provident quaerat ullam perspiciatis maxime.
+										</p>
+										<div class="itlc powder"><a href="">читать в источнике</a></div>
+										<div class="mt-4 text-uppercase ls-1">invisible_mua</div>
+										<div class="ls-1">irecommend.ru</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="review">
+									<img src="img/users/u1.jpg" alt="">
+									<div>
+										<p class="text">
+											Невероятно стойкие духи с потрясающим ароматом! На самом деле, я большой фанат различной парфюмерии. Я люблю собирать ароматы, которые мне понравятся, и у меня уже накопился хороший такой ящик с духами, совершенно разной ценовой категории. Этот парфюм случайно бросился мне в глаза в Подружке, пройти мимо не смогла, когда увидела их палитру ароматов, но и в итоге остановилась
+										</p>
+										<div class="itlc powder"><a href="">читать в источнике</a></div>
+										<div class="mt-4 text-uppercase ls-1">_Апрельская_</div>
+										<div class="ls-1">irecommend.ru</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev">
+							<img src="img/icons/arrow-left.svg" alt="предыдущий слайд">
+						</div>
+						<div class="swiper-button-next">
+							<img src="img/icons/arrow-right.svg" alt="следующий слайд">
+						</div>
 					</div>
 				</div>
+				
 			</div>
 		</section>
 

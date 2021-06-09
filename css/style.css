@@ -1,8 +1,8 @@
 header {border-top: 4px solid var(--gold);}
 .count {
-    position: absolute;
+    /* position: absolute;
     top: 80%;
-    right: calc(100% - 5px);
+    right: calc(100% - 5px); */
     color: var(--coolwhite);
     background-color: var(--powder);
     font-size: .7em;
@@ -55,7 +55,7 @@ header {border-top: 4px solid var(--gold);}
     text-align: center;
     padding: 4em 3em 2em;
     opacity: 0;
-    transition: .2s;
+    transition: opacity .4s ease-out;
 }
 .item .box:hover .text {opacity: 1;}
 .item .box .sticker {
@@ -87,11 +87,19 @@ header {border-top: 4px solid var(--gold);}
     background-size: calc(50% - 233px) 100%;
     background-repeat: no-repeat;
 }
+#sec-6 hr {
+    height: 2px;
+    width: 105%;
+    background-color: var(--gold);
+    opacity: 1;
+    border: none;
+    margin: 2.5em 0 0;
+}
 #sec-6 ol {
     list-style-type: none; 
     counter-reset: num;
 }
-#sec-6 ol>li {margin-bottom: 1em;}
+#sec-6 ol>li {margin-bottom: 2em;}
 #sec-6 ol>li:last-child {margin-bottom: 0px;}
 #sec-6 ol>li::before {
     content: counter(num); 
@@ -109,9 +117,68 @@ header {border-top: 4px solid var(--gold);}
 
 
 /* section 7 */
-.swiper-container {
-    position: relative;
+.swiper-reviews {
     overflow: hidden;
+}
+.swiper-reviews .swiper-button-prev:after,
+.swiper-reviews .swiper-button-next:after {
+    content:unset
+}
+.swiper-reviews .swiper-button-prev,
+.swiper-reviews .swiper-button-next {
+    top: 25%;
+    width: 4.75em;
+    margin: 0;
+    height: fit-content;
+}
+.swiper-reviews .swiper-button-prev img,
+.swiper-reviews .swiper-button-next img {
+    width: 100%;
+}
+.swiper-reviews .swiper-button-prev {
+    left: unset;
+    right: calc(100% + 2em);
+}
+.swiper-reviews .swiper-button-next {
+    right: unset;
+    left: calc(100% + 2em);
+}
+.review {
+    display: flex;
+    align-items: flex-start;
+}
+.review img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 3em;
+}
+.review>div {
+    margin-top: 1em;
+    position: relative;
+}
+.review>div::before {
+    content: "";
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    right: 101%;
+    bottom: 100%;
+    width: 1.3em;
+    height: 1em;
+    background: url(../img/icons/quote.svg) no-repeat center;
+    background-size: contain;
+}
+.review .text {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--gray);
+    font-style: italic;
+    line-height: 1.2em;
+    height: 8.4em;
 }
 
 
@@ -147,7 +214,7 @@ footer nav {
     justify-content: space-evenly;
     padding: 1em 0;
 }
-footer nav a {}
+/* footer nav a {} */
 
 .developers {
     display: flex;

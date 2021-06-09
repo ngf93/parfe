@@ -186,13 +186,12 @@ button {
 button:hover, button:focus, button:active {cursor: pointer;}
 .btn_main {
     border-radius: 0;
-    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     line-height: 1.1em;
-    padding: 1.2em 1.5em;
+    padding: 1em 1.5em;
     text-align: center;
     transition: .5s;
     font-weight: 500;
@@ -204,18 +203,56 @@ button:hover, button:focus, button:active {cursor: pointer;}
 .btn_1 {
     color: var(--coolwhite);
     background-color: var(--powder);
+    border: 1px solid var(--powder);
 }
-.btn_1:hover, .btn_1:focus, .btn_1:active {
+.btn_1:hover, .btn_1:focus {
     color: var(--coolwhite);
-    background-color: var(--gold);
-    box-shadow: 0px 2px 8px 0px var(--powder);
+    background-color: #D7AF87;
+    border: 1px solid #D7AF87;
+}
+.btn_1:active {
+    color: var(--coolwhite);
+    background-color: #C9AF96;
+    border: 1px solid  #C9AF96;
+    box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
 .btn_2 {
-    background-color: transparent;
-    border-bottom: 1px solid var(--powder);
+    position: relative;
+    /* border-bottom: 1px solid var(--powder); */
 }
-.btn_2:hover, .btn_2:focus, .btn_2:active {
-    box-shadow: 0px 2px 8px 0px var(--powder);
+.btn_2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--powder);
+    transform: scaleX(1);
+    transition: transform .4s ease-out;
+}
+.btn_2:hover::after, .btn_2:focus::after {
+    transform: scaleX(0);
+}
+.btn_2:active::after {
+    background-color: var(--darkpowder);
+    transform: scaleX(1);
+    transition: transform .1s ease-out;
+}
+.btn-fav {vertical-align: middle;}
+.btn-fav[data-fav="false"]::before {
+    content: url(../img/icons/favorite-2.svg);
+}
+.btn-fav[data-fav="false"]::after {
+    content: "В избранное";
+    margin-left: .5em;
+}
+.btn-fav[data-fav="true"]::before {
+    content: url(../img/icons/favorite-2-full.svg);
+}
+.btn-fav[data-fav="true"]::after {
+    content: "В избранном";
+    margin-left: .5em;
 }
 
 
@@ -268,6 +305,7 @@ h4 {
 .gray {color: var(--gray);}
 .lightgray {color: var(--lightgray);}
 .lightengray {color: var(--lightengray);}
+.powder {color: var(--powder);}
 
 .fw_1 {font-weight: 100;} /* thin */
 .fw_2 {font-weight: 200;} /* extra-light */
@@ -278,14 +316,12 @@ h4 {
 .fw_7 {font-weight: 700;} /* bold */
 .fw_8 {font-weight: 800;} /* extra-bold */
 .fw_9 {font-weight: 900;} /* black */
+
 .itlc {font-style: italic;}
 .norm {font-style: normal;}
 
-.td_und {text-decoration: underline;}
-.td_lth {text-decoration: line-through;}
-.lh_n {line-height: normal;}
-.bb_1 {border-bottom: 1px solid;}
-.t_ind {text-indent: 2rem;}
+.ls-1 {letter-spacing: 1px;}
+
 
 
 main {
