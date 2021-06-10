@@ -26,8 +26,7 @@ body {
     font-weight: 400;
     color: var(--deepgray);
     position: relative;
-    background-color: var(--coolwhite);
-    background: url(../img/bg/bg-0.svg) no-repeat;
+    background: url(../img/bg/bg-0.png) no-repeat var(--coolwhite);
     background-size: 100% calc(100% - 100vh);
     background-position: center bottom;
 }
