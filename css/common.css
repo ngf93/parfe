@@ -28,8 +28,8 @@ body {
     position: relative;
     background-color: var(--coolwhite);
     background: url(../img/bg/bg-0.svg) no-repeat;
-    background-size: 100% auto;
-    background-position: center 100vh;
+    background-size: 100% calc(100% - 100vh);
+    background-position: center bottom;
 }
 @media (max-width: 1199px){
     body {font-size: 15px;}
@@ -257,26 +257,16 @@ button:hover, button:focus, button:active {cursor: pointer;}
 
 
 /* TEXT STYLIZATION */
-h1, h2, h3, h4 {font-family: 'Source Serif Pro', serif;}
-h1 {
-    font-size: 3.5em;
-    font-weight: 400;
-    text-align: left;
-    margin-bottom: 1em;
-}
-h2 {
+h1, h2, h3, h4 {
+    font-family: 'Source Serif Pro', serif;
     text-align: center;
-    font-size: 3em;
+    font-style: italic;
     font-weight: 400;
     margin-bottom: .6em;
 }
-h3 {
-    text-align: left;
-    font-size: 2em;
-    font-weight: 600;
-    line-height: 1em;
-    margin-bottom: .6em;
-}
+h1 {font-size: 2em;}
+h2 {font-size: 3em;}
+h3 {font-size: 2.25em;}
 h4 {
     text-align: left;
     font-size: 1.5em;
@@ -285,6 +275,7 @@ h4 {
 }
 
 .felix {font-family: 'Felix Titling';}
+.brandon {font-family: 'Brandon Grotesque';}
 .source {font-family: 'Source Serif Pro', serif;}
 .pt {font-family: 'PT Sans', sans-serif;}
 
@@ -321,6 +312,7 @@ h4 {
 .norm {font-style: normal;}
 
 .ls-1 {letter-spacing: 1px;}
+.ls-3 {letter-spacing: 3px;}
 
 
 

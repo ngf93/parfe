@@ -28,6 +28,68 @@ header {border-top: 4px solid var(--gold);}
 
 
 /* section 3 */
+.grass {
+    background-color: var(--warmwhite);
+    padding: 8em 3em 4em;
+    text-align: center;
+    margin-top: 6em;
+    height: calc(100% - 6em);
+    position: relative;
+}
+.grass img {
+    position: absolute;
+    top: -6em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-main, .swiper-thumbs {
+    position: relative;
+    overflow: hidden;
+}
+.swiper-main .swiper-slide {opacity: 0 !important;}
+.swiper-main .swiper-slide-active {opacity: 1 !important;}
+.swiper-main .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.swiper-main .swiper-slide .text {
+    background-color: var(--warmwhite);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.thumb {
+    position: relative;
+}
+.thumb img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.thumb>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    font-family: 'Source Serif Pro', serif;
+    color: var(--coolwhite);
+    font-size: 1.8em;
+    font-style: italic;
+    background-image: linear-gradient(107.23deg, rgba(43, 43, 43, 0.4) 0%, rgba(79, 79, 79, 0) 99%);
+    background-size: cover;
+    padding: .5em 0 0 .5em;
+}
+
+
+/* section 4 */
 .item .box {
     border: 1px solid var(--gold);
     position: relative;

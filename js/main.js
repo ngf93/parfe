@@ -25,6 +25,27 @@ const swiper = new Swiper('.swiper-reviews', {
   },
 });
 
+const swiper2 = new Swiper('.swiper-thumbs', {
+  loop: false,
+  slidesPerView: 5,
+  spaceBetween: 14,
+});
+const swiper3 = new Swiper('.swiper-main', {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  thumbs: {
+    swiper: swiper2,
+  }
+});
+
+
+
 const myViewer = new ImgPreviewer('.img-preview-box');
 
 function fav(el){
