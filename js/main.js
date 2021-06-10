@@ -51,3 +51,25 @@ const myViewer = new ImgPreviewer('.img-preview-box');
 function fav(el){
   el.dataset.fav = (el.dataset.fav == 'false') ? 'true' : 'false'
 }
+
+/* sticky header */
+// $(window).scroll(function () {
+//   var h_header = $('header').outerHeight();
+//   var st = $(this).scrollTop();
+//   if (st > h_header) {
+//     $('.header_sticky').fadeIn(300);
+//   } else if (st < h_header) {
+//     $('.header_sticky').fadeOut(300);
+//   }
+// });
+
+window.addEventListener('scroll', function() {
+  let h_header = document.querySelector('header').offsetHeight;
+  let st = window.pageYOffset;
+  if (st > h_header) {
+    document.getElementById('nav-sticky').style.display = 'block';
+  } else {
+    document.getElementById('nav-sticky').style.display = 'none';
+  }
+  // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+});
