@@ -1,11 +1,10 @@
 header {
     border-top: 4px solid var(--gold);
     background-color: var(--coolwhite);
+    position: relative;
+    z-index: 100;
 }
 .count {
-    /* position: absolute;
-    top: 80%;
-    right: calc(100% - 5px); */
     color: var(--coolwhite);
     background-color: var(--powder);
     font-size: .7em;
@@ -17,7 +16,124 @@ header {
     align-items: center;
     border-radius: 50%;
 }
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav ul a {
+    color: var(--lightgray);
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+header nav ul a svg {
+    width: 14px;
+    height: 8px;
+    margin-left: .5em;
+}
+header nav ul a svg path {
+    stroke: var(--lightgray);
+    stroke-width: 1.375px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+header nav ul a:hover, header nav ul a:focus, header nav ul a:active {
+    color: var(--powder);
+}
+header nav ul a:hover svg path,
+header nav ul a:focus svg path, 
+header nav ul a:active svg path {
+    stroke: var(--powder);
+}
 
+.submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2em);
+    left: 0px;
+    width: 100%;
+    background-color: var(--coolwhite);
+    padding: 2em 4em;
+    border: 1px solid var(--gold);
+    opacity: 0;
+    /* transition: all .3s ease-out; */
+}
+.sm-visible {
+    top: 100%;
+    opacity: 1;
+}
+
+.submenu .title {
+    height: 3em;
+    font-family: 'Source Serif Pro', serif;
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.submenu .type-1 .title {
+    background-color: var(--color-1-5);
+}
+.submenu .type-2 .title {
+    background-color: var(--color-6-12);
+}
+.submenu .type-3 .title {
+    background-color: var(--color-13-20);
+}
+
+.submenu .ribbon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 1.5em solid transparent;
+}
+.submenu .type-1 .ribbon::before {
+    right: 100%;
+    border-right: 1em solid var(--color-1-5);
+    border-bottom: 1.5em solid var(--color-1-5);
+    border-left: 1em solid transparent;
+}
+.submenu .type-3 .ribbon::before {
+    left: 100%;
+    border-right: 1em solid transparent;
+    border-bottom: 1.5em solid var(--color-13-20);
+    border-left: 1em solid var(--color-13-20);
+}
+
+.submenu .item {
+    text-align: center;
+    padding: .5em;
+    display: block;
+    transition: .2s;
+}
+.submenu .type-1 .item:hover {
+    background-color: var(--color-1-5);
+    color: var(--powder);
+}
+.submenu .type-2 .item:hover {
+    background-color: var(--color-6-12);
+    color: var(--powder);
+}
+.submenu .type-3 .item:hover {
+    background-color: var(--color-13-20);
+    color: var(--powder);
+}
+
+#submenu-advantages .item2 {
+    font-family: 'Source Serif Pro', serif;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* section 1 */
 #sec-1 {
     background-image: linear-gradient(to top, var(--color-6-12) 0px 150px, transparent 150px);
 }
@@ -143,9 +259,6 @@ header {
     align-items: center;
     text-align: center;
 }
-.color-1-5 {background-color: var(--color-1-5);}
-.color-6-12 {background-color: var(--color-6-12);}
-.color-13-20 {background-color: var(--color-13-20);}
 .old-price {
     color: var(--lightengray);
     text-decoration: line-through;
@@ -321,4 +434,15 @@ footer nav {
     background-color: var(--coolwhite);
     z-index: 1000;
     box-shadow: 0px 2px 6px 0px var(--lightbrown);
+}
+
+#shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 29%);
+    opacity: 0;
+    z-index: -10;
 }

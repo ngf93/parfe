@@ -361,3 +361,7 @@ img.icon {
     width: 1.5em;
     height: 1.5em;
 }
+
+.color-1-5 {background-color: var(--color-1-5);}
+.color-6-12 {background-color: var(--color-6-12);}
+.color-13-20 {background-color: var(--color-13-20);}

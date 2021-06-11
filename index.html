@@ -19,9 +19,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="py-5">
-		<div class="container">
-			<div class="row align-items-start">
+	<header>
+		<div class="container position-relative pt-5 pb-4">
+			<div class="row align-items-start mb-5">
 				<div class="col-4 d-flex align-items-center">
 					<div class="d-flex f_09 text-uppercase lightengray">
 						<a href="" class="lightgray me-2">ru</a>
@@ -57,6 +57,173 @@
 					<a href="#" class="ms-3">
 						<img src="img/icons/user.svg" alt="">
 					</a>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+							каталог
+							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+							</svg>
+						</a>
+					</li>
+					<li><a href="">Подбор аромата</a></li>
+					<li>
+						<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+							преимущества
+							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+							</svg>
+						</a>
+					</li>
+					<li><a href="">о компании</a></li>
+					<li><a href="">подарки</a></li>
+					<li><a href="">Где купить</a></li>
+					<li><a href="">контакты</a></li>
+				</ul>
+			</nav>
+
+			<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-3 gx-3">
+					<div class="type-1">
+						<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 2</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 3</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 4</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 5</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-2">
+						<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 6</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 7</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 8</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 9</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 10</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 11</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 12</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 21</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-3">
+						<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 13</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 15</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 20</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-5 gx-4">
+					<div>
+						<figure>
+							<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
+							<figcaption>Абсолютная стойкость на каждый день</figcaption>
+						</figure>
+					</div>
+					<div>
+						<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
+						<div class="item2">Компактный и практичный формат</div>
+					</div>
+					<div>
+						<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
+						<div class="item2">Натуральные ингредиенты — природные афродизиаки</div>
+					</div>
+					<div>
+						<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
+						<div class="item2">Не содержит спирта, только “сердце парфюма”</div>
+					</div>
+					<div>
+						<img src="img/icons/adv5.svg" alt="">
+						<div class="item2">Богатая палитра ароматов</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -557,6 +724,8 @@
 			</div>
 		</div>
 	</nav>
+
+	<div id="shadow"></div>
 
 	<!-- Skripts -->
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
