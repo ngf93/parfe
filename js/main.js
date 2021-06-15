@@ -43,6 +43,17 @@ const swiper3 = new Swiper('.swiper-main', {
   }
 });
 
+const swiper4 = new Swiper('.swiper-parfume', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  }
+});
+
 
 const myViewer = new ImgPreviewer('.img-preview-box');
 
@@ -51,16 +62,27 @@ function fav(el){
 }
 
 /* sticky header */
+// window.addEventListener('scroll', function() {
+//   let h_header = document.querySelector('header').offsetHeight;
+//   let st = window.pageYOffset;
+//   if (st > h_header) {
+//     document.getElementById('nav-sticky').style.display = 'block';
+//   } else {
+//     document.getElementById('nav-sticky').style.display = 'none';
+//   }
+// });
+
+
 window.addEventListener('scroll', function() {
   let h_header = document.querySelector('header').offsetHeight;
   let st = window.pageYOffset;
   if (st > h_header) {
-    document.getElementById('nav-sticky').style.display = 'block';
+    console.log(1);
+    document.querySelector('header').classList.add("h-sticky");
   } else {
-    document.getElementById('nav-sticky').style.display = 'none';
+    document.querySelector('header').classList.remove("h-sticky");
   }
 });
-
 
 // document.querySelector('#btn-catalog-menu-1').onmouseenter = function(e) {
 //   document.querySelector('#catalog-menu').style.display = 'flex';
@@ -165,4 +187,19 @@ function closeSubmenu(id){
     fill: "forwards",
   });
   document.getElementById('shadow').style.zIndex = '0';
+}
+
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+for (let elm of elements) {
+  observer.observe(elm);
 }

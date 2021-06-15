@@ -20,76 +20,87 @@
 </head>
 <body>
 	<header>
-		<div class="container position-relative pt-5 pb-4">
-			<div class="row align-items-start mb-5">
-				<div class="col-4 d-flex align-items-center">
-					<div class="d-flex f_09 text-uppercase lightengray">
-						<a href="" class="lightgray me-2">ru</a>
-						<a href="" class="me-2">en</a>
-						<a href="" class="me-2">fr</a>
-						<span class="me-2">|</span>
-						<a href="">faq</a>
-					</div>
-					<div class="d-flex ms-4">
-						<a href="#" class="round-icon me-3">
-							<img src="img/icons/inst.svg" alt="">
-						</a>
-						<a href="#" class="round-icon me-3">
-							<img src="img/icons/fb.svg" alt="">
-						</a>
+		<div class="container position-relative">
+			<div class="header-grid">
+				<div class="h-grid-1">
+					<div class="d-flex align-items-center">
+						<div class="d-flex f_09 text-uppercase lightengray">
+							<a href="" class="lightgray me-2">ru</a>
+							<a href="" class="me-2">en</a>
+							<a href="" class="me-2">fr</a>
+							<span class="me-2">|</span>
+							<a href="">faq</a>
+						</div>
+						<div class="d-flex ms-4">
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/inst.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/fb.svg" alt="">
+							</a>
+						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="h-grid-2">
 					<a href="index.html">
 						<img src="img/logo.svg" alt="" class="d-block mx-auto">
 					</a>
 				</div>
-				<div class="col-4 d-flex justify-content-end">
-					<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
-						<div class="count me-1">12</div>
-						<img src="img/icons/shopping-cart.svg" alt="">
-						корзина
-					</a>
-					<a href="#" class="ms-4 d-flex align-items-center">
-						<div class="count me-1">29</div>
-						<img src="img/icons/favorite.svg" alt="">
-					</a>
-					<a href="#" class="ms-3">
-						<img src="img/icons/user.svg" alt="">
+				<div class="h-grid-3">
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
+							<div class="count me-1">12</div>
+							<img src="img/icons/shopping-cart.svg" alt="">
+							<span class="cart-text">корзина</span>
+						</a>
+						<a href="#" class="ms-4 d-flex align-items-center">
+							<div class="count me-1">29</div>
+							<img src="img/icons/favorite.svg" alt="">
+						</a>
+						<a href="#" class="ms-3">
+							<img src="img/icons/user.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="h-grid-4">
+					<nav>
+						<ul>
+							<li>
+								<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+									каталог
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">Подбор аромата</a></li>
+							<li>
+								<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+									преимущества
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">о компании</a></li>
+							<li><a href="">подарки</a></li>
+							<li><a href="">Где купить</a></li>
+							<li><a href="">контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="h-grid-5">
+					<a href="index.html">
+						<img src="img/logo-mini.svg" alt="Parfe">
 					</a>
 				</div>
 			</div>
-			<nav>
-				<ul>
-					<li>
-						<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
-							каталог
-							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
-							</svg>
-						</a>
-					</li>
-					<li><a href="">Подбор аромата</a></li>
-					<li>
-						<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
-							преимущества
-							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
-							</svg>
-						</a>
-					</li>
-					<li><a href="">о компании</a></li>
-					<li><a href="">подарки</a></li>
-					<li><a href="">Где купить</a></li>
-					<li><a href="">контакты</a></li>
-				</ul>
-			</nav>
 
 			<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
 				<div class="row row-cols-3 gx-3">
 					<div class="type-1">
 						<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 1</div>
@@ -124,7 +135,7 @@
 					</div>
 					<div class="type-2">
 						<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 6</div>
@@ -177,7 +188,7 @@
 					</div>
 					<div class="type-3">
 						<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 13</div>
@@ -201,28 +212,36 @@
 				</div>
 			</div>
 			<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
-				<div class="row row-cols-5 gx-4">
+				<div class="row row-cols-5 gx-5">
 					<div>
 						<figure>
 							<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
-							<figcaption>Абсолютная стойкость на каждый день</figcaption>
+							<figcaption><a href="">Абсолютная стойкость на каждый день</a></figcaption>
 						</figure>
 					</div>
 					<div>
-						<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
-						<div class="item2">Компактный и практичный формат</div>
+						<figure>
+							<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
+							<figcaption><a href="">Компактный и практичный формат</a></figcaption>
+						</figure>
 					</div>
 					<div>
-						<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
-						<div class="item2">Натуральные ингредиенты — природные афродизиаки</div>
+						<figure>
+							<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
+							<figcaption><a href="">Натуральные ингредиенты — природные афродизиаки</a></figcaption>
+						</figure>
 					</div>
 					<div>
-						<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
-						<div class="item2">Не содержит спирта, только “сердце парфюма”</div>
+						<figure>
+							<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
+							<figcaption><a href="">Не содержит спирта, только “сердце парфюма”</a></figcaption>
+						</figure>
 					</div>
 					<div>
-						<img src="img/icons/adv5.svg" alt="">
-						<div class="item2">Богатая палитра ароматов</div>
+						<figure>
+							<img src="img/icons/adv5.svg" alt="Богатая палитра ароматов">
+							<figcaption><a href="">Богатая палитра ароматов</a></figcaption>
+						</figure>
 					</div>
 				</div>
 			</div>
@@ -232,16 +251,44 @@
 	<section id="sec-1" class="mb-5">
 		<div class="container">
 			<img src="img/bg/bg-1.svg" alt="" class="img-fluid d-block mx-auto">
-			<div class="row justify-content-center">
-				<div class="col-10">
-					<div class="d-flex justify-content-around align-items-center">
-						<div><img src="img/parfume/12.png" alt="Парфюм №12" class="img-fluid"></div>
-						<div><img src="img/parfume/11.png" alt="Парфюм №11" class="img-fluid"></div>
-						<div><img src="img/parfume/8.png" alt="Парфюм №8" class="img-fluid"></div>
-						<div><img src="img/parfume/1.png" alt="Парфюм №1" class="img-fluid"></div>
-						<div><img src="img/parfume/7.png" alt="Парфюм №7" class="img-fluid"></div>
-						<div><img src="img/parfume/6.png" alt="Парфюм №6" class="img-fluid"></div>
-						<div><img src="img/parfume/3.png" alt="Парфюм №3" class="img-fluid"></div>
+		</div>
+		<div class="swiper-parfume">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="parfume-color-1"></div>
+					<div class="container">
+						<div class="main-parfume">
+							<div><img src="img/parfume/1.png" alt="Парфюм №1" class="img-fluid"></div>
+							<div><img src="img/parfume/3.png" alt="Парфюм №3" class="img-fluid"></div>
+							<div><img src="img/parfume/1.png" alt="Парфюм №1" class="img-fluid"></div>
+							<div><img src="img/parfume/3.png" alt="Парфюм №3" class="img-fluid"></div>
+							<div><img src="img/parfume/1.png" alt="Парфюм №1" class="img-fluid"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="parfume-color-2"></div>
+					<div class="container">
+						<div class="main-parfume">
+							<div><img src="img/parfume/12.png" alt="Парфюм №12" class="img-fluid"></div>
+							<div><img src="img/parfume/11.png" alt="Парфюм №11" class="img-fluid"></div>
+							<div><img src="img/parfume/8.png" alt="Парфюм №8" class="img-fluid"></div>
+							<div><img src="img/parfume/7.png" alt="Парфюм №7" class="img-fluid"></div>
+							<div><img src="img/parfume/6.png" alt="Парфюм №6" class="img-fluid"></div>
+							<div><img src="img/parfume/8.png" alt="Парфюм №8" class="img-fluid"></div>
+							<div><img src="img/parfume/7.png" alt="Парфюм №7" class="img-fluid"></div>
+							<div><img src="img/parfume/6.png" alt="Парфюм №6" class="img-fluid"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="parfume-color-3"></div>
+					<div class="container">
+						<div class="main-parfume">
+							<div><img src="img/parfume/20.png" alt="Парфюм №20" class="img-fluid"></div>
+							<div><img src="img/parfume/20.png" alt="Парфюм №20" class="img-fluid"></div>
+							<div><img src="img/parfume/20.png" alt="Парфюм №20" class="img-fluid"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -506,8 +553,11 @@
 						<img src="img/img1.png" alt="" class="img-fluid">
 					</div>
 				</div>
-
-				<h2>Perfume that smells good and also makes you feel good...</h2>
+				
+				<div class="element-animation">
+					<h2>Perfume that smells good and also makes you feel good...</h2>
+				</div>
+				
 
 				<video controls poster="video/poster.png">
 					<source src="video/production ID_4154241.mp4" type="video/mp4">
@@ -517,7 +567,7 @@
 
 		<section id="sec-6" class="mb-6 py-5">
 			<div class="container py-4">
-				<div class="row justify-content-between">
+				<div class="row justify-content-between align-items-center">
 					<div class="col-4">
 						<h2 class="text-start">При покупке в нашем магазине</h2>
 						<hr>
@@ -700,7 +750,8 @@
 		<div class="ms-5">© Все права защищены. Parfe <span id="year"></span></div>
 	</div>
 
-	<nav id="nav-sticky" class="py-4">
+
+	<!-- <nav id="nav-sticky" class="py-4">
 		<div class="container d-flex justify-content-around">
 			<a href="index.html">
 				<img src="img/logo-mini.svg" alt="Parfe">
@@ -708,6 +759,31 @@
 			<button class="ms-4">
 				<img src="img/icons/gamburger.svg" alt="">
 			</button>
+			<nav>
+				<ul>
+					<li>
+						<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+							каталог
+							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+							</svg>
+						</a>
+					</li>
+					<li><a href="">Подбор аромата</a></li>
+					<li>
+						<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+							преимущества
+							<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+							</svg>
+						</a>
+					</li>
+					<li><a href="">о компании</a></li>
+					<li><a href="">подарки</a></li>
+					<li><a href="">Где купить</a></li>
+					<li><a href="">контакты</a></li>
+				</ul>
+			</nav>
 			<div class="d-flex align-items-center">
 				<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
 					<div class="count me-1">12</div>
@@ -723,9 +799,160 @@
 				</a>
 			</div>
 		</div>
-	</nav>
+		<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
+			<div class="row row-cols-3 gx-3">
+				<div class="type-1">
+					<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
+					<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div>
+							<a class="item">
+								<div class="felix">N° 1</div>
+								<div class="source itlc">unisex</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 2</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 3</div>
+								<div class="source itlc">unisex</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 4</div>
+								<div class="source itlc">unisex</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 5</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="type-2">
+					<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
+					<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div>
+							<a class="item">
+								<div class="felix">N° 6</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 7</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 8</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 9</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 10</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 11</div>
+								<div class="source itlc">unisex</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 12</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 21</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="type-3">
+					<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
+					<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-4">
+						<div>
+							<a class="item">
+								<div class="felix">N° 13</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 15</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+						<div>
+							<a class="item">
+								<div class="felix">N° 20</div>
+								<div class="source itlc">woman</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
+			<div class="row row-cols-5 gx-5">
+				<div>
+					<figure>
+						<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
+						<figcaption><a href="">Абсолютная стойкость на каждый день</a></figcaption>
+					</figure>
+				</div>
+				<div>
+					<figure>
+						<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
+						<figcaption><a href="">Компактный и практичный формат</a></figcaption>
+					</figure>
+				</div>
+				<div>
+					<figure>
+						<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
+						<figcaption><a href="">Натуральные ингредиенты — природные афродизиаки</a></figcaption>
+					</figure>
+				</div>
+				<div>
+					<figure>
+						<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
+						<figcaption><a href="">Не содержит спирта, только “сердце парфюма”</a></figcaption>
+					</figure>
+				</div>
+				<div>
+					<figure>
+						<img src="img/icons/adv5.svg" alt="Богатая палитра ароматов">
+						<figcaption><a href="">Богатая палитра ароматов</a></figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</nav> -->
 
 	<div id="shadow"></div>
+
+	<!-- <section></section> -->
 
 	<!-- Skripts -->
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>

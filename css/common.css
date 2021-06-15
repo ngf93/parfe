@@ -238,7 +238,10 @@ button:hover, button:focus, button:active {cursor: pointer;}
     transform: scaleX(1);
     transition: transform .1s ease-out;
 }
-.btn-fav {vertical-align: middle;}
+.btn-fav {
+    vertical-align: middle;
+    font-size: .8em;
+}
 .btn-fav[data-fav="false"]::before {
     content: url(../img/icons/favorite-2.svg);
 }

@@ -2,8 +2,69 @@ header {
     border-top: 4px solid var(--gold);
     background-color: var(--coolwhite);
     position: relative;
-    z-index: 100;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
 }
+header>div.container {
+    padding-top: 2em;
+}
+header.h-sticky {
+    box-shadow: 0px 2px 6px 0px var(--lightbrown);
+    border-top: none;
+}
+header.h-sticky>div.container {
+    padding: 1em 0;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.h-grid-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.h-grid-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.h-grid-3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.h-grid-4 {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-grid-5 {
+    display: none;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+header.h-sticky .header-grid {
+    grid-template-columns: 120px auto 250px;
+    grid-template-rows: repeat(1, 1fr);
+}
+header.h-sticky .header-grid .h-grid-1,
+header.h-sticky .header-grid .h-grid-2 {display: none;}
+header.h-sticky .header-grid .h-grid-4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+header.h-sticky .header-grid .h-grid-5 {
+    display: block;
+}
+header.h-sticky .cart-text {display: none;}
+
+
 .count {
     color: var(--coolwhite);
     background-color: var(--powder);
@@ -16,6 +77,7 @@ header {
     align-items: center;
     border-radius: 50%;
 }
+header nav {width: 100%;}
 header nav ul {
     list-style: none;
     display: flex;
@@ -29,6 +91,7 @@ header nav ul a {
     font-weight: 500;
     display: flex;
     align-items: center;
+    transition: .3s;
 }
 header nav ul a svg {
     width: 14px;
@@ -41,6 +104,7 @@ header nav ul a svg path {
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
+    transition: .3s;
 }
 header nav ul a:hover, header nav ul a:focus, header nav ul a:active {
     color: var(--powder);
@@ -50,6 +114,8 @@ header nav ul a:focus svg path,
 header nav ul a:active svg path {
     stroke: var(--powder);
 }
+
+
 
 .submenu {
     display: none;
@@ -126,17 +192,134 @@ header nav ul a:active svg path {
     color: var(--powder);
 }
 
-#submenu-advantages .item2 {
+#submenu-advantages figure {
+    margin-bottom: 1em;
+}
+#submenu-advantages figure img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+#submenu-advantages figure figcaption {
     font-family: 'Source Serif Pro', serif;
     font-style: italic;
     text-align: center;
 }
+#submenu-advantages figure figcaption a {transition: .3s;}
+#submenu-advantages figure figcaption a:hover,
+#submenu-advantages figure figcaption a:focus,
+#submenu-advantages figure figcaption a:active {
+    color: var(--powder);
+}
+
+
+
+#nav-sticky {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--coolwhite);
+    z-index: 1000;
+    box-shadow: 0px 2px 6px 0px var(--lightbrown);
+}
+#nav-sticky nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav-sticky nav ul a {
+    color: var(--lightgray);
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+#nav-sticky nav ul a svg {
+    width: 14px;
+    height: 8px;
+    margin-left: .5em;
+}
+#nav-sticky nav ul a svg path {
+    stroke: var(--lightgray);
+    stroke-width: 1.375px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: .3s;
+}
+#nav-sticky nav ul a:hover, 
+#nav-sticky nav ul a:focus, 
+#nav-sticky nav ul a:active {
+    color: var(--powder);
+}
+#nav-sticky nav ul a:hover svg path,
+#nav-sticky nav ul a:focus svg path, 
+#nav-sticky nav ul a:active svg path {
+    stroke: var(--powder);
+}
+
+
+#shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 20%);
+    opacity: 0;
+    z-index: -10;
+}
+
+
+
+
 
 
 /* section 1 */
-#sec-1 {
-    background-image: linear-gradient(to top, var(--color-6-12) 0px 150px, transparent 150px);
+.swiper-parfume {
+    position: relative;
+    overflow: hidden;
 }
+.swiper-parfume .swiper-slide {
+    position: relative;
+    opacity: 0 !important;
+}
+.swiper-parfume .swiper-slide-active {opacity: 1 !important;}
+.parfume-color-1, .parfume-color-2, .parfume-color-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 0;
+}
+.parfume-color-1 {
+    background-color: var(--color-1-5);
+}
+.parfume-color-2 {
+    background-color: var(--color-6-12);
+}
+.parfume-color-3 {
+    background-color: var(--color-13-20);
+}
+.main-parfume {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-parfume img {
+    height: 450px;
+}
+/* #sec-1 {
+    background-image: linear-gradient(to top, var(--color-6-12) 0px 150px, transparent 150px);
+} */
 
 
 /* section 2 */
@@ -213,6 +396,10 @@ header nav ul a:active svg path {
     background-image: linear-gradient(107.23deg, rgba(43, 43, 43, 0.8), transparent);
     background-size: cover;
 } */
+@media (max-width: 1399px){
+    .thumb img {height: 135px;}
+    .grass {padding: 7em 3em 4em;}
+}
 
 
 /* section 4 */
@@ -262,6 +449,9 @@ header nav ul a:active svg path {
 .old-price {
     color: var(--lightengray);
     text-decoration: line-through;
+}
+@media (max-width: 1399px){
+    .item .box .text {padding: 4em 2em 2em;}
 }
 
 
@@ -315,13 +505,9 @@ header nav ul a:active svg path {
 
 
 /* section 7 */
-.swiper-reviews {
-    overflow: hidden;
-}
+.swiper-reviews {overflow: hidden;}
 .swiper-reviews .swiper-button-prev:after,
-.swiper-reviews .swiper-button-next:after {
-    content:unset
-}
+.swiper-reviews .swiper-button-next:after {content:unset}
 .swiper-reviews .swiper-button-prev,
 .swiper-reviews .swiper-button-next {
     top: 25%;
@@ -359,8 +545,6 @@ header nav ul a:active svg path {
 .review>div::before {
     content: "";
     position: absolute;
-    /* top: 0;
-    left: 0; */
     right: 101%;
     bottom: 100%;
     width: 1.3em;
@@ -378,6 +562,22 @@ header nav ul a:active svg path {
     line-height: 1.2em;
     height: 8.4em;
 }
+@media (max-width: 1599px){
+    .swiper-reviews .swiper-button-prev,
+    .swiper-reviews .swiper-button-next {
+        top: unset;
+        bottom: 0;
+    }
+    .swiper-reviews .swiper-button-prev {
+        right: unset;
+        left: 0px;
+    }
+    .swiper-reviews .swiper-button-next {
+        left: unset;
+        right: 0px;
+    }
+}
+
 
 
 /* section 8 */
@@ -425,24 +625,20 @@ footer nav {
 }
 
 
-#nav-sticky {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--coolwhite);
-    z-index: 1000;
-    box-shadow: 0px 2px 6px 0px var(--lightbrown);
-}
-
-#shadow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0 0 0 / 29%);
+.element-animation {
+    overflow: hidden;
+    height: fit-content;
+    width: 0%;
     opacity: 0;
-    z-index: -10;
+    transform-origin: center left;
+    transition: width 2s cubic-bezier(.25, .8, .25, 1), opacity 2s cubic-bezier(.25, .8, .25, 1) .25s;
+}
+.element-animation h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.element-animation.element-show {
+    opacity: 1;
+    width: 100%;
 }
