@@ -32,6 +32,9 @@
 							<a href="">faq</a>
 						</div>
 						<div class="d-flex ms-4">
+							<a href="mailto:" class="round-icon me-3">
+								<img src="img/icons/e-mail.svg" alt="">
+							</a>
 							<a href="#" class="round-icon me-3">
 								<img src="img/icons/inst.svg" alt="">
 							</a>
@@ -49,15 +52,15 @@
 				<div class="h-grid-3">
 					<div class="d-flex align-items-center justify-content-end">
 						<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
-							<div class="count me-1">12</div>
+							<div class="count me-xl-1">12</div>
 							<img src="img/icons/shopping-cart.svg" alt="">
 							<span class="cart-text">корзина</span>
 						</a>
-						<a href="#" class="ms-4 d-flex align-items-center">
-							<div class="count me-1">29</div>
+						<a href="#" class="ms-3 ms-xl-4 d-flex align-items-center">
+							<div class="count me-xl-1">29</div>
 							<img src="img/icons/favorite.svg" alt="">
 						</a>
-						<a href="#" class="ms-3">
+						<a href="#" class="ms-2 ms-xl-3">
 							<img src="img/icons/user.svg" alt="">
 						</a>
 					</div>
@@ -94,13 +97,18 @@
 						<img src="img/logo-mini.svg" alt="Parfe">
 					</a>
 				</div>
+				<div class="h-grid-6">
+					<button type="button" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+						<img src="img/icons/gamburger.svg" alt="Меню">
+					</button>
+				</div>
 			</div>
 
 			<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
 				<div class="row row-cols-3 gx-3">
 					<div class="type-1">
 						<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 1</div>
@@ -135,7 +143,7 @@
 					</div>
 					<div class="type-2">
 						<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 6</div>
@@ -188,7 +196,7 @@
 					</div>
 					<div class="type-3">
 						<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
-						<div class="row row-cols-4 justify-content-center gx-3 gy-3 px-xxl-4">
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
 							<div>
 								<a class="item">
 									<div class="felix">N° 13</div>
@@ -212,7 +220,7 @@
 				</div>
 			</div>
 			<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
-				<div class="row row-cols-5 gx-5">
+				<div class="row row-cols-6 gx-3 gx-xl-4">
 					<div>
 						<figure>
 							<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
@@ -241,6 +249,12 @@
 						<figure>
 							<img src="img/icons/adv5.svg" alt="Богатая палитра ароматов">
 							<figcaption><a href="">Богатая палитра ароматов</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv6.svg" alt="Не испытывается на животных">
+							<figcaption><a href="">Не испытывается на животных</a></figcaption>
 						</figure>
 					</div>
 				</div>
@@ -300,7 +314,7 @@
 			<div class="container">
 				<h2>О компании</h2>
 				<div class="row justify-content-center">
-					<div class="col-6 text-center">
+					<div class="col-md-8 col-lg-7 col-xl-6 text-center">
 						<p class="f_12">История бренда началась на юго-востоке Франции. А именно в парфюмерной столице мира — в знаменитом городе Grasse. Компании принадлежит одна из лучших фабрик региона, оборудованная по европейским стандартам. Именно здесь с 1971 года изготавливают качественные эфирные масла и сырьё для парфюмерии. Создатели бренда используют своё сырьё и выпускают парфюмы на собственной фабрике, сокращая издержки производства. Вот почему ароматы Parfé по ценам на порядок ниже и духов, и эссенций, созданных известными парфюмерными Домами.</p>
 						<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
 					</div>
@@ -310,12 +324,20 @@
 
 		<section id="sec-3" class="mb-6">
 			<div class="container">
-				<div class="row">
-					<div class="col-8">
+				<div class="row flex-lg-row-reverse">
+					<div class="col-lg-4 mb-3 mb-lg-0">
+						<div class="grass">
+							<img src="img/img3.png" alt="" class="img-fluid d-block mx-auto">
+							<h3>Грас, Франция</h3>
+							<div class="text-uppercase f_11 fw_5 ls-1 mb-4">Родина <span class="brandon ls-3">Parfé</span></div>
+							<p>Здесь разместим несколько строк о Грасе. Противоположная точка зрения подразумевает, что сделанные на базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.</p>
+						</div>
+					</div>
+					<div class="col-lg-8">
 						<div class="swiper-main mb-3">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<div class="row row-cols-2 g-0">
+									<div class="row row-cols-sm-2 g-0">
 										<div class="text">
 											<h3>1.Не содержит спирта</h3>
 											<p>Parfe не содержат спирта и воды: это чистый парфюм. Всего 10 мл такого парфюма приравнивается к 100 мл обычных духов, на 85% состоящих из спирта, который искажает аромат, быстро испаряется в воздухе и практически не задерживается на коже.</p>
@@ -327,7 +349,7 @@
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="row row-cols-2 g-0">
+									<div class="row row-cols-sm-2 g-0">
 										<div class="text">
 											<h3>2.Второй пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
@@ -339,7 +361,7 @@
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="row row-cols-2 g-0">
+									<div class="row row-cols-sm-2 g-0">
 										<div class="text">
 											<h3>3.Третий пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
@@ -351,7 +373,7 @@
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="row row-cols-2 g-0">
+									<div class="row row-cols-sm-2 g-0">
 										<div class="text">
 											<h3>4.Четвертый пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
@@ -363,7 +385,7 @@
 									</div>
 								</div>
 								<div class="swiper-slide">
-									<div class="row row-cols-2 g-0">
+									<div class="row row-cols-sm-2 g-0">
 										<div class="text">
 											<h3>5.Пятый пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
@@ -427,14 +449,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-4">
-						<div class="grass">
-							<img src="img/img3.png" alt="" class="img-fluid d-block mx-auto">
-							<h3>Грас, Франция</h3>
-							<div class="text-uppercase f_11 fw_5 ls-1 mb-4">Родина <span class="brandon ls-3">Parfé</span></div>
-							<p>Здесь разместим несколько строк о Грасе. Противоположная точка зрения подразумевает, что сделанные на базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.</p>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -442,7 +457,7 @@
 		<section id="sec-4" class="mb-6">
 			<div class="container">
 				<h2>Популярные ароматы</h2>
-				<div class="row row-cols-4 g-4">
+				<div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
 					<div>
 						<div class="item">
 							<div class="box">
@@ -515,7 +530,7 @@
 					<div>
 						<div class="item">
 							<div class="box">
-								<img src="img/parfume/20.jpg" alt="">
+								<img src="img/parfume/20.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
 									<button onclick="fav(this)" class="btn_main btn_1 w-100 mt-4 btn-fav" data-fav="false"></button>
@@ -541,7 +556,7 @@
 
 		<section id="sec-5" class="mb-6">
 			<div class="container">
-				<div class="row row-cols-2 mb-6">
+				<div class="row row-cols-md-2 mb-6">
 					<div>
 						<h2>Как наносить ароматы</h2>
 						<p class="f_12 gray itlc">Чтобы благоухать, достаточно нанести всего каплю парфюма на каждую точку пульса — за мочку уха, на запястье, сгиб локтя, шею в районе межключичной впадины и под колено. В этих местах кожа имеет самую высокую температуру, а значит, запах будет быстро распространяться по воздуху. Желательно наносить на чистую, слегка влажную кожу. Аромат парфюма максимально впитывается именно во влажную кожу.</p>
@@ -549,7 +564,7 @@
 							<a href="" class="btn_main btn_2">Каталог ароматов</a>
 						</div>
 					</div>
-					<div>
+					<div class="mt-4 mt-md-0">
 						<img src="img/img1.png" alt="" class="img-fluid">
 					</div>
 				</div>
@@ -565,14 +580,14 @@
 			</div>
 		</section>
 
-		<section id="sec-6" class="mb-6 py-5">
-			<div class="container py-4">
+		<section id="sec-6" class="mb-6 py-4 py-sm-5">
+			<div class="container py-xl-4">
 				<div class="row justify-content-between align-items-center">
-					<div class="col-4">
+					<div class="col-md-4">
 						<h2 class="text-start">При покупке в нашем магазине</h2>
-						<hr>
+						<hr class="d-none d-md-block">
 					</div>
-					<div class="col-7">
+					<div class="col-md-8 col-xl-7">
 						<ol class="f_15">
 							<li>Бесплатная доставка при покупке от 2-х ароматов </li>
 							<li>Подарочная упаковка (по желанию)</li>
@@ -641,10 +656,10 @@
 			</div>
 		</section>
 
-		<section id="sec-8" class="mb-6 py-5">
+		<section id="sec-8" class="mb-6 py-4 py-sm-5">
 			<div class="container">
 				<h2>Инстаграм</h2>
-				<div class="row row-cols-3 g-4 mb-4 img-preview-box">
+				<div class="row row-cols-3 g-2 g-sm-4 mb-4 img-preview-box">
 					<div>
 						<img src="img/inst/i1.jpg" alt="" class="photo">
 					</div>
@@ -658,19 +673,19 @@
 			</div>
 		</section>
 
-		<section id="sec-9" class="mb-6 py-5">
+		<section id="sec-9" class="mb-6 py-xl-5">
 			<div class="container">
 				<div class="row gx-0">
-					<div class="col-4">
+					<div class="d-none d-md-block col-4">
 						<img src="img/img2.jpg" alt="" class="img-fluid">
 					</div>
-					<div class="col-8">
+					<div class="col-md-8">
 						<form action="">
-							<h2 class="text-start">Подпишитесь на нас</h2>
-							<div class="f_12 mb-5">Узнавайте наши новости первыми</div>
-							<div class="d-flex">
+							<h2 class="text-start mb-3 mb-lg-4">Подпишитесь на нас</h2>
+							<div class="f_12 mb-3 mb-lg-5">Узнавайте наши новости первыми</div>
+							<div class="d-flex flex-column flex-sm-row">
 								<input type="text" placeholder="Ваш Email" required>
-								<button class="btn_main btn_1 ms-2">Подписаться</button>
+								<button class="btn_main btn_1 ms-sm-2 mt-2 mt-sm-0">Подписаться</button>
 							</div>
 						</form>
 					</div>
@@ -679,9 +694,9 @@
 		</section>
 
 		<footer>
-			<div class="container py-5">
-				<div class="row mb-5">
-					<div class="col-4">
+			<div class="container py-4 py-md-5">
+				<div class="row mb-md-5">
+					<div class="d-none d-md-block col-4">
 						<div class="lightgray mb-3">Добро пожаловать:</div>
 						<div class="d-flex">
 							<a href="#" class="round-icon me-3">
@@ -692,23 +707,23 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-md-4">
 						<a href="index.html">
 							<img src="img/logo.svg" alt="" class="d-block mx-auto">
 						</a>
 					</div>
-					<div class="col-4 text-end">
+					<div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
 						<div class="lightgray mb-3">Платежные системы:</div>
-						<div class="d-flex justify-content-end">
-							<img src="img/icons/visa.jpg" class="ms-3">
-							<img src="img/icons/mastercard.jpg" class="ms-3">
-							<img src="img/icons/paypal.jpg" class="ms-3">
-							<img src="img/icons/payoneer.jpg" class="ms-3">
+						<div class="d-flex justify-content-center justify-content-md-end">
+							<img src="img/icons/visa.jpg">
+							<img src="img/icons/mastercard.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/paypal.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/payoneer.jpg" class="ms-1 ms-lg-3">
 						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center mb-5">
-					<div class="col-6">
+				<div class="d-none d-md-flex row justify-content-center mb-5">
+					<div class="col-md-8 col-lg-7 col-xl-6">
 						<nav>
 							<a href="">О нас в прессе</a>
 							<a href="">Каталог ароматов</a>
@@ -717,7 +732,7 @@
 						</nav>
 					</div>
 				</div>
-				<div class="row justify-content-center mb-4 lightgray">
+				<div class="d-none d-md-flex row justify-content-center mb-lg-4 lightgray">
 					<div class="col-xl-10 col-xxl-8">
 						<div class="row">
 							<div class="col-3">
@@ -747,7 +762,7 @@
 
 	<div class="container d-flex flex-column flex-sm-row justify-content-center align-items-center pt-3 pb-5 gray">
 		<div><a href="#">Политика конфиденциальности</a></div>
-		<div class="ms-5">© Все права защищены. Parfe <span id="year"></span></div>
+		<div class="ms-sm-5 mt-3 mt-sm-0">© Все права защищены. Parfe <span id="year"></span></div>
 	</div>
 
 
@@ -952,7 +967,54 @@
 
 	<div id="shadow"></div>
 
-	<!-- <section></section> -->
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu">
+		<div class="offcanvas-body">
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">✕</button>
+			<div class="offcanvas-box p-4 p-sm-5">
+				<div class="d-flex f_09 text-uppercase lightengray d-md-none mb-5">
+					<a href="" class="lightgray me-2">ru</a>
+					<a href="" class="me-2">en</a>
+					<a href="" class="me-2">fr</a>
+					<span class="me-2">|</span>
+					<a href="">faq</a>
+				</div>
+				<nav class="mb-5 mb-md-0">
+					<ul>
+						<li><a href="">каталог</a></li>
+						<li><a href="">Подбор аромата</a></li>
+						<li><a href="">преимущества</a></li>
+						<li><a href="">о компании</a></li>
+						<li><a href="">подарки</a></li>
+						<li><a href="">Где купить</a></li>
+						<li><a href="">контакты</a></li>
+						<li><a href="">О нас в прессе</a></li>
+						<li><a href="">Каталог ароматов</a></li>
+						<li><a href="">О компании</a></li>
+						<li><a href="">FAQ</a></li>
+					</ul>
+				</nav>
+				<div class="d-flex d-md-none mb-4">
+					<a href="mailto:" class="round-icon me-3">
+						<img src="img/icons/e-mail.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/inst.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/fb.svg" alt="">
+					</a>
+				</div>
+				<div class="d-flex mb-3">
+					<img src="img/icons/phone.svg" alt="" class="icon me-2">
+					<a href="tel:+79035940366">+ 7 (903) 594-03-66</a>
+				</div>
+				<div class="d-flex">
+					<img src="img/icons/address.svg" alt="" class="icon me-2">
+					<span class="text-start">125047, Москва, ул. Фадеева, дом № 7, строение 1, офис 2</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Skripts -->
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
