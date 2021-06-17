@@ -96,13 +96,15 @@ window.onload = function() {
 
 
 
-// let myModal = new bootstrap.Modal(document.getElementById('myModal'), options);
-// myModal.show();
+window.onload = function() {
+  function popup(){
+    let myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+      keyboard: false
+    });
+    myModal.show();
+  }
+  
+  let popup_delay = 1000*60*1; // 1 минута
 
-// window.onload = dosomething();
-// function dosomething(){
-//   window.alert('hello');
-// }
-// window.onload = function() {
-//   alert(document.getElementById('foo').value);
-// }
+  setTimeout(popup, popup_delay);
+}

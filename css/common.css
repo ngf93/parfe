@@ -309,6 +309,7 @@ h4 {
 .lightgray {color: var(--lightgray);}
 .lightengray {color: var(--lightengray);}
 .powder {color: var(--powder);}
+.gold {color: var(--gold);}
 
 .fw_1 {font-weight: 100;} /* thin */
 .fw_2 {font-weight: 200;} /* extra-light */
