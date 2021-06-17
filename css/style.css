@@ -127,6 +127,11 @@ header nav ul a:active svg path {
     stroke: var(--powder);
 }
 
+#btn-menu {
+    pointer-events: none;
+    cursor: default;
+}
+
 .submenu {
     display: none;
     position: absolute;
@@ -229,6 +234,10 @@ header nav ul a:active svg path {
     .submenu {padding: 1em 2em;}
 }
 @media (max-width: 991px){
+    #btn-menu {
+        pointer-events: auto;
+        cursor: pointer;
+    }
     .header-grid, header.h-sticky .header-grid {
         grid-template-columns: 120px 60px auto auto;
         grid-template-rows: repeat(1, 1fr);
