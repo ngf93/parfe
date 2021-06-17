@@ -78,23 +78,6 @@ function play_video(cover){
   video.setAttribute('src', src + '?autoplay=1');
 }
 
-window.onload = function() {
-  function onEntry(entry) {
-    entry.forEach(change => {
-      if (change.isIntersecting) {
-        change.target.classList.add('element-show');
-      }
-    });
-  }
-  let options = { threshold: [0.5] };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.element-animation');
-  for (let elm of elements) {
-    observer.observe(elm);
-  }
-}
-
-
 
 window.onload = function() {
   function popup(){
@@ -104,7 +87,22 @@ window.onload = function() {
     myModal.show();
   }
   
-  let popup_delay = 1000*60*1; // 1 минута
+  let popup_delay = 1000*1*1; // 1 минута
 
   setTimeout(popup, popup_delay);
+}
+
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+for (let elm of elements) {
+  observer.observe(elm);
 }

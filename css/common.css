@@ -37,7 +37,7 @@ body {
     body {font-size: 14px;}
 }
 @media (max-width: 575px){
-    body {font-size: 13px;}
+    body {font-size: 12px;}
 }
 
 
@@ -89,91 +89,6 @@ input, textarea, select {
     box-shadow: unset;
 }
 
-/* SELECT simple */
-select {
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    background-image: url(../images/icons/caret_down.png);
-    background-repeat: no-repeat;
-    background-position: 95% 50%;
-    background-size: auto 30%;
-    position: relative;
-}
-select::-ms-expand { /* for IE 11 */display: none;}
-select:hover {cursor: pointer;}
-
-/* checkbox customization */
-.checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.checkbox input[type="checkbox"] {
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    box-shadow: none;
-    border: 2px solid var(--color-2);
-    border-radius: 0;
-    height: 1em;
-    min-height: unset;
-    width: 1em;
-    position: relative;
-    box-sizing: content-box;
-    margin-right: .25em;
-}
-.checkbox input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: .4em;
-    height: .9em;
-    border: 0 solid var(--color-1);
-    border-width: 0 2px 2px 0;
-    transform: rotateZ(45deg);
-    -webkit-transform: rotateZ(45deg);
-    margin: .15em .3em;
-}
-.checkbox label {flex: 1;}
-
-/* radiobutton customization */
-.radio {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.radio input[type="radio"] {
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    box-shadow: none;
-    border: 2px solid var(--color-2);
-    border-radius: 50%;
-    height: 1em;
-    width: 1em;
-    position: relative;
-    box-sizing: content-box;
-    margin-right: .25em;
-}
-.radio input[type="radio"]:checked::after {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    background-color: var(--color-1);
-    border-radius: 50%;
-}
-.radio label {flex: 1;}
-
-
 
 /* кнопки */
 button {
@@ -217,7 +132,6 @@ button:hover, button:focus, button:active {cursor: pointer;}
 }
 .btn_2 {
     position: relative;
-    /* border-bottom: 1px solid var(--powder); */
 }
 .btn_2::after {
     content: "";
@@ -257,6 +171,10 @@ button:hover, button:focus, button:active {cursor: pointer;}
     margin-left: .5em;
 }
 
+@media (max-width: 575px){
+    .btn_main {padding: .8em 1em;} 
+}
+
 
 /* TEXT STYLIZATION */
 h1, h2, h3, h4 {
@@ -280,7 +198,14 @@ h4 {
     h2 {font-size: 2.5em;}
     h3 {font-size: 2em;}
 }
+@media (max-width: 991px){
+    h1, h2, h3, h4 {margin-bottom: .7em;}
+}
+@media (max-width: 767px){
+    h1, h2, h3, h4 {margin-bottom: .8em;}
+}
 @media (max-width: 575px){
+    h1, h2, h3, h4 {margin-bottom: 1em;}
     h1 {font-size: 1.6em;}
     h2 {font-size: 2em;}
     h3 {font-size: 1.8em;}

@@ -579,9 +579,6 @@ header nav ul a:active svg path {
     color: var(--lightengray);
     text-decoration: line-through;
 }
-/* @media (max-width: 1399px){
-    .item .box .text {padding: 4em 2em 2em;}
-} */
 @media (max-width: 1199px){
     .item .box img {height: 250px;}
     .item .box .sticker {
@@ -591,13 +588,26 @@ header nav ul a:active svg path {
     .item .box .text {padding: 3em 1em 1em;}
 }
 @media (max-width: 575px){
-    .item .box img {height: 90vw;}
+    .item .box {padding: .5em;}
+    .item .box img {height: 45vw;}
+    .item .box .sticker {
+        width: 55px;
+        height: 40px;
+    }
+    .item .btn_main img {
+        width: 1.5em;
+    }
+    .item .box .text {
+        padding: 3em 0em 0em;
+        font-size: 10px;
+    }
 }
 
 
 /* section 5 */
 #sec-5 svg {
     width: 100%;
+    height: auto;
 }
 
 .element-animation {
@@ -673,10 +683,6 @@ header nav ul a:active svg path {
 #play:hover::after {transform: scale(1.5);}
 #play:hover img {transform: scale(1.3);}
 
-
-
-
-
 #sec-5 video {
     width: 100%;
     height: 600px;
@@ -685,23 +691,19 @@ header nav ul a:active svg path {
 #sec-5 video:-ms-fullscreen,
 #sec-5 video:-moz-full-screen,
 #sec-5 video:-webkit-full-screen,
-#sec-5 video:fullscreen {
-    object-fit: contain;
-}
-/* @media (max-width: 1399px){
-    #sec-5 video {height: 600px;}
-} */
+#sec-5 video:fullscreen {object-fit: contain;}
+
 @media (max-width: 1199px){
-    #sec-5 video {height: 550px;}
+    .video-box, #sec-5 video {height: 550px;}
 }
 @media (max-width: 991px){
-    #sec-5 video {height: 450px;}
+    .video-box, #sec-5 video {height: 450px;}
 }
 @media (max-width: 767px){
-    #sec-5 video {height: 300px;}
+    .video-box, #sec-5 video {height: 300px;}
 }
 @media (max-width: 575px){
-    #sec-5 video {height: 65vw;}
+    .video-box, #sec-5 video {height: 65vw;}
 }
 
 
