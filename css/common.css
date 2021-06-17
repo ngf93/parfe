@@ -372,3 +372,10 @@ img.icon {
 .color-1-5 {background-color: var(--color-1-5);}
 .color-6-12 {background-color: var(--color-6-12);}
 .color-13-20 {background-color: var(--color-13-20);}
+
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+    }
+}
