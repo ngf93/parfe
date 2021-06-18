@@ -86,12 +86,9 @@ window.onload = function() {
     });
     myModal.show();
   }
-  
-  let popup_delay = 1000*1*1; // 1 минута
-
+  let popup_delay = 1000*60*1; // 1 минута
   setTimeout(popup, popup_delay);
 }
-
 
 function onEntry(entry) {
   entry.forEach(change => {
@@ -105,4 +102,28 @@ let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.element-animation');
 for (let elm of elements) {
   observer.observe(elm);
+}
+
+/* password button state change */
+function change_state(btn) {
+  if(btn.dataset.state == 'invisible'){
+    btn.previousElementSibling.setAttribute('type', 'text');
+    btn.dataset.state = 'visible';
+  } else {
+    btn.previousElementSibling.setAttribute('type', 'password');
+    btn.dataset.state = 'invisible';
+  }
+}
+
+/* swap 'entrance' & 'registration' forms */
+function swap_form(form) {
+  let parent_el = form.closest('.change-forms');
+  if(form.classList.contains('entrance') == true){
+    parent_el.querySelector('form.registration').classList.remove('d-none');
+  } else if(form.classList.contains('registration') == true){
+    parent_el.querySelector('form.entrance').classList.remove('d-none');
+  } else {
+    alert('произошла ошибка');
+  }
+  form.classList.add('d-none');
 }

@@ -79,7 +79,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
-input, textarea, select {
+input, textarea {
     border: 1px solid var(--gold);
     background-color: var(--coolwhite);
     border-radius: 0;
@@ -88,6 +88,8 @@ input, textarea, select {
     line-height: 1.1em;
     box-shadow: unset;
 }
+.b-lgray {border: 1px solid var(--lightengray);}
+input:focus, textarea:focus {border: 1px solid var(--gold);}
 
 
 /* кнопки */
@@ -272,7 +274,7 @@ main>section {
 
 .mb-6 {margin-bottom: 6em;}
 @media (max-width: 575px){
-    .mb-6 {margin-bottom: 3em;}
+    .mb-6 {margin-bottom: 4em;}
 }
 
 

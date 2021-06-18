@@ -275,7 +275,7 @@ header nav ul a:active svg path {
 }
 @media (max-width: 575px){
     header.h-sticky {padding: 0 12px;}
-    .header-grid, header.h-sticky .header-grid {grid-template-columns: 100px 60px auto auto;}
+    .header-grid, header.h-sticky .header-grid {grid-template-columns: 100px 45px auto auto;}
 }
 
 
@@ -997,11 +997,38 @@ footer nav {
 .modal-body .box {
     background: url(../img/bg/bg-3.png) no-repeat center var(--coolwhite);
     background-size: 100% 100%;
-    padding: 3em;
+    padding: 2.5em 3em;
 }
 
+.password {
+    position: relative;
+}
+.password input {position: relative;}
+.password button {
+  position: absolute;
+  bottom: .75em;
+  right: 1em;
+  width: 1.25em;
+  height: 1.25em;
+  display: flex;
+}
+.password button[data-state="invisible"] {
+  background: url(../img/icons/eye_closed.svg) no-repeat center;
+  background-size: contain;
+}
+.password button[data-state="visible"] {
+  background: url(../img/icons/eye_open.svg) no-repeat center;
+  background-size: contain;
+}
+.password button img {width: 100%;}
+
 @media (min-width: 768px){
-    .modal-dialog {
-        max-width: 750px;
+    .modal-dialog {max-width: 750px;}
+}
+@media (max-width: 767px){
+    .btn-close {
+        top: .2em;
+        right: .2em;
     }
+    .modal-body, .modal-body .box {padding: 2em;}
 }
