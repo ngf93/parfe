@@ -54,4 +54,19 @@ const swiper4 = new Swiper('.swiper-parfume', {
   }
 });
 
+const swiper5 = new Swiper('.swiper-1', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 const myViewer = new ImgPreviewer('.img-preview-box');

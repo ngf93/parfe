@@ -261,14 +261,18 @@ main {
     margin: 0px auto;
     background-color: var(--coolwhite);
     position: relative;
-    border: 1px solid var(--gold);
+    /* border: 1px solid var(--gold); */
+    padding-top: 3em;
 }
 main>section {
     position: relative;
     z-index: 2;
 }
 @media (max-width: 575px){
-    main {width: calc(100% - 24px);}
+    main {
+        width: calc(100% - 24px);
+        padding-top: 2em;
+    }
 }
 
 
