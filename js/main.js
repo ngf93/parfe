@@ -127,3 +127,15 @@ function swap_form(form) {
   }
   form.classList.add('d-none');
 }
+
+window.onload = function() {
+  document.getElementById('btn-filter-toggle').onclick = function() {
+    if (this.dataset.state == 'closed'){
+      this.nextElementSibling.style.display = 'block';
+      this.dataset.state = 'opened';
+    } else {
+      this.nextElementSibling.style.display = 'none';
+      this.dataset.state = 'closed';
+    } 
+  };
+}

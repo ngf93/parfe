@@ -91,6 +91,44 @@ input, textarea {
 .b-lgray {border: 1px solid var(--lightengray);}
 input:focus, textarea:focus {border: 1px solid var(--gold);}
 
+.radio, .checkbox {position: relative;}
+.radio input, .checkbox input {
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.radio label, .checkbox label {
+    position: relative;
+    z-index: 1;
+    color: var(--gray);
+}
+.radio input:checked ~ label {
+    color: var(--powder);
+}
+.checkbox label {
+    display: flex;
+    align-items: flex-start;
+}
+.checkbox label::before {
+    content: url(../img/icons/checkbox.svg);
+    margin-right: .5em;
+    width: 18px;
+    height: 18px;
+}
+.checkbox input:checked ~ label::before {
+    content: url(../img/icons/checkbox-checked.svg);
+    margin-right: .5em;
+}
+
 
 /* кнопки */
 button {
@@ -132,9 +170,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
     border: 1px solid  #C9AF96;
     box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
-.btn_2 {
-    position: relative;
-}
+.btn_2 {position: relative;}
 .btn_2::after {
     content: "";
     position: absolute;
@@ -146,20 +182,39 @@ button:hover, button:focus, button:active {cursor: pointer;}
     transform: scaleX(1);
     transition: transform .4s ease-out;
 }
-.btn_2:hover::after, .btn_2:focus::after {
-    transform: scaleX(0);
-}
+.btn_2:hover::after, .btn_2:focus::after {transform: scaleX(0);}
 .btn_2:active::after {
     background-color: var(--darkpowder);
     transform: scaleX(1);
     transition: transform .1s ease-out;
 }
+.btn_3 {
+    color: var(--gray);
+    background-color: transparent;
+    border: 1px solid var(--powder);
+}
+.btn_3:hover, .btn_3:focus {
+    color: var(--coolwhite);
+    background-color: #D7AF87;
+    border: 1px solid #D7AF87;
+}
+.btn_3:active {
+    color: var(--coolwhite);
+    background-color: #C9AF96;
+    border: 1px solid  #C9AF96;
+    box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
+}
+
 .btn-fav {
     vertical-align: middle;
     font-size: .8em;
 }
+.btn-fav.fav-2 {font-size: .9em;}
 .btn-fav[data-fav="false"]::before {
     content: url(../img/icons/favorite-2.svg);
+}
+.btn-fav.fav-2[data-fav="false"]::before {
+    content: url(../img/icons/favorite-3.svg);
 }
 .btn-fav[data-fav="false"]::after {
     content: "В избранное";
@@ -167,6 +222,9 @@ button:hover, button:focus, button:active {cursor: pointer;}
 }
 .btn-fav[data-fav="true"]::before {
     content: url(../img/icons/favorite-2-full.svg);
+}
+.btn-fav.fav-2[data-fav="true"]::before {
+    content: url(../img/icons/favorite-3-full.svg);
 }
 .btn-fav[data-fav="true"]::after {
     content: "В избранном";
@@ -217,6 +275,7 @@ h4 {
 .brandon {font-family: 'Brandon Grotesque';}
 .source {font-family: 'Source Serif Pro', serif;}
 .pt {font-family: 'PT Sans', sans-serif;}
+.lato {font-family: 'Lato';}
 
 .f_08 {font-size: .8em;}
 .f_09 {font-size: .9em;}
@@ -252,7 +311,8 @@ h4 {
 .norm {font-style: normal;}
 
 .ls-1 {letter-spacing: 1px;}
-.ls-3 {letter-spacing: 3px;}
+.ls-3 {letter-spacing: .3em;}
+/* .ls-10 {letter-spacing: 10px;} */
 
 
 

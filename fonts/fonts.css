@@ -34,3 +34,9 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: local('Brandon Grotesque'), local('BrandonGrotesque'), url('BrandonGrotesque-Regular.woff') format('woff'), url('BrandonGrotesque-Regular.ttf') format('truetype'), url("BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype");
+    font-weight: 400;
+    font-style: normal;
+}

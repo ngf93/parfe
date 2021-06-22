@@ -69,4 +69,18 @@ const swiper5 = new Swiper('.swiper-1', {
   },
 });
 
+const swiper6 = new Swiper('.swiper-product-thumbs', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 14,
+});
+const swiper7 = new Swiper('.swiper-product-main', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  thumbs: {
+    swiper: swiper6,
+  }
+});
+
 const myViewer = new ImgPreviewer('.img-preview-box');

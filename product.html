@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Товар</title>
+	<link rel="shortcut icon" href="" type="image/png">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/img-previewer.css" />
+
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<link rel="stylesheet" href="fonts/fonts.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="container position-relative">
+			<div class="header-grid">
+				<div class="h-grid-1">
+					<div class="d-flex align-items-center">
+						<div class="d-flex f_09 text-uppercase lightengray">
+							<a href="" class="lightgray me-2">ru</a>
+							<a href="" class="me-2">en</a>
+							<a href="" class="me-2">fr</a>
+							<span class="me-2">|</span>
+							<a href="">faq</a>
+						</div>
+						<div class="d-flex ms-4">
+							<a href="mailto:" class="round-icon me-3">
+								<img src="img/icons/e-mail.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/inst.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="h-grid-2">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="" class="d-block mx-auto">
+					</a>
+				</div>
+				<div class="h-grid-3">
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
+							<div class="count me-xl-1">12</div>
+							<img src="img/icons/shopping-cart.svg" alt="">
+							<span class="cart-text">корзина</span>
+						</a>
+						<a href="#" class="ms-3 ms-xl-4 d-flex align-items-center">
+							<div class="count me-xl-1">29</div>
+							<img src="img/icons/favorite.svg" alt="">
+						</a>
+						<a href="#" class="ms-2 ms-xl-3">
+							<img src="img/icons/user.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="h-grid-4">
+					<nav>
+						<ul>
+							<li>
+								<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+									каталог
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">Подбор аромата</a></li>
+							<li>
+								<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+									преимущества
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">о компании</a></li>
+							<li><a href="">подарки</a></li>
+							<li><a href="">Где купить</a></li>
+							<li><a href="">контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="h-grid-5">
+					<a href="index.html">
+						<img src="img/logo-mini.svg" alt="Parfe">
+					</a>
+				</div>
+				<div class="h-grid-6">
+					<button type="button" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+						<img src="img/icons/gamburger.svg" alt="Меню">
+					</button>
+				</div>
+			</div>
+
+			<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-3 gx-3">
+					<div class="type-1">
+						<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 2</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 3</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 4</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 5</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-2">
+						<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 6</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 7</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 8</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 9</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 10</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 11</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 12</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 21</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-3">
+						<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 13</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 15</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 20</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-6 gx-3 gx-xl-4">
+					<div>
+						<figure>
+							<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
+							<figcaption><a href="">Абсолютная стойкость на каждый день</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
+							<figcaption><a href="">Компактный и практичный формат</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
+							<figcaption><a href="">Натуральные ингредиенты — природные афродизиаки</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
+							<figcaption><a href="">Не содержит спирта, только “сердце парфюма”</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv5.svg" alt="Богатая палитра ароматов">
+							<figcaption><a href="">Богатая палитра ароматов</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv6.svg" alt="Не испытывается на животных">
+							<figcaption><a href="">Не испытывается на животных</a></figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section id="sec-10" class="mb-6">
+			<div class="container">
+				<div class="product-cover">
+					<img src="img/img6.jpg" alt="">
+					<div class="text"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="sec-14" class="mb-6">
+			<div class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+						<li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+						<li class="breadcrumb-item"><a href="categorie.html">Древесные/Шипровые/Цветочные</a></li>
+						<li class="breadcrumb-item"><a href="product.html">Parfé №3</a></li>
+					</ol>
+				</nav>
+				<div class="product-card row">
+					<div class="col-7">
+						<div class="swiper-product-main">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="img/parfume/3.png" alt="Parfé №3" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/parfume/3-2.jpg" alt="Parfé №3" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/parfume/3-3.jpg" alt="Parfé №3" class="img-fluid">
+								</div>
+							</div>
+						</div>
+						<div class="swiper-product-thumbs mt-4">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="img/parfume/3.png" alt="Parfé №3" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/parfume/3-2.jpg" alt="Parfé №3" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="img/parfume/3-3.jpg" alt="Parfé №3" class="img-fluid">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-5">
+						<h2 class="text-start brandon fw_5 powder norm text-uppercase"><span class="ls-3">Parfé</span> <span class="pt ms-3">№</span><span class="ms-1">3</span></h2>
+						<div class="lightgray mb-5">
+							<p>Стремительный и яркий аромат ветивера приятно уравновешивается элегантными нотами ореха и бобов тонка. Чистые зелёные акценты бергамота придают композиции свежесть и оттеняют лёгкую сладость фундука с еле уловимым карамельным оттенком.</p>
+						</div>
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-notes" type="button" role="tab" aria-selected="true">Ингредиенты</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-properties" type="button" role="tab" aria-selected="false">Свойства</button>
+							</li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content mb-5">
+							<div class="tab-pane active" id="tab-notes" role="tabpanel">
+								<ul class="list">
+									<li>Категория аромата: древесный, шипровый;</li>
+									<li>Верхние ноты: ветивер, бергамот;</li>
+									<li>Ноты сердца: лесной орех, ландыш, карамель;</li>
+									<li>Ноты базы: бобы тонка, сандал.</li>
+								</ul>
+							</div>
+							<div class="tab-pane" id="tab-properties" role="tabpanel">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolore, alias eaque totam natus deleniti odit, voluptatum nemo quia iste atque tempore suscipit quaerat praesentium modi provident eius hic reprehenderit!</p>
+							</div>
+						</div>
+
+						<div class="row row-cols-2 gx-3 pt-4">
+							<div>
+								<button type="button" class="btn_main btn_1 w-100">
+									<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+									В корзину
+								</button>
+							</div>
+							<div>
+								<button type="button" onclick="fav(this)" class="btn_main btn_3  w-100 btn-fav fav-2 h-100" data-fav="false"></button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="sec-13" class="mb-6 py-5">
+			<div class="container pt-4 pb-5">
+				<h2>Похожие ароматы</h2>
+				<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" class="btn-fav-2">
+									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
+									</svg>					
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" class="btn-fav-2">
+									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
+									</svg>					
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" class="btn-fav-2">
+									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
+									</svg>					
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" class="btn-fav-2">
+									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
+									</svg>					
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="sec-9" class="mb-6 py-xl-5">
+			<div class="container">
+				<div class="row gx-0">
+					<div class="d-none d-md-block col-4">
+						<img src="img/img2.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-md-8">
+						<form action="">
+							<h2 class="text-md-start mb-3 mb-lg-4">Подпишитесь на нас</h2>
+							<div class="text-center text-md-start f_12 mb-3 mb-lg-5">Узнавайте наши новости первыми</div>
+							<div class="d-flex flex-column flex-sm-row">
+								<input type="text" placeholder="Ваш Email" required>
+								<button type="submit" class="btn_main btn_1 mx-auto ms-sm-2 mt-2 mt-sm-0">Подписаться</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container py-4 py-md-5">
+				<div class="row mb-md-5">
+					<div class="d-none d-md-block col-4">
+						<div class="lightgray mb-3">Добро пожаловать:</div>
+						<div class="d-flex">
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/inst.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<a href="index.html">
+							<img src="img/logo.svg" alt="" class="d-block mx-auto">
+						</a>
+					</div>
+					<div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+						<div class="lightgray mb-3">Платежные системы:</div>
+						<div class="d-flex justify-content-center justify-content-md-end">
+							<img src="img/icons/visa.jpg">
+							<img src="img/icons/mastercard.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/paypal.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/payoneer.jpg" class="ms-1 ms-lg-3">
+						</div>
+					</div>
+				</div>
+				<div class="d-none d-md-flex row justify-content-center mb-5">
+					<div class="col-md-8 col-lg-7 col-xl-6">
+						<nav>
+							<a href="">О нас в прессе</a>
+							<a href="">Каталог ароматов</a>
+							<a href="">О компании</a>
+							<a href="">FAQ</a>
+						</nav>
+					</div>
+				</div>
+				<div class="d-none d-md-flex row justify-content-center mb-lg-4 lightgray">
+					<div class="col-xl-10 col-xxl-8">
+						<div class="row">
+							<div class="col-3">
+								<div class="d-flex">
+									<img src="img/icons/phone.svg" alt="" class="icon me-2">
+									<a href="tel:+79035940366">+ 7 (903) 594-03-66</a>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="d-flex">
+									<img src="img/icons/address.svg" alt="" class="icon me-2">
+									<span class="text-center">125047, Москва, ул. Фадеева, дом № 7, строение 1, офис 2</span>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="d-flex">
+									<img src="img/icons/e-mail-2.svg" alt="" class="icon me-2">
+									<a href="mailto:info@parfe-france.com">info@parfe-france.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<div class="container d-flex flex-column flex-sm-row justify-content-center align-items-center pt-3 pb-5 gray">
+		<div><a href="#">Политика конфиденциальности</a></div>
+		<div class="ms-sm-5 mt-3 mt-sm-0">© Все права защищены. Parfe <span id="year"></span></div>
+	</div>
+
+	<div id="shadow"></div>
+
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu">
+		<div class="offcanvas-body">
+			<div class="offcanvas-box p-4 p-sm-5">
+				<div class="d-flex f_09 text-uppercase lightengray d-md-none mb-5">
+					<a href="" class="lightgray me-2">ru</a>
+					<a href="" class="me-2">en</a>
+					<a href="" class="me-2">fr</a>
+					<span class="me-2">|</span>
+					<a href="">faq</a>
+				</div>
+				<nav class="mb-5 mb-md-0">
+					<ul>
+						<li><a href="">каталог</a></li>
+						<li><a href="">Подбор аромата</a></li>
+						<li><a href="">преимущества</a></li>
+						<li><a href="">о компании</a></li>
+						<li><a href="">подарки</a></li>
+						<li><a href="">Где купить</a></li>
+						<li><a href="">контакты</a></li>
+						<li><a href="">О нас в прессе</a></li>
+						<li><a href="">Каталог ароматов</a></li>
+						<li><a href="">О компании</a></li>
+						<li><a href="">FAQ</a></li>
+					</ul>
+				</nav>
+				<div class="d-flex d-md-none mb-4">
+					<a href="mailto:" class="round-icon me-3">
+						<img src="img/icons/e-mail.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/inst.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/fb.svg" alt="">
+					</a>
+				</div>
+				<div class="d-fle d-md-none mb-3">
+					<img src="img/icons/phone.svg" alt="" class="icon me-2">
+					<a href="tel:+79035940366">+ 7 (903) 594-03-66</a>
+				</div>
+				<div class="d-flex d-md-none">
+					<img src="img/icons/address.svg" alt="" class="icon me-2">
+					<span class="text-start">125047, Москва, ул. Фадеева, дом № 7, строение 1, офис 2</span>
+				</div>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23 23L9 9"/>
+					<path d="M23 9L9 23"/>
+				</svg>							
+			</button>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="box">
+						<h3 class="gold">Скидка 10% на первую покупку</h3>
+						<p class="text-center gray mb-4">Зарегестрируйтесь в личном кабинете и получите скидку 10% на первую покупку в нашем магазине</p>
+						<div class="row justify-content-center">
+							<div class="col-sm-8 col-md-6">
+								<section class="change-forms">
+									<form action="" class="entrance">
+										<input type="text" placeholder="e-mail" class="b-lgray mb-2">
+										<div class="password mb-3">
+											<input type="password" name="password" placeholder="пароль" minlength="6" maxlength="16" class="b-lgray">
+											<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this)"></button>
+										</div>
+										<button type="submit" class="btn_main btn_1 mx-auto mt-4">Войти</button>
+										<div class="d-flex justify-content-center align-items-center mt-3">
+											или <button type="button" class="powder ms-2" onclick="swap_form(this.closest('form'))">зарегистрироваться</button>
+										</div>
+									</form>
+									<form action="" class="registration d-none">
+										<input type="text" placeholder="e-mail" class="b-lgray mb-2">
+										<div class="password mb-3">
+											<input type="password" name="password" placeholder="пароль" minlength="6" maxlength="16" class="b-lgray">
+											<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this)"></button>
+										</div>
+										<button type="submit" class="btn_main btn_1 mx-auto">зарегистрироваться</button>
+										<div class="d-flex justify-content-center align-items-center mt-3 f_09">
+											или <button type="button" class="powder ms-2" onclick="swap_form(this.closest('form'))">войти</button>
+										</div>
+									</form>
+								</section>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="modal">
+						<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23 23L9 9"/>
+							<path d="M23 9L9 23"/>
+						</svg>							
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Skripts -->
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/img-previewer.min.js"></script>
+	<script type="text/javascript" src="js/sliders.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
