@@ -280,12 +280,12 @@
 						<li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
 						<li class="breadcrumb-item"><a href="categorie.html">Древесные/Шипровые/Цветочные</a></li>
 						<li class="breadcrumb-item">
-							<a href="product.html" class="brandon fw_5 powder norm text-uppercase ls-3">Parfé №3</a>
+							<a href="product.html" class="brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3</a>
 						</li>
 					</ol>
 				</nav>
-				<div class="product-card row">
-					<div class="col-7">
+				<div class="product-card row gx-4 gx-lg-5">
+					<div class="col-md-6 col-xl-7 mb-5 mb-md-0">
 						<div class="swiper-product-main">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -313,9 +313,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-5">
-						<h2 class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé №3</h2>
-						<div class="lightgray mb-5">
+					<div class="col-md-6 col-xl-5">
+						<h2 class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </span></h2>
+						<div class="lightgray mb-4 mb-sm-5">
 							<p>Стремительный и яркий аромат ветивера приятно уравновешивается элегантными нотами ореха и бобов тонка. Чистые зелёные акценты бергамота придают композиции свежесть и оттеняют лёгкую сладость фундука с еле уловимым карамельным оттенком.</p>
 						</div>
 
@@ -329,7 +329,7 @@
 							</li>
 						</ul>
 						<!-- Tab panes -->
-						<div class="tab-content mb-5">
+						<div class="tab-content mb-4 mb-md-5">
 							<div class="tab-pane active" id="tab-notes" role="tabpanel">
 								<ul class="list">
 									<li>Категория аромата: древесный, шипровый;</li>
@@ -343,7 +343,7 @@
 							</div>
 						</div>
 
-						<div class="row row-cols-2 gx-3 pt-4">
+						<div class="row row-cols-2 gx-0 gx-sm-1 gx-lg-3 pt-4">
 							<div>
 								<button type="button" class="btn_main btn_1 w-100">
 									<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
@@ -351,7 +351,11 @@
 								</button>
 							</div>
 							<div>
-								<button type="button" onclick="fav(this)" class="btn_main btn_3  w-100 btn-fav fav-2 h-100" data-fav="false"></button>
+								<button type="button" onclick="fav(this)" class="btn_main btn_3  w-100 h-100 fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" fill="#D1AF8D"/>
+									</svg>
+								</button>
 							</div>
 						</div>
 						
@@ -372,10 +376,10 @@
 									<div class="felix">N° 1</div>
 									<div class="source itlc">unisex</div>
 								</div>
-								<button type="button" class="btn-fav-2">
-									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
-									</svg>					
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
 								</button>
 							</div>
 							<div class="text color-1-5">
@@ -399,10 +403,10 @@
 									<div class="felix">N° 1</div>
 									<div class="source itlc">unisex</div>
 								</div>
-								<button type="button" class="btn-fav-2">
-									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
-									</svg>					
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
 								</button>
 							</div>
 							<div class="text color-1-5">
@@ -426,10 +430,10 @@
 									<div class="felix">N° 1</div>
 									<div class="source itlc">unisex</div>
 								</div>
-								<button type="button" class="btn-fav-2">
-									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
-									</svg>					
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
 								</button>
 							</div>
 							<div class="text color-1-5">
@@ -453,10 +457,10 @@
 									<div class="felix">N° 1</div>
 									<div class="source itlc">unisex</div>
 								</div>
-								<button type="button" class="btn-fav-2">
-									<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.5436 4C13.5005 4 12.0005 7 12.0005 7C12.0005 7 10.5005 4 7.45735 4C4.98423 4 3.02579 6.06906 3.00048 8.53797C2.94892 13.6628 7.06595 17.3073 11.5786 20.3702C11.703 20.4548 11.85 20.5001 12.0005 20.5001C12.151 20.5001 12.2979 20.4548 12.4224 20.3702C16.9345 17.3073 21.0516 13.6628 21.0005 8.53797C20.9752 6.06906 19.0167 4 16.5436 4Z"/>
-									</svg>					
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
 								</button>
 							</div>
 							<div class="text color-1-5">

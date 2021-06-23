@@ -539,6 +539,7 @@ header nav ul a:active svg path {
     transition: opacity .4s ease-out;
 }
 .item .box:hover .text {opacity: 1;}
+.item .box .text .fav-btn {font-size: .8em;}
 .item .box .sticker {
     position: absolute;
     top: 0;
@@ -1114,35 +1115,12 @@ fieldset legend {
     font-size: .9em;
     padding: .75em;
     margin-top: 1em;
-} 
-.btn-fav-2 {
-    width: 2.5em;
-    height: 2.5em;
-    border: 1px solid var(--powder);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.item.item-full .btn_icon {
     position: absolute;
     top: .5em;
     left: .5em;
     z-index: 3;
-}
-.btn-fav-2 svg {
-    width: 1.5em;
-    height: 1.5em;
-    stroke: var(--powder);
-    stroke-width: 1.5px;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    transition: .25s;
-}
-.btn-fav-2:hover svg, .btn-fav-2:focus svg {
-    fill:var(--powder);
-}
-.btn-fav-2:active svg {
-    transform: scale(1.15);
-    fill:var(--powder);
 }
 
 
@@ -1162,7 +1140,7 @@ fieldset legend {
     height: 600px;
     object-fit: contain;
     object-position: center;
-    padding: 3em;
+    padding: 4em;
 }
 .swiper-product-thumbs {
     width: 460px;
@@ -1175,6 +1153,8 @@ fieldset legend {
     border: 1px solid var(--lightpowder);
     object-fit: contain;
     object-position: center;
+    display: block;
+    margin: 0 auto;
 }
 .swiper-product-thumbs .swiper-slide.swiper-slide-active img {
     border: 1px solid var(--gold);
@@ -1220,6 +1200,42 @@ fieldset legend {
 .product-card .nav-tabs .nav-item .nav-link.active {
     background-color: var(--color-1-5);
 }
+@media (max-width: 1199px){
+    .swiper-product-main .swiper-slide img {height: 500px;}
+    .swiper-product-thumbs {width: 100%;}
+    .swiper-product-thumbs .swiper-slide img {
+        width: 100%;
+    }
+}
+@media (max-width: 991px){
+    .swiper-product-main .swiper-slide img {
+        height: 400px;
+        padding: 2em;
+    }
+    .swiper-product-thumbs .swiper-slide img {
+        height: 100px;
+    }
+}
+@media (max-width: 767px){
+    .swiper-product-thumbs {width: 460px;}
+    .swiper-product-thumbs .swiper-slide img {
+        width: 136px;
+        height: 136px;
+    }
+}
+@media (max-width: 575px){
+    .swiper-product-main .swiper-slide img {
+        height: 100vw;
+        padding: 2em;
+    }
+    .swiper-product-thumbs {width: 100%;}
+    .swiper-product-thumbs .swiper-slide img {
+        width: 100%;
+        height: 27vw;
+    }
+}
+
+
 
 footer {
     background-color: var(--color-1-5);

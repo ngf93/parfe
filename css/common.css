@@ -147,7 +147,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
     line-height: 1.1em;
     padding: 1em 1.5em;
     text-align: center;
-    transition: .5s;
+    transition: .4s;
     font-weight: 500;
     font-size: .9em;
     text-transform: uppercase;
@@ -204,35 +204,87 @@ button:hover, button:focus, button:active {cursor: pointer;}
     border: 1px solid  #C9AF96;
     box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
-
-.btn-fav {
-    vertical-align: middle;
-    font-size: .8em;
-}
-.btn-fav.fav-2 {font-size: .9em;}
-.btn-fav[data-fav="false"]::before {
-    content: url(../img/icons/favorite-2.svg);
-}
-.btn-fav.fav-2[data-fav="false"]::before {
-    content: url(../img/icons/favorite-3.svg);
-}
-.btn-fav[data-fav="false"]::after {
-    content: "В избранное";
-    margin-left: .5em;
-}
-.btn-fav[data-fav="true"]::before {
-    content: url(../img/icons/favorite-2-full.svg);
-}
-.btn-fav.fav-2[data-fav="true"]::before {
-    content: url(../img/icons/favorite-3-full.svg);
-}
-.btn-fav[data-fav="true"]::after {
-    content: "В избранном";
-    margin-left: .5em;
-}
-
 @media (max-width: 575px){
     .btn_main {padding: .8em 1em;} 
+}
+
+.btn_icon {
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid var(--powder);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_icon svg {
+    width: 1.5em;
+    height: 1.5em;
+    stroke: var(--powder);
+    stroke-width: 1.5px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    transition: .25s;
+}
+.btn_icon.fav-btn[data-fav="false"] {fill:transparent;}
+.btn_icon.fav-btn[data-fav="true"] svg {fill:var(--powder);}
+.btn_icon:hover svg, .btn_icon:focus svg, .btn_icon:active svg {
+    transform: scale(1.15);
+}
+
+.fav-btn[data-fav="false"]::after {
+    content: "В избранное";
+}
+.fav-btn[data-fav="true"]::after {
+    content: "В избранном";
+}
+.btn_icon.fav-btn::after {
+    content: unset !important;
+}
+
+.fav-btn svg {
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: .5em;
+}
+.btn_icon.fav-btn svg {
+    margin-right: 0px;
+}
+.fav-btn svg path {
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    stroke-linejoin:round;
+    transition: .4s;
+}
+
+.btn_1.fav-btn[data-fav="false"] svg path {
+    fill: transparent;
+    stroke: var(--coolwhite);
+}
+.btn_1.fav-btn[data-fav="true"] svg path {
+    fill: var(--coolwhite);
+    stroke: var(--coolwhite);
+}
+
+.btn_3.fav-btn[data-fav="false"] svg path {
+    fill: transparent;
+    stroke: var(--powder);
+}
+.btn_3.fav-btn[data-fav="true"] svg path {
+    fill: var(--powder);
+    stroke: var(--powder);
+}
+.btn_3.fav-btn[data-fav="false"]:hover svg path, 
+.btn_3.fav-btn[data-fav="false"]:focus svg path,
+.btn_3.fav-btn[data-fav="false"]:active {
+    fill: transparent;
+    stroke: var(--coolwhite);
+}
+.btn_3.fav-btn[data-fav="true"]:hover svg path, 
+.btn_3.fav-btn[data-fav="true"]:focus svg path,
+.btn_3.fav-btn[data-fav="true"]:active {
+    fill: var(--coolwhite);
+    stroke: var(--coolwhite);
 }
 
 
@@ -317,7 +369,7 @@ h4 {
 
 
 main {
-    width: calc(100% - 80px);
+    width: calc(100% - 128px);
     margin: 0px auto;
     background-color: var(--coolwhite);
     position: relative;
@@ -327,6 +379,18 @@ main {
 main>section {
     position: relative;
     z-index: 2;
+}
+@media (max-width: 1268px) and (min-width: 1201px) {
+    main {width: calc(100% - 60px);}
+}
+@media (max-width: 1087px) and (min-width: 992px) {
+    main {width: calc(100% - 32px);}
+}
+@media (max-width: 848px) and (min-width: 768px) {
+    main {width: calc(100% - 48px);}
+}
+@media (max-width: 667px) and (min-width: 576px) {
+    main {width: calc(100% - 36px);}
 }
 @media (max-width: 575px){
     main {
