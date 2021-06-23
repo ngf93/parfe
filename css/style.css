@@ -1332,12 +1332,13 @@ footer nav {
 }
 .password input {position: relative;}
 .password button {
-  position: absolute;
-  bottom: .75em;
-  right: 1em;
-  width: 1.25em;
-  height: 1.25em;
-  display: flex;
+    position: absolute;
+    bottom: 50%;
+    right: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    transform: translateY(50%);
 }
 .password button[data-state="invisible"] {
   background: url(../img/icons/eye_closed.svg) no-repeat center;

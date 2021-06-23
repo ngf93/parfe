@@ -86,7 +86,7 @@ window.onload = function() {
     });
     myModal.show();
   }
-  let popup_delay = 1000*60*1; // 1 минута
+  let popup_delay = 1000*1*1; // 1 минута
   setTimeout(popup, popup_delay);
 }
 
@@ -128,14 +128,12 @@ function swap_form(form) {
   form.classList.add('d-none');
 }
 
-window.onload = function() {
-  document.getElementById('btn-filter-toggle').onclick = function() {
-    if (this.dataset.state == 'closed'){
-      this.nextElementSibling.style.display = 'block';
-      this.dataset.state = 'opened';
-    } else {
-      this.nextElementSibling.style.display = 'none';
-      this.dataset.state = 'closed';
-    } 
-  };
+function filterToggle(btn){
+  if (btn.dataset.state == 'closed'){
+    btn.nextElementSibling.style.display = 'block';
+    btn.dataset.state = 'opened';
+  } else {
+    btn.nextElementSibling.style.display = 'none';
+    btn.dataset.state = 'closed';
+  } 
 }
