@@ -137,3 +137,26 @@ function filterToggle(btn){
     btn.dataset.state = 'closed';
   } 
 }
+
+
+function verifyInput(form){
+  let arr_inputs = Array.from(form.querySelectorAll('input[required]'));
+  console.log(arr_inputs.length);
+
+  function notNull(element, index, array) {
+    if(element.type == 'checkbox' && element.checked){
+      return element;
+    } else if(element.type == 'text' && element.value.trim() != '') {
+      return element;
+    }
+  }
+  let flag = arr_inputs.every(notNull);
+
+  if (flag) {
+    console.log('все поля заполнены');
+    form.querySelector('button[type="submit"]').removeAttribute('disabled');
+  } else {
+    console.log('есть не заполненые поля');
+    form.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+  }
+}

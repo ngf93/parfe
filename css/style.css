@@ -1237,6 +1237,59 @@ fieldset legend {
 
 
 
+/* section 15 */
+.shopping-cart table thead {
+    border-bottom: 1px solid var(--warmwhite);
+}
+.shopping-cart table thead th {
+    color: var(--gray);
+    font-weight: 400;
+}
+.shopping-cart table td {
+    vertical-align: middle;
+}
+.shopping-cart .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.shopping-cart .item img {
+    width: 70px;
+    height: 110px;
+    padding: 1em;
+    object-fit: contain;
+}
+.shopping-cart input[type="number"]{
+    border: none;
+    padding: 0;
+    min-width: 40px;
+    max-width: 60px;
+    text-align: center;
+    -moz-appearance: textfield;
+    color: var(--gray);
+    font-size: 1.1em;
+}
+.shopping-cart input[type="number"]::-webkit-outer-spin-button,
+.shopping-cart input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.shopping-cart input[type="number"]:hover,
+.shopping-cart input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+.shopping-cart .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+.shopping-cart .total input {max-width: 260px;}
+
+
+
 footer {
     background-color: var(--color-1-5);
 }

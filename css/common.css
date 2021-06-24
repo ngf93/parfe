@@ -157,6 +157,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
     letter-spacing: 1px;
 }
 .btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
+/* lightbrown button */
 .btn_1 {
     color: var(--coolwhite);
     background-color: var(--powder);
@@ -173,6 +174,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
     border: 1px solid  #C9AF96;
     box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
+/* transparent button with border-bottom */
 .btn_2 {position: relative;}
 .btn_2::after {
     content: "";
@@ -191,6 +193,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
     transform: scaleX(1);
     transition: transform .1s ease-out;
 }
+/* transparent button with border */
 .btn_3 {
     color: var(--gray);
     background-color: transparent;
@@ -206,6 +209,36 @@ button:hover, button:focus, button:active {cursor: pointer;}
     background-color: #C9AF96;
     border: 1px solid  #C9AF96;
     box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05);
+}
+.btn_1:disabled, .btn_3:disabled {
+    color: var(--coolwhite);
+    background-color: var(--lightpowder);
+    border: 1px solid var(--lightpowder);
+}
+.btn_4 {
+    color: var(--lightengray);
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn_4 span {font-size: .7em;}
+.btn_4 svg {
+    width: 1.25em;
+    height: 1.25em;
+}
+.btn_4 svg path {
+    stroke: var(--lightengray);
+    stroke-width: 1.25px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.btn_4:hover, .btn_4:focus, .btn_4:active {
+    color: var(--powder);
+    background-color: transparent;
+}
+.btn_4:hover svg path, .btn_4:focus svg path, .btn_4:active svg path {
+    stroke: var(--powder);
 }
 @media (max-width: 575px){
     .btn_main {padding: .8em 1em;} 
@@ -233,6 +266,12 @@ button:hover, button:focus, button:active {cursor: pointer;}
 .btn_icon.fav-btn[data-fav="true"] svg {fill:var(--powder);}
 .btn_icon:hover svg, .btn_icon:focus svg, .btn_icon:active svg {
     transform: scale(1.15);
+}
+.btn_icon_2 {
+    width: 2em;
+    height: 2.5em;
+    border: none;
+    background-color: var(--color-1-5);
 }
 
 .fav-btn[data-fav="false"]::after {
