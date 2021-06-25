@@ -3,12 +3,12 @@ let now = new Date();
 let cur_year = now.getFullYear();
 document.querySelector('#year').innerHTML = cur_year;
 
-
+/* изменение состояния кнопок "в избранное" */
 function fav(el){
   el.dataset.fav = (el.dataset.fav == 'false') ? 'true' : 'false'
 }
 
-
+/* фиксированная шапка */
 window.addEventListener('scroll', function() {
   let h_header = document.querySelector('header').offsetHeight;
   let st = window.pageYOffset;
@@ -33,6 +33,7 @@ function closeDiv(cl){
   });
 }
 
+/* появление подменю */
 function openSubmenu(id){
   closeDiv('.submenu');
   document.getElementById(id).style.display = 'block';
@@ -52,6 +53,7 @@ function openSubmenu(id){
   });
 }
 
+/* скрытие подменю */
 function closeSubmenu(id){
   document.getElementById(id).animate({
     "top": "calc(100% + 2em)",
@@ -71,6 +73,7 @@ function closeSubmenu(id){
   document.getElementById('shadow').style.zIndex = '0';
 }
 
+/* запуск видео при клике на кнопку */
 function play_video(cover){
   let video = cover.previousElementSibling;
   let src = video.getAttribute('src');
@@ -78,7 +81,7 @@ function play_video(cover){
   video.setAttribute('src', src + '?autoplay=1');
 }
 
-
+/* всплывающее после загрузки страницы модальное окно */
 window.onload = function() {
   function popup(){
     let myModal = new bootstrap.Modal(document.getElementById('myModal'), {
@@ -90,6 +93,7 @@ window.onload = function() {
   setTimeout(popup, popup_delay);
 }
 
+/* анимация появления элементов с классом element-animation при скролле */
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -128,6 +132,7 @@ function swap_form(form) {
   form.classList.add('d-none');
 }
 
+/* сворачивание фильтра на маленьких экранах */
 function filterToggle(btn){
   if (btn.dataset.state == 'closed'){
     btn.nextElementSibling.style.display = 'block';
@@ -139,6 +144,7 @@ function filterToggle(btn){
 }
 
 
+/* проверка input-ов с атрибутом required и активация/блокировка кнопки submit */
 function verifyInput(form){
   let arr_inputs = Array.from(form.querySelectorAll('input[required]'));
   console.log(arr_inputs.length);
