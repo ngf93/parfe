@@ -86,7 +86,7 @@ window.onload = function() {
     });
     myModal.show();
   }
-  let popup_delay = 1000*1*1; // 1 минута
+  let popup_delay = 1000*60*1; // 1 минута
   setTimeout(popup, popup_delay);
 }
 

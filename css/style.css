@@ -1244,9 +1244,11 @@ fieldset legend {
 .shopping-cart table thead th {
     color: var(--gray);
     font-weight: 400;
+    white-space: nowrap;
 }
 .shopping-cart table td {
     vertical-align: middle;
+    white-space: nowrap;
 }
 .shopping-cart .item {
     display: flex;
@@ -1287,6 +1289,28 @@ fieldset legend {
     border-bottom: 1px solid var(--gold);
 }
 .shopping-cart .total input {max-width: 260px;}
+
+.progress {
+    height: 3px;
+    background-color: var(--warmwhite);
+    border-radius: 0px;
+}
+.progress-bar {
+    background-color: var(--gold);
+}
+@media (max-width: 767px){
+    .shopping-cart .total input {max-width: 155px;}
+    
+}
+@media (max-width: 575px){
+    .shopping-cart .total {flex-wrap: wrap;}
+    .shopping-cart .total h3 {
+        width: calc(40% - .5em);
+        font-size: 1.2em;
+    }
+    .shopping-cart .total input {width: 60%;}
+}
+
 
 
 
@@ -1374,6 +1398,10 @@ footer nav {
     padding: 3em;
     position: relative;
 }
+#gift .modal-body {
+    background: url(../img/bg/flower.svg) no-repeat center bottom #fff;
+    padding: 1em;
+}
 .modal-body .box {
     background: url(../img/bg/bg-3.png) no-repeat center var(--coolwhite);
     background-size: 100% 100%;
@@ -1403,13 +1431,53 @@ footer nav {
 }
 .password button img {width: 100%;}
 
+.item-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.item-card .img {
+    width: 110px;
+    height: 140px;
+    padding: 2px;
+    margin-right: 1em;
+}
+.item-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--coolwhite);
+    padding: .5em;
+}
+.item-card .text {
+    flex: 1;
+    padding: 1em 1.5em;
+}
+
 @media (min-width: 768px){
     .modal-dialog {max-width: 750px;}
+    #gift .modal-dialog {max-width: 720px;}
+    #gift .modal-body {padding: 2em;}
 }
+@media (min-width: 992px){
+    #gift .modal-dialog {max-width: 960px;}
+    #gift .modal-body {padding: 2em 4em;}
+}
+@media (min-width: 1200px){
+    #gift .modal-dialog {max-width: 1140px;}
+    #gift .modal-body {padding: 3em 5em;}
+}
+
 @media (max-width: 767px){
     .btn-close {
         top: .2em;
         right: .2em;
     }
     .modal-body, .modal-body .box {padding: 2em;}
+}
+@media (max-width: 575px){
+    .item-card .img {
+        width: 55px;
+        height: 70px;
+    }
 }
