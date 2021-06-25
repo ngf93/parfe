@@ -70,7 +70,7 @@ function closeSubmenu(id){
     duration: 200,
     fill: "forwards",
   });
-  document.getElementById('shadow').style.zIndex = '0';
+  document.getElementById('shadow').style.zIndex = '-10';
 }
 
 /* запуск видео при клике на кнопку */

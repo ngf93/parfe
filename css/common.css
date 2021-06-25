@@ -27,7 +27,7 @@ body {
     color: var(--deepgray);
     position: relative;
     background: url(../img/bg/bg-0.png) no-repeat var(--coolwhite);
-    background-size: 100% calc(100% - 100vh);
+    background-size: 100% 80%;
     background-position: center bottom;
 }
 @media (max-width: 1199px){
@@ -83,7 +83,7 @@ input, textarea {
     border: 1px solid var(--lightengray);
     background-color: var(--coolwhite);
     border-radius: 0;
-    padding: 1em 1.5em;
+    padding: .75em 1.5em;
     width: 100%;
     line-height: 1.1em;
     box-shadow: unset;
@@ -96,8 +96,21 @@ input.transparent, textarea.transparent {
 input:focus, textarea:focus {border: 1px solid var(--powder);}
 input.transparent:focus, textarea.transparent:focus {border: 1px solid transparent;}
 
-.radio, .checkbox, .radio-block {position: relative;}
-.radio input, .checkbox input, .radio-block input {
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(../img/icons/calendar.svg) no-repeat center;
+    background-size: 1.5em 1.5em;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    background: url(../img/icons/clock.svg) no-repeat center;
+    background-size: 1.5em 1.5em;
+}
+
+.radio, .radio-mark, .checkbox, .radio-block {position: relative;}
+.radio input, .radio-mark input, .checkbox input, .radio-block input {
     appearance:none;
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -111,7 +124,7 @@ input.transparent:focus, textarea.transparent:focus {border: 1px solid transpare
     opacity: 0;
     cursor: pointer;
 }
-.radio label, .checkbox label {
+.radio label, .radio-mark label, .checkbox label {
     position: relative;
     z-index: 1;
     color: var(--gray);
@@ -127,23 +140,22 @@ input.transparent:focus, textarea.transparent:focus {border: 1px solid transpare
 .radio-block input:checked ~ div {
     border: 1px solid var(--gold);
 }
-.checkbox label {
+.checkbox label, .radio-mark label {
     display: flex;
     align-items: flex-start;
 }
-.checkbox label::before {
-    content: url(../img/icons/checkbox.svg);
+.checkbox label::before {content: url(../img/icons/checkbox.svg);}
+.radio-mark label::before {content: url(../img/icons/radio.svg);}
+.checkbox label::before, .radio-mark label::before {
     margin-right: .5em;
     width: 18px;
     height: 18px;
 }
-.checkbox input:hover ~ label {color: var(--powder);}
-.checkbox input:hover ~ label::before {
-    content: url(../img/icons/checkbox-hover.svg);
-}
-.checkbox input:checked ~ label::before {
-    content: url(../img/icons/checkbox-checked.svg);
-}
+.checkbox input:hover ~ label, .radio-mark input:hover ~ label {color: var(--powder);}
+.checkbox input:hover ~ label::before {content: url(../img/icons/checkbox-hover.svg);}
+.checkbox input:checked ~ label::before {content: url(../img/icons/checkbox-checked.svg);}
+.radio-mark input:hover ~ label::before {content: url(../img/icons/radio-hover.svg);}
+.radio-mark input:checked ~ label::before {content: url(../img/icons/radio-checked.svg);}
 
 
 /* кнопки */
@@ -349,7 +361,7 @@ h1, h2, h3, h4 {
     text-align: center;
     font-style: italic;
     font-weight: 400;
-    margin-bottom: .6em;
+    margin-bottom: 1em;
 }
 h1 {font-size: 2em;}
 h2 {font-size: 3em;}
@@ -385,6 +397,7 @@ h4 {
 .lato {font-family: 'Lato';}
 .com {font-family: 'Comfortaa', cursive;}
 
+.f_07 {font-size: .7em;}
 .f_08 {font-size: .8em;}
 .f_09 {font-size: .9em;}
 .f_11 {font-size: 1.1em;}

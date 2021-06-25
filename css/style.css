@@ -1261,7 +1261,7 @@ fieldset legend {
     padding: 1em;
     object-fit: contain;
 }
-.shopping-cart input[type="number"]{
+.shopping-cart table input[type="number"]{
     border: none;
     padding: 0;
     min-width: 40px;
@@ -1295,9 +1295,33 @@ fieldset legend {
     background-color: var(--warmwhite);
     border-radius: 0px;
 }
-.progress-bar {
-    background-color: var(--gold);
+.progress-bar {background-color: var(--gold);}
+
+
+.btn-toggle-2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 100%;
+    text-align: left;
+    padding-right: 2em;
 }
+.btn-toggle-2[aria-expanded="true"] {
+    background-image: url(../img/icons/up.svg);
+}
+.btn-toggle-2[aria-expanded="false"] {
+    background-image: url(../img/icons/down.svg);
+}
+
+.inp-mini {
+    max-width: 165px;
+}
+
+.shopping-cart .total-2 {
+    border: 1px solid var(--gold);
+    padding: 3em;
+}
+
 @media (max-width: 767px){
     .shopping-cart .total input {max-width: 155px;}
     
