@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Оформление заказа</title>
+	<title>Где купить</title>
 	<link rel="shortcut icon" href="" type="image/png">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -263,208 +263,35 @@
 	</header>
 
 	<main>
-		<section id="sec-15" class="pb-5 mb-6">
+		<section id="sec-18" class="pb-5">
 			<div class="container">
-				<h2>Оформление заказа</h2>
-				<form action="" class="shopping-cart">
-					<div class="row justify-content-between">
-						<div class="col-md-7 col-xl-6">
-							<button type="button" class="btn-toggle-2 fw_5 f_15 mb-4 mb-sm-5" data-bs-toggle="collapse" data-bs-target="#collapse-delivery" aria-expanded="true">
-								<span class="ls-3">1 / 3</span> <span class="ls-1 ms-3">Адрес и доставка</span>
-							</button>
-							<div class="collapse show mb-6" id="collapse-delivery">
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Населенный пункт</div>
-									</div>
-									<div class="col-sm-8">
-										<div class="f_11 gray">г. Уфа</div>
-										<div class="f_11 gray">Респ. Башкортостан</div>
-										<button class="btn_main btn_3 f_07 mt-3">изменить город</button>
-									</div>
-								</div>
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Способ доставки</div>
-									</div>
-									<div class="col-sm-8">
-										<div class="radio-mark mb-2">
-											<input type="radio" name="delivery-method" value="СДЭК">
-											<label class="gray">СДЭК</label>
-										</div>
-										<div class="radio-mark mb-2">
-											<input type="radio" name="delivery-method" value="Boxberry">
-											<label class="gray">Boxberry</label>
-										</div>
-										<div class="radio-mark mb-2">
-											<input type="radio" name="delivery-method" value="Dostavista">
-											<label class="gray">Dostavista</label>
-										</div>
-										<div class="radio-mark mb-2">
-											<input type="radio" name="delivery-method" value="Почта России">
-											<label class="gray">Почта России</label>
-										</div>
-									</div>
-								</div>
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Адрес доставки</div>
-									</div>
-									<div class="col-sm-8">
-										<div class="f_11 gray">г. Уфа, ул. Баязита Бикбая, д.12, кв. 7</div>
-										<button class="btn_main btn_3 f_07 mt-3">изменить адрес</button>
-									</div>
-								</div>
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Дата и время доставки</div>
-									</div>
-									<div class="col-sm-8">
-										<input type="date" class="mb-3">
-										<input type="time">
-									</div>
-								</div>
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Стоимость доставки</div>
-									</div>
-									<div class="col-sm-8">
-										<div class="f_15 fw_5 text-sm-end">350 <span class="pt">₽</span></div>
-									</div>
-								</div>
-							</div>
+				<h2>Где купить</h2>
+				<div class="row">
+					<div class="col-3">
+						<button class="btn_main btn_1 w-100 mb-3">найти меня</button>
+						<input class="mb-3" type="text" placeholder="страна" value="Россия">
+						<input class="mb-3" type="text" placeholder="город" value="Уфа, Респ. Башкортостан">
 
-							<button type="button" class="btn-toggle-2 fw_5 f_15 mb-4 mb-sm-5" data-bs-toggle="collapse" data-bs-target="#collapse-addressee" aria-expanded="true">
-								<span class="ls-3">2 / 3</span> <span class="ls-1 ms-3">Получатель</span>
-							</button>
-							<div class="collapse show mb-5" id="collapse-addressee">
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Ваши данные</div>
-									</div>
-									<div class="col-sm-8">
-										<input type="text" placeholder="Фамилия" class="mb-3">
-										<input type="text" placeholder="Имя" class="mb-3">
-										<input type="text" placeholder="Отчество" class="mb-3">
-									</div>
-								</div>
-								<div class="row mt-4 mt-sm-5">
-									<div class="col-sm-4 mb-3">
-										<div class="f_11 text-sm-end">Контакты</div>
-									</div>
-									<div class="col-sm-8">
-										<div class="d-flex mb-3">
-											<div class="custom-select me-2">
-												<button type="button"></button>
-												<div class="cs-options">
-													<div class="radio">
-														<input type="radio" name="country" value="ru" checked>
-														<label>
-															<img src="img/icons/flag-ru.svg" alt="">
-														</label>
-													</div>
-													<div class="radio">
-														<input type="radio" name="country" value="uk">
-														<label>
-															<img src="img/icons/flag-uk.svg" alt="">
-														</label>
-													</div>
-													<div class="radio">
-														<input type="radio" name="country" value="fr">
-														<label>
-															<img src="img/icons/flag-fr.svg" alt="">
-														</label>
-													</div>
-												</div>
-											</div>
-											<input type="text" class="flex-1" placeholder="+7 (000) 000-00-00">
-										</div>
-										<input type="text" placeholder="e-mail" class="mb-3">
-									</div>
-								</div>
-							</div>
-
-							<button type="button" class="btn-toggle-2 fw_5 f_15 mb-4 mb-sm-5" data-bs-toggle="collapse" data-bs-target="#collapse-payment" aria-expanded="true">
-								<span class="ls-3">3 / 3</span> <span class="ls-1 ms-3">Оплата</span>
-							</button>
-							<div class="collapse show mb-5" id="collapse-payment">
-								<div class="radio-mark mb-3">
-									<input type="radio" name="payment" value="Банковская карта">
-									<label class="gray f_11 align-items-center">
-										<span>Банковская карта</span>
-										<img src="img/icons/visa2.jpg" class="ms-2">
-										<img src="img/icons/mastercard2.jpg" class="ms-2">
-									</label>
-								</div>
-								<div class="row g-3 mb-4">
-									<div class="col-12">
-										<input type="text" placeholder="Номер карты">
-									</div>
-									<div class="col-6">
-										<input type="text" placeholder="Срок действия">
-									</div>
-									<div class="col-6">
-										<input type="text" placeholder="CVC">
-									</div>
-								</div>
-								<div class="radio-mark mb-3">
-									<input type="radio" name="payment" value="PayPal">
-									<label class="gray f_11 align-items-center">
-										<span>PayPal</span>
-										<img src="img/icons/paypal2.jpg" class="ms-2">
-									</label>
-								</div>
-								<div class="radio-mark mb-3">
-									<input type="radio" name="payment" value="При получении">
-									<label class="gray f_11 align-items-center">
-										<span>При получении</span>
-									</label>
-								</div>
-								<div class="radio-mark mb-3">
-									<input type="radio" name="payment" value="Использовать бонусные баллы">
-									<label class="gray f_11">Использовать бонусные баллы (можно оплатить до 50% от стоимости покупки)
-									</label>
-								</div>
-								<div class="ps-4 d-sm-flex align-items-center">
-									<div class="gray f_11 text-sm-end mb-2 mb-sm-0">Сейчас у вас <span class="powder">2 500</span> баллов, списать</div>
-									<input type="number" class="inp-mini ms-sm-3" placeholder="ХХХХ, баллов">
-								</div>
-							</div>
-						</div>
-						<div class="col-md-5 col-xl-5">
-							<div class="total-2">
-								<div class="d-flex justify-content-between align-items-center mb-2 mb-lg-4">
-									<div class="ls-1 fw_5 f_15">Ваш заказ</div>
-									<a href="shopping-cart.html" class="powder f_11">изменить</a>
-								</div>
-								<div class="item mb-2">
-									<img src="img/parfume/1.png" alt="">
-									<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </div>
-									<div class="ms-4">1 шт.</div>
-								</div>
-								<div class="item mb-2">
-									<img src="img/parfume/1.png" alt="">
-									<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </div>
-									<div class="ms-4">1 шт.</div>
-								</div>
-								<div class="row row-cols-2 lightgray f_12 mt-4">
-									<div>Сумма заказа</div>
-									<div>6 696 <span class="pt">₽</span></div>
-								</div>
-								<div class="row row-cols-2 lightgray f_12 mt-2">
-									<div>Доставка</div>
-									<div>250 <span class="pt">₽</span></div>
-								</div>
-								<div class="row row-cols-2 black f_12 mt-4">
-									<div>Итого</div>
-									<div>6 946 <span class="pt">₽</span></div>
-								</div>
-							</div>
+						<div class="mt-5 fw_5 f_09 text-uppercase black mb-3">Магазины</div>
+						<div id="shops-list">
+							<div class="mb-2">“Магазин №1”, г.Уфа, ул. Б. Бикбая 12</div>
+							<div class="mb-2">“Магазин с очень длинным названием”, г.Уфа, ул. Б. Бикбая 23</div>
+							<div class="mb-2">“Магазин с очень очень очень длинным названием”, г.Уфа, ул. Маршала Жукова 10</div>
+							<div class="mb-2">“Магазин с очень очень очень длинным названием”, г.Уфа, ул. Маршала Жукова 10</div>
+							<div class="mb-2">“Магазин №4”, г.Уфа, ул. Маршала Жукова 10</div>
+							<div class="mb-2">“Магазин №4”, г.Уфа, ул. Маршала Жукова 10</div>
+							<div class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+							<div class="mb-2">Ipsum repellat quidem ad nostrum, aliquam consequuntur atque, pariatur rem, cumque doloremque illo.</div>
+							<div class="mb-2">Nulla eligendi in fuga quis cum nesciunt, quisquam vero?</div>
 						</div>
 					</div>
-
-					<button type="submit" class="btn_main btn_1 my-5">Подтвердить заказ</button>
-				</form>
+					<div class="col-9">
+						<div class="map">
+							<img src="img/Mapsicle Map.jpg" alt="" class="w-100">
+							
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

@@ -20,6 +20,52 @@
   --color-6-12: #FDE9E6;
   --color-13-20: #FBC7B9;
 }
+
+
+/*****************
+SCROLL STYLIZATION
+******************/
+html {
+    scrollbar-color: var(--gold) var(--lightbrown);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: var(--lightbrown);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--gold);
+    border-radius: 0px;
+    transition: .2s;
+}
+::-webkit-scrollbar-thumb:hover {background-color: var(--darkpowder);}
+::-webkit-scrollbar-button:vertical:start:decrement {
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 6px solid var(--gold);
+    background-color: var(--coolwhite);
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 6px solid var(--gold);
+    background-color: var(--coolwhite);
+}
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    border-right: 6px solid var(--gold);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background-color: var(--coolwhite);
+}
+::-webkit-scrollbar-button:horizontal:end:increment {
+    border-left: 6px solid var(--gold);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background-color: var(--coolwhite);
+}
+
+
 body {
     font-family: 'Lato';
     font-size: 16px;
@@ -370,6 +416,7 @@ h4 {
     text-align: left;
     font-size: 1.5em;
     font-weight: 500;
+    line-height: 1.5em;
     margin-bottom: 1em;
 }
 @media (max-width: 1199px){
@@ -427,6 +474,8 @@ h4 {
 .fw_7 {font-weight: 700;} /* bold */
 .fw_8 {font-weight: 800;} /* extra-bold */
 .fw_9 {font-weight: 900;} /* black */
+
+.lh_15 {line-height: 1.5em;}
 
 .itlc {font-style: italic;}
 .norm {font-style: normal;}
@@ -507,4 +556,94 @@ img.icon {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1140px;
     }
+}
+
+
+.flex-1 {flex: 1;}
+
+
+/************
+CUSTOM SELECT
+************/
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.custom-select {
+    position: relative;
+    width: 85px;
+}
+.custom-select button {
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid var(--lightengray);
+    text-align: left;
+    padding: .7em 1.5em .7em 1em;
+    background: url(../img/icons/down.svg) no-repeat;
+    background-color: var(--coolwhite);
+    background-position: calc(100% - .5em) 55%;
+    background-size: 1.25em 1.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cs-options {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    border: 1px solid var(--lightengray);
+    background-color: var(--coolwhite);
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.cs-options::-webkit-scrollbar {width: 0;}
+.cs-options.opened {display: block;}
+
+
+
+/* checkbox for select customization */ 
+.cs-options .radio:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid var(--lightengray);
+}
+.cs-options .radio label {
+    position: relative;
+    z-index: 1;
+    padding: .7em 1em;
+    transition: .2s;
+    line-height: 1.2em;
+    display: block;
+    width: 100%;
+    background-color: var(--coolwhite);
+}
+.cs-options .radio label img, .custom-select button img {
+    width: 20px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.cs-options .radio input[type="radio"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.cs-options .radio input[type="radio"]:hover ~ label,
+.cs-options .radio input[type="radio"]:checked ~ label  {
+    background-color: var(--warmwhite);
 }

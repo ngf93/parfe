@@ -1299,7 +1299,7 @@ fieldset legend {
 
 
 .btn-toggle-2 {
-    background-size: contain;
+    background-size: 1.3em 1.3em;
     background-repeat: no-repeat;
     background-position: right center;
     width: 100%;
@@ -1321,7 +1321,9 @@ fieldset legend {
     border: 1px solid var(--gold);
     padding: 3em;
 }
-
+@media (max-width: 991px){
+    .shopping-cart .total-2 {padding: 1em;}
+}
 @media (max-width: 767px){
     .shopping-cart .total input {max-width: 155px;}
     
@@ -1336,6 +1338,81 @@ fieldset legend {
 }
 
 
+
+/* section 16 */
+#sec-16 figure {
+    display: flex;
+    align-items: flex-start;
+}
+#sec-16 figure img {
+    width: calc(50% + 30px);
+    height: 580px;
+    object-fit: cover;
+}
+#sec-16 figure figcaption {
+    margin-top: 5em;
+    width: calc(50% + 0px);
+    background-color: var(--color-6-12);
+    padding: 6em;
+    margin-left: -30px;
+}
+#sec-16 figure figcaption blockquote p {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+#sec-16 figure figcaption blockquote cite {
+    font-size: 1.5em;
+    font-family: 'Source Serif Pro', serif;
+    display: block;
+    text-align: right;
+}
+@media (max-width: 1199px){
+    #sec-16 figure img {height: 490px;}
+    #sec-16 figure figcaption {
+        margin-top: 4em;
+        padding: 4em;
+    }
+}
+@media (max-width: 991px){
+    #sec-16 figure img {
+        height: 350px;
+        width: 50%;
+    }
+    #sec-16 figure figcaption {
+        margin-top: 0em;
+        padding: 2em;
+        width: 50%;
+        margin-left: 0px;
+    } 
+    #sec-16 figure figcaption blockquote p{
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+}
+@media (max-width: 767px){
+    #sec-16 figure {flex-direction: column-reverse;}
+    #sec-16 figure img {
+        width: 100%;
+        height: 500px;
+    }
+    #sec-16 figure figcaption {width: 100%;}
+}
+@media (max-width: 575px){
+    #sec-16 figure img {height: 85vw;}
+}
+
+
+/* section 18 */
+#shops-list {
+    max-height: 310px;
+    overflow: auto;
+    font-size: .9em;
+    color: var(--gray);
+}
+.map {
+    position: relative;
+}
 
 
 footer {
