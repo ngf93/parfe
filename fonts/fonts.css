@@ -1,28 +1,4 @@
 @font-face {
-    font-family: 'Lato';
-    src: local('Lato Regular'), local('Lato-Regular'), url('latoregular.woff2') format('woff2'), url('latoregular.woff') format('woff'), url('latoregular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Italic'), local('Lato-Italic'), url('latoitalic.woff2') format('woff2'), url('latoitalic.woff') format('woff'), url('latoitalic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Medium'), local('Lato-Medium'), url('latomedium.woff2') format('woff2'), url('latomedium.woff') format('woff'), url('latomedium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Lato';
-    src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url('latomediumitalic.woff2') format('woff2'), url('latomediumitalic.woff') format('woff'), url('latomediumitalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-}
-@font-face {
     font-family: 'Felix Titling';
     src: local('Felix Titling'), url('Felix Titling.ttf') format('truetype');
     font-weight: 400;
@@ -39,4 +15,28 @@
     src: local('Brandon Grotesque'), local('BrandonGrotesque'), url('BrandonGrotesque-Regular.woff') format('woff'), url('BrandonGrotesque-Regular.ttf') format('truetype'), url("BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype");
     font-weight: 400;
     font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
 }

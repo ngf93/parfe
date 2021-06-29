@@ -907,8 +907,8 @@ header nav ul a:active svg path {
     border: 1px solid var(--gold);
     z-index: 2;
 }
-#sec-10 .swiper-1 .swiper-button-prev,
-#sec-10 .swiper-1 .swiper-button-next {
+.swiper-1 .swiper-button-prev,
+.swiper-1 .swiper-button-next {
     top: unset;
     bottom: 3em;
     width: 2.5em;
@@ -919,24 +919,24 @@ header nav ul a:active svg path {
     align-items: center;
     left: unset;
 }
-#sec-10 .swiper-1 .swiper-button-next {
+.swiper-1 .swiper-button-next {
     right: 3em;
 }
-#sec-10 .swiper-1 .swiper-button-prev {
+.swiper-1 .swiper-button-prev {
     right: 6.5em;
 }
-#sec-10 .swiper-1 .swiper-button-prev img,
-#sec-10 .swiper-1 .swiper-button-next img {
+.swiper-1 .swiper-button-prev img,
+.swiper-1 .swiper-button-next img {
     width: 1.5em;
     height: 1.5em;
 }
-#sec-10 .swiper-1 .swiper-slide {
+.swiper-1 .swiper-slide {
     position: relative;
     z-index: 1;
     opacity: 0 !important;
 }
-#sec-10 .swiper-1 .swiper-slide-active {opacity: 1 !important;}
-#sec-10 .swiper-1 .swiper-slide img {
+.swiper-1 .swiper-slide-active {opacity: 1 !important;}
+.swiper-1 .swiper-slide img {
     width: 100%;
     height: 560px;
     object-fit: cover;
@@ -997,29 +997,29 @@ header nav ul a:active svg path {
 }
 
 @media (max-width: 1199px){
-    #sec-10 .swiper-1 .swiper-slide img, .categorie-cover img {height: 480px;}
+    .swiper-1 .swiper-slide img, .categorie-cover img {height: 480px;}
 }
 @media (max-width: 991px){
-    #sec-10 .swiper-1 .swiper-slide img, .categorie-cover img {height: 370px;}
+    .swiper-1 .swiper-slide img, .categorie-cover img {height: 370px;}
 }
 @media (max-width: 767px){
-    #sec-10 .swiper-1 .swiper-slide img, .categorie-cover img {height: 270px;}
+    .swiper-1 .swiper-slide img, .categorie-cover img {height: 270px;}
 }
 @media (max-width: 575px){
-    #sec-10 .swiper-1 .swiper-slide img, .categorie-cover img {height: 45vw;}
+    .swiper-1 .swiper-slide img, .categorie-cover img {height: 45vw;}
     .swiper-1::after, .categorie-cover::after {
         top: .5em;
         left: .5em;
         width: calc(100% - 1em);
         height: calc(100% - 1em);
     }
-    #sec-10 .swiper-1 .swiper-button-prev, #sec-10 .swiper-1 .swiper-button-next {
+    .swiper-1 .swiper-button-prev, .swiper-1 .swiper-button-next {
         bottom: 1em;
     }
-    #sec-10 .swiper-1 .swiper-button-next {
+    .swiper-1 .swiper-button-next {
         right: 1em;
     }
-    #sec-10 .swiper-1 .swiper-button-prev {
+    .swiper-1 .swiper-button-prev {
         right: 4.5em;
     }
     .categorie-cover .text {padding: 1em;}
@@ -1410,9 +1410,126 @@ fieldset legend {
     font-size: .9em;
     color: var(--gray);
 }
-.map {
-    position: relative;
+.map-block {position: relative;}
+.map-block::before {content: unset;}
+.map-block.not-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: rgb(3 2 1 / 29%);
 }
+.map-box {
+    position: relative;
+    z-index: 1;
+    height: 550px;
+}
+
+.map-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+.marker {
+    position: absolute;
+    transform: translate(-50%, -100%);
+}
+.marker svg {
+    width: 39px;
+    height: 54px;
+    fill: none;
+}
+.marker svg path.figure {
+    fill: var(--brown);
+    stroke: var(--brown);
+    stroke-width: 2.83px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.marker.active svg path.figure {
+    fill: var(--gold);
+    stroke: var(--gold);
+}
+.marker svg path.letter {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: var(--coolwhite);
+}
+
+.shop-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 200px;
+    background-color: var(--warmwhite);
+    z-index: 3;
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+@media (max-width: 1199px){
+    .map-box {height: 500px;}
+    #shops-list {max-height: 265px;}
+}
+@media (max-width: 767px){
+    .shop-info {
+        width: 215px;
+        height: 150px;
+        padding: 1em 2em;
+    }
+    .map-box {height: 400px;}
+}
+@media (max-width: 575px){
+    .map-box {
+        height: 100vw;
+    }
+    .shop-info {
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* section 19 */
+#sec-19 .bunny {
+    width: 160px;
+    height: 160px;
+}
+
+
+/* section 20 */
+.quiz-page {width: 100%;}
+.quiz-page img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+.quiz-page>div {
+    background-color: var(--warmwhite);
+    padding: 3em;
+}
+.quiz-page .btn_main {
+    min-width: 250px;
+    max-width: 100%;
+}
+/* .swiper-quiz {
+    position: relative;
+    overflow: hidden;
+} */
 
 
 footer {

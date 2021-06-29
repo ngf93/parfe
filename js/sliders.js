@@ -83,4 +83,15 @@ const swiper7 = new Swiper('.swiper-product-main', {
   }
 });
 
+// const swiper7 = new Swiper('.swiper-quiz', {
+//   loop: false,
+//   slidesPerView: 1,
+//   spaceBetween: 0,
+//   effect: "fade",
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+
 const myViewer = new ImgPreviewer('.img-preview-box');

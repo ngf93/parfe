@@ -68,8 +68,9 @@ html {
 
 body {
     font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
     font-size: 16px;
-    font-weight: 400;
     color: var(--deepgray);
     position: relative;
     background: url(../img/bg/bg-0.png) no-repeat var(--coolwhite);
