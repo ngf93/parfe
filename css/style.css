@@ -1526,10 +1526,79 @@ fieldset legend {
     min-width: 250px;
     max-width: 100%;
 }
-/* .swiper-quiz {
-    position: relative;
-    overflow: hidden;
-} */
+@media (max-width: 575px){
+    .quiz-page img {height: 50vw;}
+    .quiz-page .btn_main {min-width: 150px;}
+    .quiz-page>div {padding: 1em;}
+}
+
+
+
+/* section 21 */
+.user-card {
+    border: 1px solid var(--gold);
+    padding: 3em 2em;
+}
+.user-card table {
+    border-collapse: separate;
+    border-spacing: 0px 4px;
+}
+.user-card table tr td:first-child {
+    padding-right: .5em;
+}
+.user-card table tr td:nth-child(2) {
+    padding-left: .5em;
+    border-left: 1px solid var(--lightengray);
+}
+
+#profileTabs.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: fit-content;
+}
+#profileTabs.nav-tabs .nav-item {margin-bottom: 1.5em;}
+#profileTabs.nav-tabs .nav-link {
+    border: none;
+    color: var(--deepgray);
+    font-weight: 500;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+#profileTabs.nav-tabs .nav-link.active {
+    border: none;
+    color: var(--powder);
+    background-color: transparent;
+}
+
+#sec-21 .shopping-cart {
+    border-bottom: 2px solid var(--warmwhite);
+    padding: 3em 0;
+}
+#sec-21 .shopping-cart:first-child {
+    border-top: 2px solid var(--warmwhite);
+}
+@media (max-width: 767px){
+    #profileTabs.nav-tabs {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2em;
+        background-color: var(--warmwhite);
+    }
+    #profileTabs.nav-tabs .nav-item {margin-bottom: 0;}
+    #profileTabs.nav-tabs .nav-link {padding: .75em .5em;}
+}
+@media (max-width: 575px){
+    .user-card {padding: 2em 1em;}
+    #profileTabs.nav-tabs {flex-direction: column;}
+    #profileTabs.nav-tabs .nav-link {text-align: left;}
+}
+
 
 
 footer {

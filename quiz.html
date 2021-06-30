@@ -266,8 +266,8 @@
 		<section id="sec-20" class="mb-6">
 			<div class="container">
 				<h2>Подбор аромата</h2>
-				<div class="row justify-content-center">
-					<div class="col-7">
+				<div class="row justify-content-center mb-6">
+					<div class="col-md-9 col-lg-8 col-xl-7">
 						<div id="quiz" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
@@ -275,8 +275,8 @@
 										<img src="img/quiz-1.jpg">
 										<div>
 											<h3 class="mb-4">Какой аромат вам подходит?</h3>
-											<p class="text-center f_11 mb-5">Пройдите тест и узнайте, какой аромат вам подходит</p>
-											<button class="btn_main btn_1 mx-auto" type="button" data-bs-target="#quiz"  data-bs-slide="next">
+											<p class="text-center f_11">Пройдите тест и узнайте, какой аромат вам подходит</p>
+											<button class="btn_main btn_1 mx-auto mt-4 mt-sm-5" type="button" data-bs-target="#quiz"  data-bs-slide="next">
 												начать
 											</button>
 										</div>
@@ -287,7 +287,50 @@
 										<img src="img/quiz-2.jpg">
 										<div>
 											<h3 class="mb-4">В вашем гардеробе преобладают</h3>
-											<button class="btn_main btn_1 mx-auto" type="button" data-bs-target="#quiz"  data-bs-slide="next">
+											<div class="checkbox mb-2">
+												<input type="checkbox" name="question-1" value="casual">
+												<label>Одежда стиля casual: джинсы, кроссовки, удобная одежда</label>
+											</div>
+											<div class="checkbox mb-2">
+												<input type="checkbox" name="question-1" value="Женственные">
+												<label>Женственные платья, юбки, каблуки</label>
+											</div>
+											<div class="checkbox mb-2">
+												<input type="checkbox" name="question-1" value="обтягивающие">
+												<label>Кожаные юбки, леггинсы, обтягивающие платья</label>
+											</div>
+											<div class="checkbox mb-2">
+												<input type="checkbox" name="boho" value="обтягивающие">
+												<label>Одежда в стиле boho: легкие ткани, воздушные платья в пол</label>
+											</div>
+											<button class="btn_main btn_1 mx-auto mt-4 mt-sm-5" type="button" data-bs-target="#quiz"  data-bs-slide="next">
+												следующий вопрос
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="quiz-page">
+										<img src="img/quiz-2.jpg">
+										<div>
+											<h3 class="mb-4">В вашем гардеробе преобладают</h3>
+											<div class="radio-btn mb-2">
+												<input type="radio" name="question-2" value="casual">
+												<label>Одежда стиля casual: джинсы, кроссовки, удобная одежда</label>
+											</div>
+											<div class="radio-btn mb-2">
+												<input type="radio" name="question-2" value="Женственные">
+												<label>Женственные платья, юбки, каблуки</label>
+											</div>
+											<div class="radio-btn mb-2">
+												<input type="radio" name="question-2" value="обтягивающие">
+												<label>Кожаные юбки, леггинсы, обтягивающие платья</label>
+											</div>
+											<div class="radio-btn mb-2">
+												<input type="radio" name="question-2" value="boho">
+												<label>Одежда в стиле boho: легкие ткани, воздушные платья в пол</label>
+											</div>
+											<button class="btn_main btn_1 mx-auto mt-4 mt-sm-5" type="button" data-bs-target="#quiz"  data-bs-slide="next">
 												следующий вопрос
 											</button>
 										</div>
@@ -299,8 +342,8 @@
 										<div>
 											<h3 class="gold mb-4">Вам подходят цветочные ароматы</h3>
 											<p class="text-center f_11 mb-3">Вы нежная, мечтательная натура, романтик в душе. Вы любите домашний уют и верите в настоящую любовь. Подчеркнут вашу нежность и женственность цветочные нотки сирени, розы, жасмина.</p>
-											<p class="text-center f_11 mb-5">Ниже представлен список ароматов Parfé которые подойдут именно вам</p>
-											<svg class="d-block mx-auto" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<p class="text-center f_11">Ниже представлен список ароматов Parfé которые подойдут именно вам</p>
+											<svg class="d-block mx-auto mt-4 mt-sm-5" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1.5 2.25L15 15.75L28.5 2.25" stroke="#D1AF8D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
 										</div>
@@ -308,24 +351,116 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- <div class="swiper-quiz">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="img/about1.jpg" alt="" class="w-25">
-									<div class="swiper-button-next">следующий</div>
+					</div>
+				</div>
+				<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 gx-4 gy-5">
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
 								</div>
-								<div class="swiper-slide">
-									<img src="img/about2.jpg" alt="" class="w-25">
-									<div class="swiper-button-next">следующий</div>
-								</div>
-								<div class="swiper-slide">
-									<img src="img/about3.jpg" alt="" class="w-25">
-								</div>
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
+								</button>
 							</div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div> -->
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
+					</div>
+					<div>
+						<div class="item item-full">
+							<div class="box">
+								<img src="img/parfume/1.png" alt="">
+								<div class="sticker color-1-5">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</div>
+								<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="false">
+									<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+									</svg>
+								</button>
+							</div>
+							<div class="text color-1-5">
+								<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+							</div>
+							<div class="d-flex justify-content-center mt-3 f_12">
+								<div class="black">1 674 <span class="pt">₽</span></div>
+								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+							</div>
+							<button type="button" class="btn_main btn_1 mt-3 w-100">
+								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+								В корзину
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

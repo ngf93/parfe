@@ -168,6 +168,12 @@ function verifyInput(form){
 }
 
 
+function changeField(){
+  document.getElementById('info-field').classList.add('d-none');
+  document.getElementById('editing-field').classList.remove('d-none');
+}
+
+
 /*************** 
 CUSTOM SELECT
 ****************/

@@ -156,8 +156,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     background-size: 1.5em 1.5em;
 }
 
-.radio, .radio-mark, .checkbox, .radio-block {position: relative;}
-.radio input, .radio-mark input, .checkbox input, .radio-block input {
+.radio, .radio-mark, .checkbox, .radio-block, .radio-btn {position: relative;}
+.radio input, .radio-mark input, .checkbox input, .radio-block input, .radio-btn input {
     appearance:none;
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -176,6 +176,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     z-index: 1;
     color: var(--gray);
 }
+.radio-btn label {
+    display: block;
+    background-color: var(--coolwhite);
+    border: 1px solid var(--powder);
+    color: var(--deepgray);
+    line-height: 1.1em;
+    padding: 1em 1.5em;
+    text-align: center;
+    transition: .4s;
+    font-size: .9em;
+}
 .radio-block>div {
     position: relative;
     z-index: 1;
@@ -183,6 +194,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 .radio input:checked ~ label {
     color: var(--powder);
+}
+.radio-btn input:checked ~ label {
+    background-color: var(--powder);
+    border: 1px solid var(--powder);
+    color: var(--coolwhite);
 }
 .radio-block input:checked ~ div {
     border: 1px solid var(--gold);
@@ -401,6 +417,14 @@ button:hover, button:focus, button:active {cursor: pointer;}
     stroke: var(--coolwhite);
 }
 
+@media (max-width: 767px){
+    .btn_4 span {font-size: .8em;}
+}
+@media (max-width: 575px){
+    .btn_4 span {font-size: .9em;}
+}
+
+
 
 /* TEXT STYLIZATION */
 h1, h2, h3, h4 {
@@ -458,6 +482,7 @@ h4 {
 .f_18 {font-size: 1.8em;}
 .f_19 {font-size: 1.9em;}
 .f_20 {font-size: 2em;}
+.f_30 {font-size: 3em;}
 .white {color: var(--coolwhite);}
 .black {color: var(--black);}
 .gray {color: var(--gray);}
@@ -481,7 +506,7 @@ h4 {
 .itlc {font-style: italic;}
 .norm {font-style: normal;}
 
-.ls-1 {letter-spacing: 1px;}
+.ls-1 {letter-spacing: .1em;}
 .ls-3 {letter-spacing: .3em;}
 
 .ws-no {white-space: nowrap;}

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Личный кабинет</title>
+	<link rel="shortcut icon" href="" type="image/png">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/img-previewer.css" />
+
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<link rel="stylesheet" href="fonts/fonts.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Comfortaa:wght@300;400&family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="container position-relative">
+			<div class="header-grid">
+				<div class="h-grid-1">
+					<div class="d-flex align-items-center">
+						<div class="d-flex f_09 text-uppercase lightengray">
+							<a href="" class="lightgray me-2">ru</a>
+							<a href="" class="me-2">en</a>
+							<a href="" class="me-2">fr</a>
+							<span class="me-2">|</span>
+							<a href="">faq</a>
+						</div>
+						<div class="d-flex ms-4">
+							<a href="mailto:" class="round-icon me-3">
+								<img src="img/icons/e-mail.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/inst.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="h-grid-2">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="" class="d-block mx-auto">
+					</a>
+				</div>
+				<div class="h-grid-3">
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="text-uppercase lightengray f_09 d-flex align-items-center">
+							<div class="count me-xl-1">12</div>
+							<img src="img/icons/shopping-cart.svg" alt="">
+							<span class="cart-text">корзина</span>
+						</a>
+						<a href="#" class="ms-3 ms-xl-4 d-flex align-items-center">
+							<div class="count me-xl-1">29</div>
+							<img src="img/icons/favorite.svg" alt="">
+						</a>
+						<a href="#" class="ms-2 ms-xl-3">
+							<img src="img/icons/user.svg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="h-grid-4">
+					<nav>
+						<ul>
+							<li>
+								<a href="" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+									каталог
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">Подбор аромата</a></li>
+							<li>
+								<a href="" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+									преимущества
+									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
+									</svg>
+								</a>
+							</li>
+							<li><a href="">о компании</a></li>
+							<li><a href="">подарки</a></li>
+							<li><a href="">Где купить</a></li>
+							<li><a href="">контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="h-grid-5">
+					<a href="index.html">
+						<img src="img/logo-mini.svg" alt="Parfe">
+					</a>
+				</div>
+				<div class="h-grid-6">
+					<button type="button" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+						<img src="img/icons/gamburger.svg" alt="Меню">
+					</button>
+				</div>
+			</div>
+
+			<div class="submenu" id="submenu-catalog" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-3 gx-3">
+					<div class="type-1">
+						<div class="title color-1-5 ribbon mb-3">Древесные / Шипровые / Цветочные</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 1</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 2</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 3</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 4</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 5</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-2">
+						<div class="title color-6-12 mb-3">Цветочные / Фруктовые</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 6</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 7</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 8</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 9</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 10</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 11</div>
+									<div class="source itlc">unisex</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 12</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 21</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="type-3">
+						<div class="title color-13-20 ribbon mb-3">Пряные / Ванильные / Восточные</div>
+						<div class="row row-cols-3 row-cols-lg-4 justify-content-center gx-3 gy-3 px-xxl-4">
+							<div>
+								<a class="item">
+									<div class="felix">N° 13</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 15</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+							<div>
+								<a class="item">
+									<div class="felix">N° 20</div>
+									<div class="source itlc">woman</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="submenu" id="submenu-advantages" onmouseleave="closeSubmenu(this.id)">
+				<div class="row row-cols-6 gx-3 gx-xl-4">
+					<div>
+						<figure>
+							<img src="img/icons/adv1.svg" alt="Абсолютная стойкость на каждый день">
+							<figcaption><a href="">Абсолютная стойкость на каждый день</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv2.svg" alt="Компактный и практичный формат">
+							<figcaption><a href="">Компактный и практичный формат</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv3.svg" alt="Натуральные ингредиенты — природные афродизиаки">
+							<figcaption><a href="">Натуральные ингредиенты — природные афродизиаки</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv4.svg" alt="Не содержит спирта, только “сердце парфюма”">
+							<figcaption><a href="">Не содержит спирта, только “сердце парфюма”</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv5.svg" alt="Богатая палитра ароматов">
+							<figcaption><a href="">Богатая палитра ароматов</a></figcaption>
+						</figure>
+					</div>
+					<div>
+						<figure>
+							<img src="img/icons/adv6.svg" alt="Не испытывается на животных">
+							<figcaption><a href="">Не испытывается на животных</a></figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section id="sec-21" class="mb-6">
+			<div class="container">
+				<h2>Личный кабинет</h2>
+				<div class="row mb-5">
+					<div class="col-md-7 col-lg-6 col-xl-5">
+						<div class="user-card">
+							<div class="f_20 black mb-2">Александрина</div>
+							<div class="f_20 black mb-3">Христорождественская</div>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<div class="lightgray text-uppercase f_09 ls-1">бонусные баллы</div>
+										</td>
+										<td>
+											<div class="f_11 powder fw_7 ls-1">2 500</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="lightgray text-uppercase f_09 ls-1">скидка</div>
+										</td>
+										<td>
+											<div class="f_11 powder fw_7 ls-1">10 %</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-lg-3">
+						<ul class="nav nav-tabs" id="profileTabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#personal-information" type="button" role="tab" aria-selected="true">Личная информация</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" data-bs-toggle="tab" data-bs-target="#favorites" type="button" role="tab" aria-selected="false">Избранное</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" data-bs-toggle="tab" data-bs-target="#my-orders" type="button" role="tab" aria-selected="false">Мои покупки</button>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-8 col-lg-9">
+						<div class="tab-content" id="profileTabContent">
+							<div class="tab-pane fade show active" id="personal-information" role="tabpanel">
+								<div class="row" id="info-field">
+									<div class="col-sm-6 col-lg-5 col-xl-4 offset-lg-1">
+										<div class="f_11 gray mb-3">Христорождественская</div>
+										<div class="f_11 gray mb-3">Александрина</div>
+										<div class="f_11 gray mb-3">Константиновна</div>
+		
+										<div class="d-flex f_11 mb-4">
+											<div class="radio-mark">
+												<input type="radio" name="gender" value="female">
+												<label class="gray">Женский</label>
+											</div>
+											<div class="radio-mark ms-3">
+												<input type="radio" name="gender" value="male">
+												<label class="gray">Мужской</label>
+											</div>
+										</div>
+		
+										<div class="f_11 gray mb-4">24.05.1990</div>
+										<div class="f_11 gray mb-4"><a href="mailto:mainemail@gmail.com">mainemail@gmail.com</a></div>
+										<div class="f_11 gray mb-4"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div>
+										<div class="f_11 gray mb-4">Уфа, Респ. Башкортостан</div>
+									</div>
+									<div class="col-sm-6 col-lg-5 col-xl-4 offset-xl-2">
+										<button type="button" class="powder f_11 mt-4 mt-sm-0" onclick="changeField()">редактировать</button>
+									</div>
+								</div>
+								<div class="row d-none" id="editing-field">
+									<div class="col-sm-6 col-lg-5 col-xl-4 offset-lg-1">
+										<form action="">
+											<input type="text" placeholder="Фамилия" class="mb-3">
+											<input type="text" placeholder="Имя" class="mb-3">
+											<input type="text" placeholder="Отчество" class="mb-4">
+											<div class="d-flex f_11 mb-4">
+												<div class="radio-mark">
+													<input type="radio" name="gender" value="female">
+													<label class="gray">Женский</label>
+												</div>
+												<div class="radio-mark ms-3">
+													<input type="radio" name="gender" value="male">
+													<label class="gray">Мужской</label>
+												</div>
+											</div>
+											<input type="date" class="mb-3">
+											<div class="d-flex mb-3">
+												<div class="custom-select me-2">
+													<button type="button"></button>
+													<div class="cs-options">
+														<div class="radio">
+															<input type="radio" name="country" value="ru" checked>
+															<label>
+																<img src="img/icons/flag-ru.svg" alt="">
+															</label>
+														</div>
+														<div class="radio">
+															<input type="radio" name="country" value="uk">
+															<label>
+																<img src="img/icons/flag-uk.svg" alt="">
+															</label>
+														</div>
+														<div class="radio">
+															<input type="radio" name="country" value="fr">
+															<label>
+																<img src="img/icons/flag-fr.svg" alt="">
+															</label>
+														</div>
+													</div>
+												</div>
+												<input type="text" class="flex-1" placeholder="+7 (000) 000-00-00">
+											</div>
+											<input type="text" placeholder="e-mail" class="mb-3">
+											<input type="text" placeholder="Уфа, Респ. Башкортостан" class="mb-3">
+											<button type="submit" class="btn_main btn_1 w-100 mt-4">Регистрация</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="favorites" role="tabpanel">
+								<!-- Если нет товаров в избранном: -->
+								<div class="f_11 mb-4">Список пожеланий пока пуст</div>
+
+								<!-- Если есть товары в избранном: -->
+								<div class="d-flex justify-content-between mb-4">
+									<button type="button" class="btn_4">
+										<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.125 6.875C2.95924 6.875 2.80027 6.94085 2.68306 7.05806C2.56585 7.17527 2.5 7.33424 2.5 7.5V15.9375C2.5 17.1187 3.50625 18.125 4.6875 18.125H15.3125C16.4937 18.125 17.5 17.1676 17.5 15.9863V7.5C17.5 7.33424 17.4342 7.17527 17.3169 7.05806C17.1997 6.94085 17.0408 6.875 16.875 6.875H3.125Z"/>
+											<path d="M6.25 6.875V5.625C6.25 4.63044 6.64509 3.67661 7.34835 2.97335C8.05161 2.27009 9.00544 1.875 10 1.875V1.875C10.9946 1.875 11.9484 2.27009 12.6517 2.97335C13.3549 3.67661 13.75 4.63044 13.75 5.625V6.875"/>
+										</svg>
+										<span>все товары в корзину</span>
+									</button>
+									<button type="button" class="btn_4">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4.375 4.375L5.15625 16.875C5.19336 17.5973 5.71875 18.125 6.40625 18.125H13.5938C14.284 18.125 14.7996 17.5973 14.8438 16.875L15.625 4.375"/>
+											<path d="M3.125 4.375H16.875"/>
+											<path d="M7.5 4.375V2.8125C7.49964 2.68929 7.52365 2.56722 7.57063 2.45331C7.61762 2.33941 7.68666 2.23591 7.77379 2.14879C7.86091 2.06166 7.96441 1.99262 8.07831 1.94563C8.19222 1.89865 8.31429 1.87464 8.4375 1.875H11.5625C11.6857 1.87464 11.8078 1.89865 11.9217 1.94563C12.0356 1.99262 12.1391 2.06166 12.2262 2.14879C12.3133 2.23591 12.3824 2.33941 12.4294 2.45331C12.4764 2.56722 12.5004 2.68929 12.5 2.8125V4.375"/>
+											<path d="M10 6.875V15.625"/>
+											<path d="M7.1875 6.875L7.5 15.625"/>
+											<path d="M12.8125 6.875L12.5 15.625"/>
+										</svg>
+										<span>удалить все</span>
+									</button>
+								</div>
+								<div class="row row-cols-2 row-cols-lg-3 gx-4 gy-5">
+									<div>
+										<div class="item item-full">
+											<div class="box">
+												<img src="img/parfume/1.png" alt="">
+												<div class="sticker color-1-5">
+													<div class="felix">N° 1</div>
+													<div class="source itlc">unisex</div>
+												</div>
+												<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="true">
+													<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+													</svg>
+												</button>
+											</div>
+											<div class="text color-1-5">
+												<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+											</div>
+											<div class="d-flex justify-content-center mt-3 f_12">
+												<div class="black">1 674 <span class="pt">₽</span></div>
+												<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+											</div>
+											<button type="button" class="btn_main btn_1 mt-3 w-100">
+												<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+												В корзину
+											</button>
+										</div>
+									</div>
+									<div>
+										<div class="item item-full">
+											<div class="box">
+												<img src="img/parfume/1.png" alt="">
+												<div class="sticker color-1-5">
+													<div class="felix">N° 1</div>
+													<div class="source itlc">unisex</div>
+												</div>
+												<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="true">
+													<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+													</svg>
+												</button>
+											</div>
+											<div class="text color-1-5">
+												<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+											</div>
+											<div class="d-flex justify-content-center mt-3 f_12">
+												<div class="black">1 674 <span class="pt">₽</span></div>
+												<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+											</div>
+											<button type="button" class="btn_main btn_1 mt-3 w-100">
+												<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+												В корзину
+											</button>
+										</div>
+									</div>
+									<div>
+										<div class="item item-full">
+											<div class="box">
+												<img src="img/parfume/1.png" alt="">
+												<div class="sticker color-1-5">
+													<div class="felix">N° 1</div>
+													<div class="source itlc">unisex</div>
+												</div>
+												<button type="button" onclick="fav(this)" class="btn_icon fav-btn" data-fav="true">
+													<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" />
+													</svg>
+												</button>
+											</div>
+											<div class="text color-1-5">
+												<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
+											</div>
+											<div class="d-flex justify-content-center mt-3 f_12">
+												<div class="black">1 674 <span class="pt">₽</span></div>
+												<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+											</div>
+											<button type="button" class="btn_main btn_1 mt-3 w-100">
+												<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
+												В корзину
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="my-orders" role="tabpanel">
+								<!-- Если не было покупок: -->
+								<div class="row mb-5">
+									<div class="col-xl-10 offset-xl-1">
+										<div class="f_30 fw_5 ls-1 mb-5">У вас пока нет покупок</div>
+									</div>
+									<div class="col-md-6 col-lg-4 col-xl-3 offset-xl-1">
+										<a href="catalog.html" class="btn_main btn_1 w-100">в каталог</a>
+									</div>
+								</div>
+
+								<!-- Если есть покупки: -->
+								<div>
+									<div class="shopping-cart">
+										<div class="f_09 fw_5 ls-1 ps-4 mb-4"><span class="gray">Заказ №</span> Б-1209988923</div>
+										<div class="table-responsive mb-5">
+											<table class="table table-borderless">
+												<tbody>
+													<tr>
+														<td>
+															<div class="item">
+																<img src="img/parfume/1.png" alt="">
+																<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex f_11">
+																<div class="black">1 674 <span class="pt">₽</span></div>
+																<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/minus.svg" alt="">
+																</button>
+																<input type="number" placeholder="0" value="1">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/plus.svg" alt="">
+																</button>
+															</div>
+														</td>
+														<td>
+															<div class="f_11">Доставка СДЭК</div>
+														</td>
+														<td>
+															<button type="button" class="btn_4">
+																<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M4.375 4.375L5.15625 16.875C5.19336 17.5973 5.71875 18.125 6.40625 18.125H13.5938C14.284 18.125 14.7996 17.5973 14.8438 16.875L15.625 4.375"/>
+																	<path d="M3.125 4.375H16.875" stroke-miterlimit="10"/>
+																	<path d="M7.5 4.375V2.8125C7.49964 2.68929 7.52365 2.56722 7.57063 2.45331C7.61762 2.33941 7.68666 2.23591 7.77379 2.14879C7.86091 2.06166 7.96441 1.99262 8.07831 1.94563C8.19222 1.89865 8.31429 1.87464 8.4375 1.875H11.5625C11.6857 1.87464 11.8078 1.89865 11.9217 1.94563C12.0356 1.99262 12.1391 2.06166 12.2262 2.14879C12.3133 2.23591 12.3824 2.33941 12.4294 2.45331C12.4764 2.56722 12.5004 2.68929 12.5 2.8125V4.375"/>
+																	<path d="M10 6.875V15.625"/>
+																	<path d="M7.1875 6.875L7.5 15.625"/>
+																	<path d="M12.8125 6.875L12.5 15.625"/>
+																</svg>
+																<span>удалить</span>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="item">
+																<img src="img/parfume/1.png" alt="">
+																<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex f_12">
+																<div class="black">1 674 <span class="pt">₽</span></div>
+																<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/minus.svg" alt="">
+																</button>
+																<input type="number" placeholder="0" value="1">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/plus.svg" alt="">
+																</button>
+															</div>
+														</td>
+														<td>
+															Доставка СДЭК
+														</td>
+														<td>
+															<button type="button" class="btn_4">
+																<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M4.375 4.375L5.15625 16.875C5.19336 17.5973 5.71875 18.125 6.40625 18.125H13.5938C14.284 18.125 14.7996 17.5973 14.8438 16.875L15.625 4.375"/>
+																	<path d="M3.125 4.375H16.875" stroke-miterlimit="10"/>
+																	<path d="M7.5 4.375V2.8125C7.49964 2.68929 7.52365 2.56722 7.57063 2.45331C7.61762 2.33941 7.68666 2.23591 7.77379 2.14879C7.86091 2.06166 7.96441 1.99262 8.07831 1.94563C8.19222 1.89865 8.31429 1.87464 8.4375 1.875H11.5625C11.6857 1.87464 11.8078 1.89865 11.9217 1.94563C12.0356 1.99262 12.1391 2.06166 12.2262 2.14879C12.3133 2.23591 12.3824 2.33941 12.4294 2.45331C12.4764 2.56722 12.5004 2.68929 12.5 2.8125V4.375"/>
+																	<path d="M10 6.875V15.625"/>
+																	<path d="M7.1875 6.875L7.5 15.625"/>
+																	<path d="M12.8125 6.875L12.5 15.625"/>
+																</svg>
+																<span>удалить</span>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="f_15 fw_5 ps-4"><span class="gray">Итого:</span> 5 022 <span class="pt">₽</span></div>
+									</div>
+									<div class="shopping-cart">
+										<div class="f_09 fw_5 ls-1 ps-4 mb-4"><span class="gray">Заказ №</span> Б-1209988923</div>
+										<div class="table-responsive mb-5">
+											<table class="table table-borderless">
+												<tbody>
+													<tr>
+														<td>
+															<div class="item">
+																<img src="img/parfume/1.png" alt="">
+																<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex f_11">
+																<div class="black">1 674 <span class="pt">₽</span></div>
+																<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/minus.svg" alt="">
+																</button>
+																<input type="number" placeholder="0" value="1">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/plus.svg" alt="">
+																</button>
+															</div>
+														</td>
+														<td>
+															<div class="f_11">Доставка СДЭК</div>
+														</td>
+														<td>
+															<button type="button" class="btn_4">
+																<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M4.375 4.375L5.15625 16.875C5.19336 17.5973 5.71875 18.125 6.40625 18.125H13.5938C14.284 18.125 14.7996 17.5973 14.8438 16.875L15.625 4.375"/>
+																	<path d="M3.125 4.375H16.875" stroke-miterlimit="10"/>
+																	<path d="M7.5 4.375V2.8125C7.49964 2.68929 7.52365 2.56722 7.57063 2.45331C7.61762 2.33941 7.68666 2.23591 7.77379 2.14879C7.86091 2.06166 7.96441 1.99262 8.07831 1.94563C8.19222 1.89865 8.31429 1.87464 8.4375 1.875H11.5625C11.6857 1.87464 11.8078 1.89865 11.9217 1.94563C12.0356 1.99262 12.1391 2.06166 12.2262 2.14879C12.3133 2.23591 12.3824 2.33941 12.4294 2.45331C12.4764 2.56722 12.5004 2.68929 12.5 2.8125V4.375"/>
+																	<path d="M10 6.875V15.625"/>
+																	<path d="M7.1875 6.875L7.5 15.625"/>
+																	<path d="M12.8125 6.875L12.5 15.625"/>
+																</svg>
+																<span>удалить</span>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<div class="item">
+																<img src="img/parfume/1.png" alt="">
+																<div class="text-start brandon fw_5 powder norm text-uppercase ls-3">Parfé <span class="pt">№</span>3 </span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex f_12">
+																<div class="black">1 674 <span class="pt">₽</span></div>
+																<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
+															</div>
+														</td>
+														<td>
+															<div class="d-flex">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/minus.svg" alt="">
+																</button>
+																<input type="number" placeholder="0" value="1">
+																<button type="button" class="btn_icon_2">
+																	<img src="img/icons/plus.svg" alt="">
+																</button>
+															</div>
+														</td>
+														<td>
+															Доставка СДЭК
+														</td>
+														<td>
+															<button type="button" class="btn_4">
+																<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M4.375 4.375L5.15625 16.875C5.19336 17.5973 5.71875 18.125 6.40625 18.125H13.5938C14.284 18.125 14.7996 17.5973 14.8438 16.875L15.625 4.375"/>
+																	<path d="M3.125 4.375H16.875" stroke-miterlimit="10"/>
+																	<path d="M7.5 4.375V2.8125C7.49964 2.68929 7.52365 2.56722 7.57063 2.45331C7.61762 2.33941 7.68666 2.23591 7.77379 2.14879C7.86091 2.06166 7.96441 1.99262 8.07831 1.94563C8.19222 1.89865 8.31429 1.87464 8.4375 1.875H11.5625C11.6857 1.87464 11.8078 1.89865 11.9217 1.94563C12.0356 1.99262 12.1391 2.06166 12.2262 2.14879C12.3133 2.23591 12.3824 2.33941 12.4294 2.45331C12.4764 2.56722 12.5004 2.68929 12.5 2.8125V4.375"/>
+																	<path d="M10 6.875V15.625"/>
+																	<path d="M7.1875 6.875L7.5 15.625"/>
+																	<path d="M12.8125 6.875L12.5 15.625"/>
+																</svg>
+																<span>удалить</span>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="f_15 fw_5 ps-4"><span class="gray">Итого:</span> 5 022 <span class="pt">₽</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container py-4 py-md-5">
+				<div class="row mb-md-5">
+					<div class="d-none d-md-block col-4">
+						<div class="lightgray mb-3">Добро пожаловать:</div>
+						<div class="d-flex">
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/inst.svg" alt="">
+							</a>
+							<a href="#" class="round-icon me-3">
+								<img src="img/icons/fb.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<a href="index.html">
+							<img src="img/logo.svg" alt="" class="d-block mx-auto">
+						</a>
+					</div>
+					<div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+						<div class="lightgray mb-3">Платежные системы:</div>
+						<div class="d-flex justify-content-center justify-content-md-end">
+							<img src="img/icons/visa.jpg">
+							<img src="img/icons/mastercard.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/paypal.jpg" class="ms-1 ms-lg-3">
+							<img src="img/icons/payoneer.jpg" class="ms-1 ms-lg-3">
+						</div>
+					</div>
+				</div>
+				<div class="d-none d-md-flex row justify-content-center mb-5">
+					<div class="col-md-8 col-lg-7 col-xl-6">
+						<nav>
+							<a href="">О нас в прессе</a>
+							<a href="">Каталог ароматов</a>
+							<a href="">О компании</a>
+							<a href="">FAQ</a>
+						</nav>
+					</div>
+				</div>
+				<div class="d-none d-md-flex row justify-content-center mb-lg-4 lightgray">
+					<div class="col-xl-10">
+						<div class="row">
+							<div class="order-1 col-6 col-lg-3">
+								<div class="d-flex justify-content-center">
+									<img src="img/icons/phone.svg" alt="" class="icon me-2">
+									<a href="tel:+79035940366">+ 7 (903) 594-03-66</a>
+								</div>
+							</div>
+							<div class="order-3 order-lg-2 col-12 col-lg-6 mt-4 mt-lg-0">
+								<div class="d-flex justify-content-center">
+									<img src="img/icons/address.svg" alt="" class="icon me-2">
+									<span class="text-center">125047, Москва, ул. Фадеева, дом № 7,<br> строение 1, офис 2</span>
+								</div>
+							</div>
+							<div class="order-2 order-lg-3 col-6 col-lg-3">
+								<div class="d-flex justify-content-center">
+									<img src="img/icons/e-mail-2.svg" alt="" class="icon me-2">
+									<a href="mailto:info@parfe-france.com">info@parfe-france.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<div class="container d-flex flex-column flex-sm-row justify-content-center align-items-center pt-3 pb-5 gray">
+		<div><a href="#">Политика конфиденциальности</a></div>
+		<div class="ms-sm-5 mt-3 mt-sm-0">© Все права защищены. Parfe <span id="year"></span></div>
+	</div>
+
+	<div id="shadow"></div>
+
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu">
+		<div class="offcanvas-body">
+			<div class="offcanvas-box p-4 p-sm-5">
+				<div class="d-flex f_09 text-uppercase lightengray d-md-none mb-5">
+					<a href="" class="lightgray me-2">ru</a>
+					<a href="" class="me-2">en</a>
+					<a href="" class="me-2">fr</a>
+					<span class="me-2">|</span>
+					<a href="">faq</a>
+				</div>
+				<nav class="mb-5 mb-md-0">
+					<ul>
+						<li><a href="">каталог</a></li>
+						<li><a href="">Подбор аромата</a></li>
+						<li><a href="">преимущества</a></li>
+						<li><a href="">о компании</a></li>
+						<li><a href="">подарки</a></li>
+						<li><a href="">Где купить</a></li>
+						<li><a href="">контакты</a></li>
+						<li><a href="">О нас в прессе</a></li>
+						<li><a href="">Каталог ароматов</a></li>
+						<li><a href="">О компании</a></li>
+						<li><a href="">FAQ</a></li>
+					</ul>
+				</nav>
+				<div class="d-flex d-md-none mb-4">
+					<a href="mailto:" class="round-icon me-3">
+						<img src="img/icons/e-mail.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/inst.svg" alt="">
+					</a>
+					<a href="#" class="round-icon me-3">
+						<img src="img/icons/fb.svg" alt="">
+					</a>
+				</div>
+				<div class="d-fle d-md-none mb-3">
+					<img src="img/icons/phone.svg" alt="" class="icon me-2">
+					<a href="tel:+79035940366">+ 7 (903) 594-03-66</a>
+				</div>
+				<div class="d-flex d-md-none">
+					<img src="img/icons/address.svg" alt="" class="icon me-2">
+					<span class="text-start">125047, Москва, ул. Фадеева, дом № 7, строение 1, офис 2</span>
+				</div>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23 23L9 9"/>
+					<path d="M23 9L9 23"/>
+				</svg>							
+			</button>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="box">
+						<h3 class="gold">Скидка 10% на первую покупку</h3>
+						<p class="text-center gray mb-4">Зарегестрируйтесь в личном кабинете и получите скидку 10% на первую покупку в нашем магазине</p>
+						<div class="row justify-content-center">
+							<div class="col-sm-8 col-md-6">
+								<section class="change-forms">
+									<form action="" class="entrance">
+										<input type="text" placeholder="e-mail" class="b-lgray mb-2">
+										<div class="password mb-3">
+											<input type="password" name="password" placeholder="пароль" minlength="6" maxlength="16" class="b-lgray">
+											<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this)"></button>
+										</div>
+										<button type="submit" class="btn_main btn_1 mx-auto mt-4">Войти</button>
+										<div class="d-flex justify-content-center align-items-center mt-3">
+											или <button type="button" class="powder ms-2" onclick="swap_form(this.closest('form'))">зарегистрироваться</button>
+										</div>
+									</form>
+									<form action="" class="registration d-none">
+										<input type="text" placeholder="e-mail" class="b-lgray mb-2">
+										<div class="password mb-3">
+											<input type="password" name="password" placeholder="пароль" minlength="6" maxlength="16" class="b-lgray">
+											<button type="button" data-state="invisible" class="pass_btn" onclick="change_state(this)"></button>
+										</div>
+										<button type="submit" class="btn_main btn_1 mx-auto">зарегистрироваться</button>
+										<div class="d-flex justify-content-center align-items-center mt-3 f_09">
+											или <button type="button" class="powder ms-2" onclick="swap_form(this.closest('form'))">войти</button>
+										</div>
+									</form>
+								</section>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="modal">
+						<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23 23L9 9"/>
+							<path d="M23 9L9 23"/>
+						</svg>							
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Skripts -->
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/img-previewer.min.js"></script>
+	<script type="text/javascript" src="js/sliders.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
