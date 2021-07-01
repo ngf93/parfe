@@ -172,6 +172,10 @@ function changeField(){
   document.getElementById('info-field').classList.add('d-none');
   document.getElementById('editing-field').classList.remove('d-none');
 }
+function changeFieldReverse(){
+  document.getElementById('editing-field').classList.add('d-none');
+  document.getElementById('info-field').classList.remove('d-none');
+}
 
 
 /*************** 

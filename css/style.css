@@ -139,7 +139,7 @@ header nav ul a:active svg path {
     left: 0px;
     width: 100%;
     background-color: var(--coolwhite);
-    padding: 2em 4em;
+    padding: 2em 3.5em;
     border: 1px solid var(--gold);
     opacity: 0;
 }
@@ -225,9 +225,6 @@ header nav ul a:active svg path {
     color: var(--powder);
 }
 
-/* @media (max-width: 1399px){
-    header.h-sticky .header-grid {grid-template-columns: 115px 45px auto 190px;}
-} */
 @media (max-width: 1199px){
     header.h-sticky .header-grid {grid-template-columns: 100px 45px auto 150px;}
     header.h-sticky nav ul a {font-size: .8em;}
@@ -1680,10 +1677,13 @@ footer nav {
 
 /* Modal window */
 .modal-body {
-    background: url(../img/bg/bg-2.png) no-repeat center;
-    background-size: cover;
+    background-color: var(--coolwhite);
     padding: 3em;
     position: relative;
+}
+#myModal {
+    background: url(../img/bg/bg-2.png) no-repeat center;
+    background-size: cover;
 }
 #gift .modal-body {
     background: url(../img/bg/flower.svg) no-repeat center bottom #fff;
@@ -1740,18 +1740,23 @@ footer nav {
     flex: 1;
     padding: 1em 1.5em;
 }
-
+@media (min-width: 1200px){
+    .modal-dialog.md-full-content {max-width: 1140px;}
+}
+@media (min-width: 992px){
+    .modal-dialog.md-full-content {max-width: 960px;}
+}
 @media (min-width: 768px){
     .modal-dialog {max-width: 750px;}
-    #gift .modal-dialog {max-width: 720px;}
+    .modal-dialog.md-full-content {max-width: 720px;}
     #gift .modal-body {padding: 2em;}
 }
 @media (min-width: 992px){
-    #gift .modal-dialog {max-width: 960px;}
+    .modal-dialog.md-full-content {max-width: 960px;}
     #gift .modal-body {padding: 2em 4em;}
 }
 @media (min-width: 1200px){
-    #gift .modal-dialog {max-width: 1140px;}
+    .modal-dialog.md-full-content {max-width: 1140px;}
     #gift .modal-body {padding: 3em 5em;}
 }
 
