@@ -518,9 +518,9 @@ main {
     margin: 0px auto;
     background-color: var(--coolwhite);
     position: relative;
-    /* border: 1px solid var(--gold); */
     padding-top: 3em;
 }
+main.main-border {border: 1px solid var(--gold);}
 main>section {
     position: relative;
     z-index: 2;
