@@ -21,13 +21,13 @@
 				<div class="h-grid-1">
 					<div class="d-flex align-items-center">
 						<div class="d-flex f_09 text-uppercase lightengray">
-							<a href="" class="lightgray me-2">ru</a>
-							<a href="" class="me-2">en</a>
-							<a href="" class="me-2">fr</a>
+							<a href="" class="simple-link active me-2">ru</a>
+							<a href="" class="simple-link me-2">en</a>
+							<a href="" class="simple-link me-2">fr</a>
 							<span class="me-2">|</span>
-							<a href="">faq</a>
+							<a href="" class="simple-link">faq</a>
 						</div>
-						<div class="d-flex ms-4">
+						<div class="d-none d-md-flex ms-4">
 							<a href="mailto:" class="round-icon me-3">
 								<img src="img/icons/e-mail.svg" alt="">
 							</a>
@@ -42,22 +42,29 @@
 				</div>
 				<div class="h-grid-2">
 					<a href="index.html">
-						<img src="img/logo.svg" alt="" class="d-block mx-auto">
+						<img src="img/logo.svg" alt="" class="logo-img d-block mx-auto">
 					</a>
 				</div>
 				<div class="h-grid-3">
 					<div class="d-flex align-items-center justify-content-end">
-						<a href="shopping-cart.html" class="text-uppercase lightengray f_09 d-flex align-items-center">
+						<a href="shopping-cart.html" class="head-btn-svg">
 							<div class="count me-xl-1">12</div>
-							<img src="img/icons/shopping-cart.svg" alt="">
-							<span class="cart-text">корзина</span>
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 8.25C3.55109 8.25 3.36032 8.32902 3.21967 8.46967C3.07902 8.61032 3 8.80109 3 9V19.125C3 20.5425 4.2075 21.75 5.625 21.75H18.375C19.7925 21.75 21 20.6011 21 19.1836V9C21 8.80109 20.921 8.61032 20.7803 8.46967C20.6397 8.32902 20.4489 8.25 20.25 8.25H3.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M7.5 8.25V6.75C7.5 5.55653 7.97411 4.41193 8.81802 3.56802C9.66193 2.72411 10.8065 2.25 12 2.25V2.25C13.1935 2.25 14.3381 2.72411 15.182 3.56802C16.0259 4.41193 16.5 5.55653 16.5 6.75V8.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>								
 						</a>
-						<a href="#" class="ms-3 ms-xl-4 d-flex align-items-center">
+						<a href="#" class="ml-12 head-btn-svg">
 							<div class="count me-xl-1">29</div>
-							<img src="img/icons/favorite.svg" alt="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.5437 4C13.5006 4 12.0006 7 12.0006 7C12.0006 7 10.5006 4 7.45748 4C4.98435 4 3.02591 6.06906 3.0006 8.53797C2.94904 13.6628 7.06607 17.3073 11.5787 20.3702C11.7031 20.4548 11.8501 20.5001 12.0006 20.5001C12.1511 20.5001 12.2981 20.4548 12.4225 20.3702C16.9347 17.3073 21.0517 13.6628 21.0006 8.53797C20.9753 6.06906 19.0169 4 16.5437 4Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>						
 						</a>
-						<a data-bs-toggle="modal" href="#modal-entrance" class="ms-2 ms-xl-3">
-							<img src="img/icons/user.svg" alt="">
+						<a data-bs-toggle="modal" href="#modal-entrance" class="ml-12 head-btn-svg">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.4795 7.60156C16.3034 9.97658 14.5029 11.9141 12.5263 11.9141C10.5498 11.9141 8.74617 9.97703 8.57322 7.60156C8.39353 5.13086 10.1455 3.28906 12.5263 3.28906C14.9072 3.28906 16.6592 5.17578 16.4795 7.60156Z" stroke-width="1.42" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M12.1857 14.7891C8.27745 14.7891 4.31085 16.9453 3.57683 21.0152C3.48833 21.5058 3.76595 21.9766 4.27941 21.9766H20.0919C20.6058 21.9766 20.8834 21.5058 20.7949 21.0152C20.0605 16.9453 16.0939 14.7891 12.1857 14.7891Z" stroke-width="1.42" stroke-miterlimit="10"/>
+							</svg>								
 						</a>
 					</div>
 				</div>
@@ -65,26 +72,26 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="catalog.html" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+								<a href="catalog.html" class="main-menu" data-target="submenu-catalog">
 									каталог
 									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
 									</svg>
 								</a>
 							</li>
-							<li><a href="quiz.html">Подбор аромата</a></li>
+							<li><a href="quiz.html" class="main-menu">Подбор аромата</a></li>
 							<li>
-								<a href="benefits.html" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+								<a href="benefits.html" class="main-menu" data-target="submenu-advantages">
 									преимущества
 									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
 									</svg>
 								</a>
 							</li>
-							<li><a href="about.html">о компании</a></li>
-							<li><a href="">подарки</a></li>
-							<li><a href="shops.html">Где купить</a></li>
-							<li><a href="">контакты</a></li>
+							<li class="floating"><a href="about.html" class="main-menu">о компании</a></li>
+							<li class="floating"><a href="" class="main-menu">подарки</a></li>
+							<li><a href="shops.html" class="main-menu">Где купить</a></li>
+							<li><a href="" class="main-menu">контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -94,8 +101,28 @@
 					</a>
 				</div>
 				<div class="h-grid-6">
-					<button type="button" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
-						<img src="img/icons/gamburger.svg" alt="Меню">
+					<div class="dropdown d-none d-lg-block">
+						<button class="gamburger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+							<!-- <img src="img/icons/gamburger.svg" alt="Меню"> -->
+							<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 10H27"/>
+								<path d="M5.33334 16L24 16"/>
+								<path d="M5 22H27"/>
+							</svg>
+						</button>
+						<nav class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<ul>
+								<li><a href="about.html">о компании</a></li>
+								<li><a href="">подарки</a></li>
+							</ul>
+						</nav>
+					</div>
+					<button type="button" class="gamburger d-block d-lg-none" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 10H27"/>
+							<path d="M5.33334 16L24 16"/>
+							<path d="M5 22H27"/>
+						</svg>
 					</button>
 				</div>
 			</div>
@@ -289,7 +316,7 @@
 						<div class="swiper-product-main">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<img src="img/parfume/3.png" alt="Parfé №3" class="img-fluid">
+									<img src="img/parfume/3-1.jpg" alt="Parfé №3" class="img-fluid">
 								</div>
 								<div class="swiper-slide">
 									<img src="img/parfume/3-2.jpg" alt="Parfé №3" class="img-fluid">
@@ -302,7 +329,7 @@
 						<div class="swiper-product-thumbs mt-4">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<img src="img/parfume/3.png" alt="Parfé №3" class="img-fluid">
+									<img src="img/parfume/3-1.jpg" alt="Parfé №3" class="img-fluid">
 								</div>
 								<div class="swiper-slide">
 									<img src="img/parfume/3-2.jpg" alt="Parfé №3" class="img-fluid">

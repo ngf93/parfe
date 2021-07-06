@@ -1,8 +1,3 @@
-/* current year */
-let now = new Date();
-let cur_year = now.getFullYear();
-document.querySelector('#year').innerHTML = cur_year;
-
 /* изменение состояния кнопок "в избранное" */
 function fav(el){
   el.dataset.fav = (el.dataset.fav == 'false') ? 'true' : 'false'
@@ -19,23 +14,12 @@ window.addEventListener('scroll', function() {
   }
 });
 
-function closeDiv(cl){
-  let arr = Array.from(document.querySelectorAll(cl));
-  arr.forEach(function(item, i, arr) {
-    item.animate({
-      "top": "calc(100% + 2em)",
-      "opacity": "0"
-    }, {
-      duration: 200,
-      fill: "forwards",
-    });
-    item.style.display = 'none';
-  });
-}
 
+/*************** 
+DESKTOP SUBMENU
+****************/
 /* появление подменю */
 function openSubmenu(id){
-  closeDiv('.submenu');
   document.getElementById(id).style.display = 'block';
   document.getElementById(id).animate({
     "top": "100%",
@@ -52,7 +36,6 @@ function openSubmenu(id){
     fill: "forwards",
   });
 }
-
 /* скрытие подменю */
 function closeSubmenu(id){
   document.getElementById(id).animate({
@@ -72,6 +55,24 @@ function closeSubmenu(id){
   });
   document.getElementById('shadow').style.zIndex = '-10';
 }
+let arr_mainMenu = Array.from(document.querySelectorAll('.main-menu'));
+arr_mainMenu.forEach(function(item, i, arr) {
+  item.addEventListener('mouseenter', function(e) {
+    if (item.hasAttribute('data-target')) {
+      openSubmenu(item.dataset.target);
+    } else {return;}
+  });
+  item.addEventListener('mouseleave', function(e) {
+    if (item.hasAttribute('data-target')) {
+      let goingto = e.relatedTarget || event.toElement;
+      let check = goingto != document.getElementById(item.dataset.target);
+      if(check) {
+        closeSubmenu(item.dataset.target);
+      }
+    } else {return;}
+  });
+});
+
 
 /* запуск видео при клике на кнопку */
 function play_video(cover){
@@ -238,3 +239,9 @@ window.onload = function() {
       }
   });
 }
+
+
+/* current year */
+let now = new Date();
+let cur_year = now.getFullYear();
+document.querySelector('#year').innerHTML = cur_year;

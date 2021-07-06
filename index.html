@@ -21,13 +21,13 @@
 				<div class="h-grid-1">
 					<div class="d-flex align-items-center">
 						<div class="d-flex f_09 text-uppercase lightengray">
-							<a href="" class="lightgray me-2">ru</a>
-							<a href="" class="me-2">en</a>
-							<a href="" class="me-2">fr</a>
+							<a href="" class="simple-link active me-2">ru</a>
+							<a href="" class="simple-link me-2">en</a>
+							<a href="" class="simple-link me-2">fr</a>
 							<span class="me-2">|</span>
-							<a href="">faq</a>
+							<a href="" class="simple-link">faq</a>
 						</div>
-						<div class="d-flex ms-4">
+						<div class="d-none d-md-flex ms-4">
 							<a href="mailto:" class="round-icon me-3">
 								<img src="img/icons/e-mail.svg" alt="">
 							</a>
@@ -42,22 +42,29 @@
 				</div>
 				<div class="h-grid-2">
 					<a href="index.html">
-						<img src="img/logo.svg" alt="" class="d-block mx-auto">
+						<img src="img/logo.svg" alt="" class="logo-img d-block mx-auto">
 					</a>
 				</div>
 				<div class="h-grid-3">
 					<div class="d-flex align-items-center justify-content-end">
-						<a href="shopping-cart.html" class="text-uppercase lightengray f_09 d-flex align-items-center">
+						<a href="shopping-cart.html" class="head-btn-svg">
 							<div class="count me-xl-1">12</div>
-							<img src="img/icons/shopping-cart.svg" alt="">
-							<span class="cart-text">корзина</span>
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 8.25C3.55109 8.25 3.36032 8.32902 3.21967 8.46967C3.07902 8.61032 3 8.80109 3 9V19.125C3 20.5425 4.2075 21.75 5.625 21.75H18.375C19.7925 21.75 21 20.6011 21 19.1836V9C21 8.80109 20.921 8.61032 20.7803 8.46967C20.6397 8.32902 20.4489 8.25 20.25 8.25H3.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M7.5 8.25V6.75C7.5 5.55653 7.97411 4.41193 8.81802 3.56802C9.66193 2.72411 10.8065 2.25 12 2.25V2.25C13.1935 2.25 14.3381 2.72411 15.182 3.56802C16.0259 4.41193 16.5 5.55653 16.5 6.75V8.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>								
 						</a>
-						<a href="#" class="ms-3 ms-xl-4 d-flex align-items-center">
+						<a href="#" class="ml-12 head-btn-svg">
 							<div class="count me-xl-1">29</div>
-							<img src="img/icons/favorite.svg" alt="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.5437 4C13.5006 4 12.0006 7 12.0006 7C12.0006 7 10.5006 4 7.45748 4C4.98435 4 3.02591 6.06906 3.0006 8.53797C2.94904 13.6628 7.06607 17.3073 11.5787 20.3702C11.7031 20.4548 11.8501 20.5001 12.0006 20.5001C12.1511 20.5001 12.2981 20.4548 12.4225 20.3702C16.9347 17.3073 21.0517 13.6628 21.0006 8.53797C20.9753 6.06906 19.0169 4 16.5437 4Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>						
 						</a>
-						<a data-bs-toggle="modal" href="#modal-entrance" class="ms-2 ms-xl-3">
-							<img src="img/icons/user.svg" alt="">
+						<a data-bs-toggle="modal" href="#modal-entrance" class="ml-12 head-btn-svg">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.4795 7.60156C16.3034 9.97658 14.5029 11.9141 12.5263 11.9141C10.5498 11.9141 8.74617 9.97703 8.57322 7.60156C8.39353 5.13086 10.1455 3.28906 12.5263 3.28906C14.9072 3.28906 16.6592 5.17578 16.4795 7.60156Z" stroke-width="1.42" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M12.1857 14.7891C8.27745 14.7891 4.31085 16.9453 3.57683 21.0152C3.48833 21.5058 3.76595 21.9766 4.27941 21.9766H20.0919C20.6058 21.9766 20.8834 21.5058 20.7949 21.0152C20.0605 16.9453 16.0939 14.7891 12.1857 14.7891Z" stroke-width="1.42" stroke-miterlimit="10"/>
+							</svg>								
 						</a>
 					</div>
 				</div>
@@ -65,26 +72,26 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="catalog.html" data-target="submenu-catalog" onmouseenter="openSubmenu(this.dataset.target)">
+								<a href="catalog.html" class="main-menu" data-target="submenu-catalog">
 									каталог
 									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
 									</svg>
 								</a>
 							</li>
-							<li><a href="quiz.html">Подбор аромата</a></li>
+							<li><a href="quiz.html" class="main-menu">Подбор аромата</a></li>
 							<li>
-								<a href="benefits.html" data-target="submenu-advantages" onmouseenter="openSubmenu(this.dataset.target)">
+								<a href="benefits.html" class="main-menu" data-target="submenu-advantages">
 									преимущества
 									<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.8125 0.989502L7 7.177L13.1875 0.989502"/>
 									</svg>
 								</a>
 							</li>
-							<li><a href="about.html">о компании</a></li>
-							<li><a href="">подарки</a></li>
-							<li><a href="shops.html">Где купить</a></li>
-							<li><a href="">контакты</a></li>
+							<li class="floating"><a href="about.html" class="main-menu">о компании</a></li>
+							<li class="floating"><a href="" class="main-menu">подарки</a></li>
+							<li><a href="shops.html" class="main-menu">Где купить</a></li>
+							<li><a href="" class="main-menu">контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -94,8 +101,28 @@
 					</a>
 				</div>
 				<div class="h-grid-6">
-					<button type="button" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
-						<img src="img/icons/gamburger.svg" alt="Меню">
+					<div class="dropdown d-none d-lg-block">
+						<button class="gamburger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+							<!-- <img src="img/icons/gamburger.svg" alt="Меню"> -->
+							<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 10H27"/>
+								<path d="M5.33334 16L24 16"/>
+								<path d="M5 22H27"/>
+							</svg>
+						</button>
+						<nav class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<ul>
+								<li><a href="about.html">о компании</a></li>
+								<li><a href="">подарки</a></li>
+							</ul>
+						</nav>
+					</div>
+					<button type="button" class="gamburger d-block d-lg-none" id="btn-menu" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+						<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 10H27"/>
+							<path d="M5.33334 16L24 16"/>
+							<path d="M5 22H27"/>
+						</svg>
 					</button>
 				</div>
 			</div>
@@ -312,7 +339,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-8 col-lg-7 col-xl-6 text-center">
 						<p class="f_12">История бренда началась на юго-востоке Франции. А именно в парфюмерной столице мира — в знаменитом городе Grasse. Компании принадлежит одна из лучших фабрик региона, оборудованная по европейским стандартам. Именно здесь с 1971 года изготавливают качественные эфирные масла и сырьё для парфюмерии. Создатели бренда используют своё сырьё и выпускают парфюмы на собственной фабрике, сокращая издержки производства. Вот почему ароматы Parfé по ценам на порядок ниже и духов, и эссенций, созданных известными парфюмерными Домами.</p>
-						<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+						<a href="about.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -324,8 +351,8 @@
 					<div class="col-lg-4 mb-3 mb-lg-0">
 						<div class="grass">
 							<img src="img/img3.png" alt="" class="img-fluid d-block mx-auto">
-							<h3>Грас, Франция</h3>
-							<div class="text-uppercase f_11 fw_5 ls-1 mb-4">Родина <span class="brandon ls-3">Parfé</span></div>
+							<h3 class="mb-3">Грас, Франция</h3>
+							<div class="text-uppercase fw_5 ls-1 mb-4">Родина <span class="brandon ls-3">Parfé</span></div>
 							<p>Здесь разместим несколько строк о Грасе. Противоположная точка зрения подразумевает, что сделанные на базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.</p>
 						</div>
 					</div>
@@ -337,7 +364,7 @@
 										<div class="text">
 											<h3>1.Не содержит спирта</h3>
 											<p>Parfe не содержат спирта и воды: это чистый парфюм. Всего 10 мл такого парфюма приравнивается к 100 мл обычных духов, на 85% состоящих из спирта, который искажает аромат, быстро испаряется в воздухе и практически не задерживается на коже.</p>
-											<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+											<a href="benefits.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 										</div>
 										<div>
 											<img src="img/about1.jpg" alt="" class="img-fluid">
@@ -349,7 +376,7 @@
 										<div class="text">
 											<h3>2.Второй пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
-											<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+											<a href="benefits.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 										</div>
 										<div>
 											<img src="img/about2.jpg" alt="" class="img-fluid">
@@ -361,7 +388,7 @@
 										<div class="text">
 											<h3>3.Третий пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
-											<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+											<a href="benefits.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 										</div>
 										<div>
 											<img src="img/about3.jpg" alt="" class="img-fluid">
@@ -373,7 +400,7 @@
 										<div class="text">
 											<h3>4.Четвертый пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
-											<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+											<a href="benefits.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 										</div>
 										<div>
 											<img src="img/about4.jpg" alt="" class="img-fluid">
@@ -385,7 +412,7 @@
 										<div class="text">
 											<h3>5.Пятый пункт</h3>
 											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos possimus, modi cupiditate mollitia obcaecati laudantium ipsam, nobis at neque vel corporis cum! Facere dolor voluptates eos at odio dolorum quaerat.</p>
-											<button class="btn_main btn_2 mt-4 mx-auto">Подробнее</button>
+											<a href="benefits.html" class="btn_main btn_2 mt-4 mx-auto">Подробнее</a>
 										</div>
 										<div>
 											<img src="img/about5.jpg" alt="" class="img-fluid">
@@ -394,22 +421,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="row row-cols-2 g-0">
-							<div>
-								
-							</div>
-							<div>
-								<div class="swiper-main">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">Slide 1</div>
-										<div class="swiper-slide">Slide 2</div>
-										<div class="swiper-slide">Slide 3</div>
-										<div class="swiper-slide">Slide 4</div>
-										<div class="swiper-slide">Slide 5</div>
-									</div>
-								</div>
-							</div>
-						</div> -->
 						<div class="swiper-thumbs">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -444,8 +455,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					
+					</div>				
 				</div>
 			</div>
 		</section>
@@ -460,7 +470,7 @@
 								<img src="img/parfume/1.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button type="button" onclick="fav(this)" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
+									<button type="button" onclick="fav(this); this.blur();" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
 										<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" fill="#D1AF8D"/>
 										</svg>
@@ -475,7 +485,7 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button type="button" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
+							<button type="button" onclick="this.blur();" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
 								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
 								В корзину
 							</button>
@@ -487,7 +497,7 @@
 								<img src="img/parfume/7.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button type="button" onclick="fav(this)" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
+									<button type="button" onclick="fav(this); this.blur();" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
 										<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" fill="#D1AF8D"/>
 										</svg>
@@ -502,7 +512,7 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button type="button" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
+							<button type="button" onclick="this.blur();" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
 								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
 								В корзину
 							</button>
@@ -514,7 +524,7 @@
 								<img src="img/parfume/6.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button type="button" onclick="fav(this)" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
+									<button type="button" onclick="fav(this); this.blur();" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
 										<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" fill="#D1AF8D"/>
 										</svg>
@@ -529,7 +539,7 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button type="button" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
+							<button type="button" onclick="this.blur();" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
 								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
 								В корзину
 							</button>
@@ -541,7 +551,7 @@
 								<img src="img/parfume/20.png" alt="">
 								<div class="text">
 									<p>Нероли, бергамот, чёрная смородина, лимон, мускус, ветивер, кедр</p>
-									<button type="button" onclick="fav(this)" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
+									<button type="button" onclick="fav(this); this.blur();" class="btn_main btn_1 w-100 mt-2 mt-sm-4 fav-btn" data-fav="false">
 										<svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M14.5437 1C11.5006 1 10.0006 4 10.0006 4C10.0006 4 8.5006 1 5.45748 1C2.98435 1 1.02591 3.06906 1.0006 5.53797C0.949039 10.6628 5.06607 14.3073 9.57873 17.3702C9.70314 17.4548 9.85013 17.5001 10.0006 17.5001C10.1511 17.5001 10.2981 17.4548 10.4225 17.3702C14.9347 14.3073 19.0517 10.6628 19.0006 5.53797C18.9753 3.06906 17.0169 1 14.5437 1Z" fill="#D1AF8D"/>
 										</svg>
@@ -556,7 +566,7 @@
 								<div class="black">1 674 <span class="pt">₽</span></div>
 								<div class="old-price ms-2 ms-sm-3">1 860 <span class="pt">₽</span></div>
 							</div>
-							<button type="button" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
+							<button type="button" onclick="this.blur();" class="btn_main btn_1 mt-3 mt-sm-4 w-100">
 								<img src="img/icons/shopping-cart-2.svg" class="me-1 me-sm-2">
 								В корзину
 							</button>
@@ -573,7 +583,7 @@
 						<h2>Как наносить ароматы</h2>
 						<p class="f_12 gray itlc text-center text-md-start">Чтобы благоухать, достаточно нанести всего каплю парфюма на каждую точку пульса — за мочку уха, на запястье, сгиб локтя, шею в районе межключичной впадины и под колено. В этих местах кожа имеет самую высокую температуру, а значит, запах будет быстро распространяться по воздуху. Желательно наносить на чистую, слегка влажную кожу. Аромат парфюма максимально впитывается именно во влажную кожу.</p>
 						<div class="mt-4">
-							<a href="" class="btn_main btn_2">Каталог ароматов</a>
+							<a href="catalog.html" class="btn_main btn_2">Каталог ароматов</a>
 						</div>
 					</div>
 					<div class="mt-4 mt-md-0">
@@ -612,7 +622,11 @@
 			<div class="container py-xl-4">
 				<div class="row justify-content-between align-items-center">
 					<div class="col-md-4">
-						<h2 class="text-start">При покупке в нашем магазине</h2>
+						<h2 class="text-start">
+							При покупке <br>
+							в нашем <br>
+							магазине
+						</h2>
 						<hr class="d-none d-md-block">
 					</div>
 					<div class="col-md-8 col-xl-7">

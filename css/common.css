@@ -132,7 +132,7 @@ input, textarea {
     border-radius: 0;
     padding: .75em 1.5em;
     width: 100%;
-    line-height: 1.1em;
+    line-height: normal;
     box-shadow: unset;
 }
 input.transparent, textarea.transparent {
@@ -335,7 +335,7 @@ button:hover, button:focus, button:active {cursor: pointer;}
 .btn_icon {
     width: 2.5em;
     height: 2.5em;
-    border: 1px solid var(--powder);
+    /* border: 1px solid var(--powder); */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -432,11 +432,19 @@ h1, h2, h3, h4 {
     text-align: center;
     font-style: italic;
     font-weight: 400;
+}
+h1 {
+    font-size: 2em;
     margin-bottom: 1em;
 }
-h1 {font-size: 2em;}
-h2 {font-size: 3em;}
-h3 {font-size: 2.25em;}
+h2 {
+    font-size: 3em;
+    margin-bottom: 32px;
+}
+h3 {
+    font-size: 2.25em;
+    margin-bottom: 24px;
+}
 h4 {
     text-align: left;
     font-size: 1.5em;
@@ -672,3 +680,5 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .cs-options .radio input[type="radio"]:checked ~ label  {
     background-color: var(--warmwhite);
 }
+
+.ml-12 {margin-left: 12px;}
