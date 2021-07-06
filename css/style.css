@@ -387,7 +387,6 @@ header.h-sticky .floating {display: none;}
     .gamburger svg path {stroke: var(--deepgray);}
     .gamburger:hover svg path {stroke: var(--powder);}
     .gamburger:active svg path {stroke: var(--gold);}
-    }
 }
 @media (max-width: 575px){
     header.h-sticky {padding: 0 12px;}
