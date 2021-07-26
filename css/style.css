@@ -1887,12 +1887,6 @@ footer nav {
     flex: 1;
     padding: 1em 1.5em;
 }
-@media (min-width: 1200px){
-    .modal-dialog.md-full-content {max-width: 1140px;}
-}
-@media (min-width: 992px){
-    .modal-dialog.md-full-content {max-width: 960px;}
-}
 @media (min-width: 768px){
     .modal-dialog {max-width: 750px;}
     .modal-dialog.md-full-content {max-width: 720px;}
