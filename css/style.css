@@ -1434,6 +1434,60 @@ fieldset legend {
 }
 .shopping-cart .total input {max-width: 260px;}
 
+
+.shopping-cart .cart-product {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopping-cart .cart-product img.img-prod {
+    width: 70px;
+    height: 110px;
+    padding: 1em;
+    object-fit: contain;
+}
+.shopping-cart .cart-product .title {
+    text-align: left;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+    color: var(--powder);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    min-width: 300px;
+}
+.shopping-cart .cart-product .price {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+.shopping-cart .cart-product .price .actual {color: black;}
+.shopping-cart .cart-product .price .old {
+    color: var(--lightengray);
+    text-decoration: line-through;
+}
+.shopping-cart .cart-product .inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopping-cart .cart-product .inputs input[type="number"] {
+    border: none;
+    padding: 0;
+    min-width: 40px;
+    max-width: 60px;
+    text-align: center;
+    -moz-appearance: textfield;
+    color: var(--gray);
+    font-size: 1.1em;
+}
+.shopping-cart .cart-product .sum {
+    color: black;
+    font-size: 1.2em;
+}
+
+
 .progress {
     height: 3px;
     background-color: var(--warmwhite);
@@ -1464,6 +1518,11 @@ fieldset legend {
 .shopping-cart .total-2 {
     border: 1px solid var(--gold);
     padding: 3em;
+}
+@media (max-width: 1199px){
+    .shopping-cart .cart-product .title {
+        min-width: 250px;
+    }
 }
 @media (max-width: 991px){
     .shopping-cart .total-2 {padding: 1em;}
