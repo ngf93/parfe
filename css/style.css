@@ -1447,11 +1447,11 @@ fieldset legend {
     color: var(--gray);
     padding: .5em 0px;
 }
-.shopping-cart .cart-product .img-prod {
+.shopping-cart .cart-product .img-prod, .shopping-cart .cart-product>img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
-.shopping-cart .cart-product .img-prod img {
+.shopping-cart .cart-product .img-prod img, .shopping-cart .cart-product>img {
     width: 70px;
     height: 90px;
     padding: .5em;
@@ -1505,7 +1505,7 @@ fieldset legend {
     height: 100%;
     object-fit: scale-down;
 }
-.shopping-cart .cart-product .inputs input[type="number"] {
+.shopping-cart .cart-product .inputs input {
     border: none;
     padding: 0;
     min-width: 40px;
@@ -1524,7 +1524,6 @@ fieldset legend {
     align-items: center;
     justify-content: center;
 }
-
 
 .shopping-cart .cart-product .del {
     grid-column: 6 / 7;
@@ -1581,6 +1580,7 @@ fieldset legend {
     }
 }
 @media (max-width: 767px){
+    .shopping-cart .total input {max-width: 155px;}
     .shopping-cart .cart-product.head {display: none;}
     .shopping-cart .cart-product {
         grid-template-columns: 100px repeat(4, 1fr);
@@ -1625,6 +1625,12 @@ fieldset legend {
     }
 }
 @media (max-width: 575px){
+    .shopping-cart .total {flex-wrap: wrap;}
+    .shopping-cart .total h3 {
+        width: calc(40% - .5em);
+        font-size: 1.2em;
+    }
+    .shopping-cart .total input {width: 60%;}
     .shopping-cart .cart-product {grid-template-columns: 70px repeat(4, 1fr);}
     .shopping-cart .cart-product .del {font-size: 1.5em;}
     .shopping-cart .cart-product .img-prod img {
