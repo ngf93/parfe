@@ -1641,7 +1641,6 @@ fieldset legend {
 }
 
 
-
 /* section 16 */
 #sec-16 figure {
     display: flex;
@@ -1902,6 +1901,84 @@ fieldset legend {
     #profileTabs.nav-tabs .nav-link {text-align: left;}
 }
 
+
+/* section 22 */
+/* common for articles */
+article {
+    height: 100%;
+    background-color: var(--color-1-5);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+article .text {
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4em;
+}
+article .text p, article .text span, article .text div {line-height: 1.4em;}
+/* first article */
+figure.big-art article {padding: 3em;}
+figure.big-art article .text {
+    font-size: 1.1em;
+    -webkit-line-clamp: 14;
+    height: 19.6em;
+}
+figure.big-art img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center top;
+}
+/* other articles */
+figure.sm-art article {padding: 2em 1.5em;}
+figure.sm-art article .text {
+    font-size: .9em;
+    -webkit-line-clamp: 12;
+    height: 16.8em;
+}
+figure.sm-art img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center top;
+}
+@media (max-width: 1199px){
+    figure.big-art img {height: 500px;}
+    figure.sm-art img {height: 310px;}
+    figure.sm-art article {padding: 1.5em;}
+}
+@media (max-width: 991px){
+    figure.big-art article {padding: 2em;}
+    figure.big-art img {height: 390px;}
+    figure.sm-art img {height: 230px;}
+    figure.sm-art article {padding: 1em;}
+    figure.sm-art article .text {
+        -webkit-line-clamp: 10;
+        height: 14em;
+    }
+}
+@media (max-width: 767px){
+    figure.big-art img, figure.sm-art img {height: 280px;}
+    figure.big-art article .text {
+        font-size: .9em;
+        -webkit-line-clamp: 10;
+        height: 14em;
+    }
+    figure.big-art article, figure.sm-art article {padding: 1.5em;}
+}
+@media (max-width: 575px){
+    figure.big-art img, figure.sm-art img {height: 48vw;}
+    figure.big-art article, figure.sm-art article {padding: 1em;}
+    figure.big-art article .text, figure.sm-art article .text {
+        -webkit-line-clamp: 8;
+        height: 11.2em;
+    }
+}
 
 
 footer {
